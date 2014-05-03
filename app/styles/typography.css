@@ -1,0 +1,19 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #111111;
+  background: #efefef; }
+
+.muted {
+  color: #777777; }
+
+h1, h2, h3 {
+  font-weight: normal;
+  vertical-align: middle; }
+
+h1 small,
+h2 small,
+h3 small {
+  font-size: 70%; }
+
+small {
+  vertical-align: middle; }

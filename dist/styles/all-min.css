@@ -1,0 +1,84 @@
+body, html {
+  margin: 0 auto; }
+
+i {
+  font-style: normal; }
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #111111;
+  background: #efefef; }
+
+.muted {
+  color: #777777; }
+
+h1, h2, h3 {
+  font-weight: normal;
+  vertical-align: middle; }
+
+h1 small,
+h2 small,
+h3 small {
+  font-size: 70%; }
+
+small {
+  vertical-align: middle; }
+
+body {
+  margin: 0 20px; }
+
+h1 {
+  color: #777777; }
+
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+[class*="entypo-"]:before {
+  font-family: "entypo", sans-serif; }
+
+game-board {
+  position: relative;
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0 0 0 10px #e5e5e5; }
+  game-board .space {
+    display: block;
+    position: absolute;
+    width: 16.66667%;
+    height: 16.66667%;
+    box-shadow: inset 0 0 0 1px #f2f2f2;
+    background: white;
+    color: rgba(0, 0, 0, 0.1);
+    font-weight: normal;
+    font-size: 11px;
+    text-align: center;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+    game-board .space:hover {
+      -webkit-transition: none;
+      -moz-transition: none;
+      transition: none;
+      background: #f2f2f2; }
+  game-board .x0 {
+    left: 0%; }
+  game-board .x1 {
+    left: 16.66667%; }
+  game-board .x2 {
+    left: 33.33333%; }
+  game-board .x3 {
+    left: 50.0%; }
+  game-board .x4 {
+    left: 66.66667%; }
+  game-board .x5 {
+    left: 83.33333%; }
+  game-board .y0 {
+    top: 0%; }
+  game-board .y1 {
+    top: 16.66667%; }
+  game-board .y2 {
+    top: 33.33333%; }
+  game-board .y3 {
+    top: 50.0%; }
+  game-board .y4 {
+    top: 66.66667%; }
+  game-board .y5 {
+    top: 83.33333%; }

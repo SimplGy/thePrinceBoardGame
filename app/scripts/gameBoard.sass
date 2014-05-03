@@ -1,0 +1,59 @@
+@import '../styles/__'
+
+game-board
+  $spaceSize: percentage(1 / 6) // 6x6 board
+  position: relative
+  display: block
+  margin: 20px auto
+  box-shadow: 0 0 0 10px $black10
+
+  .space
+    display: block
+    position: absolute
+    width: $spaceSize
+    height: $spaceSize
+    box-shadow: inset 0 0 0 1px $black05
+    background: white
+    color: $shade10
+    font-weight: normal
+    font-size: 11px
+    text-align: center
+    +transition(all .2s ease-in-out)
+    &:hover
+      +transition(none)
+      background: $black05
+
+
+  // X Positions
+  .x0
+    left: $spaceSize * 0
+  .x1
+    left: $spaceSize * 1
+  .x2
+    left: $spaceSize * 2
+  .x3
+    left: $spaceSize * 3
+  .x4
+    left: $spaceSize * 4
+  .x5
+    left: $spaceSize * 5
+  // Y Positions
+  .y0
+    top: $spaceSize * 0
+  .y1
+    top: $spaceSize * 1
+  .y2
+    top: $spaceSize * 2
+  .y3
+    top: $spaceSize * 3
+  .y4
+    top: $spaceSize * 4
+  .y5
+    top: $spaceSize * 5
+
+
+
+
+
+
+
