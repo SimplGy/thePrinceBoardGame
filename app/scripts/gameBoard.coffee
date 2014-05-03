@@ -38,7 +38,7 @@ angular.module('prince')
 .directive 'gameBoard', (gameBoard, $window) ->
   restrict: 'E'
   scope: {}
-  template: '<b ng-repeat="space in board.spaces" class="space x{{space.x}} y{{space.y}}">{{space.x}}, {{space.y}}</b>'
+  template: '<b\n  ng-repeat="space in board.spaces"\n  class="space x{{space.x}} y{{space.y}}"\n  ng-class="{altColor: (space.x + space.y) % 2 === 0}" title="{{space.x}}, {{space.y}}">\n</b>\n        \n<i piece class="piece x3 y4 teamA">\n</i>'
   link: (scope, el, attrs) ->
     scope.board = gameBoard
     #    for space in board
@@ -58,6 +58,13 @@ angular.module('prince')
     do calculateSize
 
 
+
+.directive 'piece', ->
+  restrict: 'A'
+  link: (scope, el, attrs) ->
+    draggie = new Draggabilly el[0]
+    draggie.on 'dragEnd', (draggie, evt, pointer) ->
+      console.log 'dragEnd', pointer
 
 
 

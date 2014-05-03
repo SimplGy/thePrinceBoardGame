@@ -5,7 +5,8 @@ game-board
   position: relative
   display: block
   margin: 20px auto
-  box-shadow: 0 0 0 10px $colorBlue
+  box-shadow: 0 4px 0 2px $colorBlue, 0 0 0 2px $colorBlue, 0 5px 1px 1px $shade20
+  border-radius: 3px
   background: white
 
   .space
@@ -13,17 +14,13 @@ game-board
     position: absolute
     width: $spaceSize
     height: $spaceSize
-    box-shadow: inset 0 0 0 1px mix($colorBlue, white, 10%)
     background: white
     color: transparentize($colorBlue, .8)
     font-weight: normal
     font-size: 10px
     text-align: center
-    +transition(all .2s ease-in-out)
-    &:hover
-      +transition(none)
-      background: transparentize($colorBlue, .8)
-      color: $colorBlue
+    &.altColor
+      background: mix($colorBlue, white, 10%)
 
 
   // X Positions
@@ -56,6 +53,20 @@ game-board
 
 
 
-
+  // Pieces
+  .piece
+    position: relative
+    display: block
+    width: $spaceSize
+    height: $spaceSize
+    cursor: pointer
+    background: mix($colorRed, white, 50%)
+    box-shadow:  inset 0 2px 0 0 $light50, inset 0 -3px 0 0 $colorRed, inset 0 0 0 1px $colorRed, 0 1px 1px 0 $shade20
+    border-radius: 3px
+    //+transition(all .15s ease-in-out)
+    &:hover
+      background: mix($colorRed, white, 45%)
+    //&.is-dragging
+      //+transition(none)
 
 

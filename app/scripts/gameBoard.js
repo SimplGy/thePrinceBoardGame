@@ -43,7 +43,7 @@
     return {
       restrict: 'E',
       scope: {},
-      template: '<b ng-repeat="space in board.spaces" class="space x{{space.x}} y{{space.y}}">{{space.x}}, {{space.y}}</b>',
+      template: '<b\n  ng-repeat="space in board.spaces"\n  class="space x{{space.x}} y{{space.y}}"\n  ng-class="{altColor: (space.x + space.y) % 2 === 0}" title="{{space.x}}, {{space.y}}">\n</b>\n        \n<i piece class="piece x3 y4 teamA">\n</i>',
       link: function(scope, el, attrs) {
         var calculateSize;
         scope.board = gameBoard;
@@ -66,6 +66,17 @@
         };
         $window.onresize = _.debounce(calculateSize, 200);
         return calculateSize();
+      }
+    };
+  }).directive('piece', function() {
+    return {
+      restrict: 'A',
+      link: function(scope, el, attrs) {
+        var draggie;
+        draggie = new Draggabilly(el[0]);
+        return draggie.on('dragEnd', function(draggie, evt, pointer) {
+          return console.log('dragEnd', pointer);
+        });
       }
     };
   });
