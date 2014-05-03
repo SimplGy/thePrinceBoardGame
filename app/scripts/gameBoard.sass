@@ -5,23 +5,25 @@ game-board
   position: relative
   display: block
   margin: 20px auto
-  box-shadow: 0 0 0 10px $black10
+  box-shadow: 0 0 0 10px $colorBlue
+  background: white
 
   .space
     display: block
     position: absolute
     width: $spaceSize
     height: $spaceSize
-    box-shadow: inset 0 0 0 1px $black05
+    box-shadow: inset 0 0 0 1px mix($colorBlue, white, 10%)
     background: white
-    color: $shade10
+    color: transparentize($colorBlue, .8)
     font-weight: normal
-    font-size: 11px
+    font-size: 10px
     text-align: center
     +transition(all .2s ease-in-out)
     &:hover
       +transition(none)
-      background: $black05
+      background: transparentize($colorBlue, .8)
+      color: $colorBlue
 
 
   // X Positions

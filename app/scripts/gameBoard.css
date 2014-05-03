@@ -2,17 +2,18 @@ game-board {
   position: relative;
   display: block;
   margin: 20px auto;
-  box-shadow: 0 0 0 10px #e5e5e5; }
+  box-shadow: 0 0 0 10px #417090;
+  background: white; }
   game-board .space {
     display: block;
     position: absolute;
     width: 16.66667%;
     height: 16.66667%;
-    box-shadow: inset 0 0 0 1px #f2f2f2;
+    box-shadow: inset 0 0 0 1px #ecf0f3;
     background: white;
-    color: rgba(0, 0, 0, 0.1);
+    color: rgba(65, 112, 144, 0.2);
     font-weight: normal;
-    font-size: 11px;
+    font-size: 10px;
     text-align: center;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -21,7 +22,8 @@ game-board {
       -webkit-transition: none;
       -moz-transition: none;
       transition: none;
-      background: #f2f2f2; }
+      background: rgba(65, 112, 144, 0.2);
+      color: #417090; }
   game-board .x0 {
     left: 0%; }
   game-board .x1 {
