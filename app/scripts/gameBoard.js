@@ -11,45 +11,48 @@
       y: void 0
     };
     return Space;
-  }).factory('gameBoard', function(cfg, Space) {
-    var api, initialize;
-    api = {};
-    initialize = function() {
-      var space, x, y, _i, _ref, _results;
-      api.locations = [];
-      api.spaces = [];
-      _results = [];
-      for (y = _i = 0, _ref = cfg.boardSize; 0 <= _ref ? _i < _ref : _i > _ref; y = 0 <= _ref ? ++_i : --_i) {
-        api.locations[y] = [];
-        _results.push((function() {
-          var _j, _ref1, _results1;
-          _results1 = [];
-          for (x = _j = 0, _ref1 = cfg.boardSize; 0 <= _ref1 ? _j < _ref1 : _j > _ref1; x = 0 <= _ref1 ? ++_j : --_j) {
-            space = new Space({
-              x: x,
-              y: y
-            });
-            api.spaces.push(space);
-            _results1.push(api.locations[y].push);
-          }
-          return _results1;
-        })());
-      }
-      return _results;
+  }).factory('gameBoard', function(cfg, Space, Piece) {
+    var api, space, x, y, _i, _j, _ref, _ref1;
+    api = {
+      locations: [],
+      spaces: [],
+      pieces: []
     };
-    initialize();
+    for (y = _i = 0, _ref = cfg.cellCount; 0 <= _ref ? _i < _ref : _i > _ref; y = 0 <= _ref ? ++_i : --_i) {
+      api.locations[y] = [];
+      for (x = _j = 0, _ref1 = cfg.cellCount; 0 <= _ref1 ? _j < _ref1 : _j > _ref1; x = 0 <= _ref1 ? ++_j : --_j) {
+        space = new Space({
+          x: x,
+          y: y
+        });
+        api.spaces.push(space);
+        api.locations[y].push;
+      }
+    }
+    api.pieces.push(new Piece({
+      type: Piece.TYPES.prince,
+      x: 2,
+      y: 5
+    }));
+    api.pieces.push(new Piece({
+      type: Piece.TYPES.footman,
+      x: 2,
+      y: 4
+    }));
+    api.pieces.push(new Piece({
+      type: Piece.TYPES.footman,
+      x: 3,
+      y: 5
+    }));
     return api;
-  }).directive('gameBoard', function(gameBoard, $window) {
+  }).directive('gameBoard', function(gameBoard, $window, cfg) {
     return {
       restrict: 'E',
       scope: {},
-      template: '<b\n  ng-repeat="space in board.spaces"\n  class="space x{{space.x}} y{{space.y}}"\n  ng-class="{altColor: (space.x + space.y) % 2 === 0}" title="{{space.x}}, {{space.y}}">\n</b>\n        \n<i piece class="piece x3 y4 teamA">\n</i>',
+      template: '<b\n  ng-repeat="space in board.spaces"\n  class="space x{{space.x}} y{{space.y}}"\n  ng-class="{altColor: (space.x + space.y) % 2 === 0}" title="{{space.x}}, {{space.y}}">\n</b>\n\n<i piece\n   ng-repeat="piece in board.pieces"\n   class="piece {{piece.type}} x{{piece.x}} y{{piece.y}} team{{piece.team}} side{{piece.getSide()}}">\n  {{piece.type}} [{{piece.getSide()}}]\n</i>',
       link: function(scope, el, attrs) {
         var calculateSize;
         scope.board = gameBoard;
-        console.log({
-          scope: scope
-        });
         calculateSize = function() {
           var size;
           if ($window.innerWidth > $window.innerHeight) {
@@ -59,24 +62,15 @@
           }
           size = Math.floor(size);
           size -= 40;
-          return el.css({
+          el.css({
             width: size,
             height: size
           });
+          cfg.boardSize = size;
+          return cfg.pieceSize = Math.round(size / cfg.cellCount);
         };
         $window.onresize = _.debounce(calculateSize, 200);
         return calculateSize();
-      }
-    };
-  }).directive('piece', function() {
-    return {
-      restrict: 'A',
-      link: function(scope, el, attrs) {
-        var draggie;
-        draggie = new Draggabilly(el[0]);
-        return draggie.on('dragEnd', function(draggie, evt, pointer) {
-          return console.log('dragEnd', pointer);
-        });
       }
     };
   });

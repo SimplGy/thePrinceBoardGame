@@ -18,32 +18,43 @@ angular.module('prince')
 #      console.log scope:scope
 
 
-.factory 'gameBoard', (cfg, Space) ->
-  api = {}
+# Build a game board with instances of space objects
+.factory 'gameBoard', (cfg, Space, Piece) ->
+  api =
+    locations: []  # 2d array representing board shape
+    spaces: []     # Flat list
+    pieces: []
 
-  initialize = ->
-    api.locations = []  # 2d array representing board shape
-    api.spaces = []     # Flat list
-    for y in [0...cfg.boardSize]
-      api.locations[y] = []
-      for x in [0...cfg.boardSize]
-        space = new Space x:x, y:y
-        api.spaces.push space
-        api.locations[y].push
+  for y in [0...cfg.cellCount]
+    api.locations[y] = []
+    for x in [0...cfg.cellCount]
+      space = new Space x:x, y:y
+      api.spaces.push space
+      api.locations[y].push
 
-  initialize()
+  # Starting pieces
+  api.pieces.push new Piece
+    type: Piece.TYPES.prince
+    x: 2
+    y: 5
+  api.pieces.push new Piece
+    type: Piece.TYPES.footman
+    x: 2
+    y: 4
+  api.pieces.push new Piece
+    type: Piece.TYPES.footman
+    x:3
+    y:5
+
   api
 
 
-.directive 'gameBoard', (gameBoard, $window) ->
+.directive 'gameBoard', (gameBoard, $window, cfg) ->
   restrict: 'E'
   scope: {}
-  template: '<b\n  ng-repeat="space in board.spaces"\n  class="space x{{space.x}} y{{space.y}}"\n  ng-class="{altColor: (space.x + space.y) % 2 === 0}" title="{{space.x}}, {{space.y}}">\n</b>\n        \n<i piece class="piece x3 y4 teamA">\n</i>'
+  template: '<b\n  ng-repeat="space in board.spaces"\n  class="space x{{space.x}} y{{space.y}}"\n  ng-class="{altColor: (space.x + space.y) % 2 === 0}" title="{{space.x}}, {{space.y}}">\n</b>\n\n<i piece\n   ng-repeat="piece in board.pieces"\n   class="piece {{piece.type}} x{{piece.x}} y{{piece.y}} team{{piece.team}} side{{piece.getSide()}}">\n  {{piece.type}} [{{piece.getSide()}}]\n</i>'
   link: (scope, el, attrs) ->
     scope.board = gameBoard
-    #    for space in board
-    console.log scope:scope
-
     calculateSize = ->
       if $window.innerWidth > $window.innerHeight
         size = window.innerHeight
@@ -54,17 +65,15 @@ angular.module('prince')
       el.css
         width: size
         height: size
+      cfg.boardSize = size
+      cfg.pieceSize = Math.round size / cfg.cellCount
     $window.onresize = _.debounce calculateSize, 200
     do calculateSize
 
 
 
-.directive 'piece', ->
-  restrict: 'A'
-  link: (scope, el, attrs) ->
-    draggie = new Draggabilly el[0]
-    draggie.on 'dragEnd', (draggie, evt, pointer) ->
-      console.log 'dragEnd', pointer
+
+
 
 
 

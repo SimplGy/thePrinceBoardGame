@@ -2,7 +2,7 @@
 (function() {
   angular.module('prince', []).constant('cfg', {
     title: 'The Prince',
-    boardSize: 6
+    cellCount: 6
   });
 
 }).call(this);
