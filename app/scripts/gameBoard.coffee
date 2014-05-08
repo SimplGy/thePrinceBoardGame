@@ -34,7 +34,7 @@ angular.module('prince')
 
   # Given a piece instance, show the actions on the game board that can be made
   api.showActions = (piece) ->
-    console.log "Show actions for piece: ", piece
+    console.log "Visualize these actions: ", piece.getActions()
 
   api
 

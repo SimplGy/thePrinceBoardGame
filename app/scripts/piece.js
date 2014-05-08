@@ -23,6 +23,9 @@
           return 1;
         }
       },
+      getActions: function() {
+        return this.actions[this.getSide()];
+      },
       showActions: function() {
         return gameBoard.showActions(this);
       },

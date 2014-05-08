@@ -30,7 +30,7 @@
       }
     }
     api.showActions = function(piece) {
-      return console.log("Show actions for piece: ", piece);
+      return console.log("Visualize these actions: ", piece.getActions());
     };
     return api;
   }).directive('gameBoard', function(gameBoard, $window, cfg) {
