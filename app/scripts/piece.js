@@ -18,17 +18,17 @@
           return 1;
         }
       },
-      move: function(pos) {
+      act: function(pos) {
         if (pos.x < 0) {
           return 'off the left';
         }
-        if (pos.x > cfg.boardSize - 1) {
+        if (pos.x > cfg.cellCount - 1) {
           return 'off the right';
         }
         if (pos.y < 0) {
           return 'off the top';
         }
-        if (pos.y > cfg.boardSize - 1) {
+        if (pos.y > cfg.cellCount - 1) {
           return 'off the bottom';
         }
         if (!((pos.x != null) && (pos.y != null))) {
@@ -57,13 +57,7 @@
             console.warn('can not position piece without knowing size');
           }
           col = Math.round(draggie.position.x / cfg.pieceSize);
-          if ((0 < col && col > cfg.cellCount)) {
-            col = null;
-          }
           row = Math.round(draggie.position.y / cfg.pieceSize);
-          if ((0 < row && row > cfg.cellCount)) {
-            row = null;
-          }
           pos = {
             x: col,
             y: row
@@ -73,11 +67,8 @@
         return setPosition = function(pos) {
           draggie.element.style.left = null;
           draggie.element.style.top = null;
-          if (!((pos.x != null) && (pos.y != null))) {
-            return;
-          }
           return scope.$apply(function() {
-            return console.log(scope.piece.move(pos));
+            return console.log(scope.piece.act(pos));
           });
         };
       }

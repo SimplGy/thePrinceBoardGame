@@ -13,11 +13,11 @@ angular.module('prince')
     y: undefined
     actions: 0 # how many actions has this piece taken?
     getSide: -> if @actions % 2 is 0 then 0 else 1 # is it on side 0 or side 1?
-    move: (pos) ->
+    act: (pos) ->
       return 'off the left'   if pos.x < 0                    # Off the left side
-      return 'off the right'  if pos.x > cfg.boardSize - 1    # Too far right
+      return 'off the right'  if pos.x > cfg.cellCount - 1    # Too far right
       return 'off the top'    if pos.y < 0                    # Off the top
-      return 'off the bottom' if pos.y > cfg.boardSize - 1    # Off the bottom
+      return 'off the bottom' if pos.y > cfg.cellCount - 1    # Off the bottom
       unless pos.x? and pos.y?
         return 'missing a position'
       if pos.x is @x and pos.y is @y
@@ -39,9 +39,7 @@ angular.module('prince')
     draggie.on 'dragEnd', (draggie, evt, pointer) ->
       console.warn 'can not position piece without knowing size' unless cfg.pieceSize
       col = Math.round draggie.position.x / cfg.pieceSize
-      col = null if 0 < col > cfg.cellCount # out of bounds
       row = Math.round draggie.position.y / cfg.pieceSize
-      row = null if 0 < row > cfg.cellCount # out of bounds
       pos =
         x: col
         y: row
@@ -51,11 +49,9 @@ angular.module('prince')
       # Turn off the top and left offset in a way that doesn't break draggabilly
       draggie.element.style.left = null
       draggie.element.style.top = null
-      # Return without changing position if the position wasn't successfully calculated
-      return unless pos.x? and pos.y?
       # Announce the new x/y coord to scope. It will assign the css class and css will handle the positioning
       scope.$apply ->
-        console.log scope.piece.move pos
+        console.log scope.piece.act pos
 
 
 
