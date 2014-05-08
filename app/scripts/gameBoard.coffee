@@ -19,7 +19,7 @@ angular.module('prince')
 
 
 # Build a game board with instances of space objects
-.factory 'gameBoard', (cfg, Space, Piece) ->
+.factory 'gameBoard', (cfg, Space, Piece, PieceDefinitions) ->
   api =
     locations: []  # 2d array representing board shape
     spaces: []     # Flat list
@@ -34,15 +34,15 @@ angular.module('prince')
 
   # Starting pieces
   api.pieces.push new Piece
-    type: Piece.TYPES.prince
+    type: PieceDefinitions.TYPES.prince
     x: 2
     y: 5
   api.pieces.push new Piece
-    type: Piece.TYPES.footman
+    type: PieceDefinitions.TYPES.footman
     x: 2
     y: 4
   api.pieces.push new Piece
-    type: Piece.TYPES.footman
+    type: PieceDefinitions.TYPES.footman
     x:3
     y:5
 
@@ -52,7 +52,7 @@ angular.module('prince')
 .directive 'gameBoard', (gameBoard, $window, cfg) ->
   restrict: 'E'
   scope: {}
-  template: '<b\n  ng-repeat="space in board.spaces"\n  class="space x{{space.x}} y{{space.y}}"\n  ng-class="{altColor: (space.x + space.y) % 2 === 0}" title="{{space.x}}, {{space.y}}">\n</b>\n\n<i piece\n   ng-repeat="piece in board.pieces"\n   class="piece {{piece.type}} x{{piece.x}} y{{piece.y}} team{{piece.team}} side{{piece.getSide()}}">\n  {{piece.type}} [{{piece.getSide()}}]\n</i>'
+  template: '<b\n  ng-repeat="space in board.spaces"\n  class="space x{{space.x}} y{{space.y}}"\n  ng-class="{altColor: (space.x + space.y) % 2 === 0}" title="{{space.x}}, {{space.y}}">\n</b>\n\n<i piece\n   ng-repeat="piece in board.pieces"\n   class="piece {{piece.type}} x{{piece.x}} y{{piece.y}} team{{piece.team}} side{{piece.getSide()}}">\n  {{piece.type}}\n</i>'
   link: (scope, el, attrs) ->
     scope.board = gameBoard
     calculateSize = ->

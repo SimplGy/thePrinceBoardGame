@@ -2,20 +2,19 @@ game-board {
   position: relative;
   display: block;
   margin: 20px auto;
-  box-shadow: 0 4px 0 2px #beb8a2, 0 0 0 2px #beb8a2, 0 5px 1px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
+  box-shadow: 0 0 0 0 white, 0 0 0 5px #f2f2f2;
   background: white; }
   game-board .space {
     display: block;
     position: absolute;
     width: 16.66667%;
     height: 16.66667%;
-    background: cornsilk;
+    background: white;
     font-weight: normal;
     font-size: 10px;
     text-align: center; }
     game-board .space.altColor {
-      background: #eee6cb; }
+      background: #f2f2f2; }
   game-board .x0 {
     left: 0%; }
   game-board .x1 {

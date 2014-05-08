@@ -1,0 +1,1 @@
+. color teams blue and green instead of light and dark. Let the sides be light and dark instead.

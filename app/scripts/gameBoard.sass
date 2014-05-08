@@ -5,8 +5,8 @@ game-board
   position: relative
   display: block
   margin: 20px auto
-  box-shadow: 0 4px 0 2px mix($colorTeam0dark, black, 80%), 0 0 0 2px mix($colorTeam0dark, black, 80%), 0 5px 1px 1px $shade20
-  border-radius: 3px
+  //box-shadow: 0 4px 0 2px $black10, 0 0 0 2px $black10, 0 5px 1px 1px $black20 // 3dish
+  box-shadow: 0 0 0 0 white, 0 0 0 5px $black05 // double outline
   background: white
 
   .space
@@ -14,12 +14,12 @@ game-board
     position: absolute
     width: $spaceSize
     height: $spaceSize
-    background: $colorTeam0
+    background: white
     font-weight: normal
     font-size: 10px
     text-align: center
     &.altColor
-      background: $colorTeam0dark
+      background: $black05
 
 
   // X Positions

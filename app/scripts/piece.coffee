@@ -1,11 +1,7 @@
 angular.module('prince')
 
 
-.factory 'Piece', ->
-  _static =
-    TYPES:
-      prince: 'prince'
-      footman: 'footman'
+.factory 'Piece', (cfg, PieceDefinitions) ->
 
   Piece = (options) ->
     @type = options.type
@@ -18,24 +14,27 @@ angular.module('prince')
     actions: 0 # how many actions has this piece taken?
     getSide: -> if @actions % 2 is 0 then 0 else 1 # is it on side 0 or side 1?
     move: (pos) ->
+      return 'off the left'   if pos.x < 0                    # Off the left side
+      return 'off the right'  if pos.x > cfg.boardSize - 1    # Too far right
+      return 'off the top'    if pos.y < 0                    # Off the top
+      return 'off the bottom' if pos.y > cfg.boardSize - 1    # Off the bottom
+      unless pos.x? and pos.y?
+        return 'missing a position'
       if pos.x is @x and pos.y is @y
-        return null # Already in this postion, doesn't count as a move
+        return 'already in this position'
       else
         @x = pos.x
         @y = pos.y
         @actions++
     team: 0 # dark or light team?
 
-  angular.extend Piece, _static
+  Piece
 
 
 
 .directive 'piece', (cfg) ->
   restrict: 'A'
-#  scope: piece: '='
   link: (scope, el, attrs) ->
-    console.log 'piece scope', scope
-    pieceSize = undefined
     draggie = new Draggabilly el[0]
     draggie.on 'dragEnd', (draggie, evt, pointer) ->
       console.warn 'can not position piece without knowing size' unless cfg.pieceSize
@@ -56,7 +55,7 @@ angular.module('prince')
       return unless pos.x? and pos.y?
       # Announce the new x/y coord to scope. It will assign the css class and css will handle the positioning
       scope.$apply ->
-        scope.piece.move pos
+        console.log scope.piece.move pos
 
 
 

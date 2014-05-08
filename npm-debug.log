@@ -1,0 +1,1551 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@1.2.28
+3 info using node@v0.10.4
+4 verbose node symlink /usr/local/bin/node
+5 verbose read json /Users/eric/Projects/thePrinceBoardGame/package.json
+6 warn package.json thePrince@0.0.1 No repository field.
+7 verbose readDependencies using package.json deps
+8 verbose install where, deps [ '/Users/eric/Projects/thePrinceBoardGame',
+8 verbose install   [ 'grunt',
+8 verbose install     'grunt-contrib-copy',
+8 verbose install     'grunt-contrib-cssmin',
+8 verbose install     'grunt-contrib-connect',
+8 verbose install     'grunt-contrib-clean',
+8 verbose install     'grunt-contrib-htmlmin',
+8 verbose install     'grunt-contrib-imagemin',
+8 verbose install     'grunt-contrib-watch',
+8 verbose install     'grunt-rev',
+8 verbose install     'grunt-mocha',
+8 verbose install     'grunt-open',
+8 verbose install     'grunt-concurrent',
+8 verbose install     'load-grunt-tasks',
+8 verbose install     'connect-livereload',
+8 verbose install     'time-grunt',
+8 verbose install     'grunt-contrib-concat',
+8 verbose install     'grunt-usemin' ] ]
+9 verbose from cache /Users/eric/Projects/thePrinceBoardGame/package.json
+10 info preinstall thePrince@0.0.1
+11 verbose read json /Users/eric/Projects/thePrinceBoardGame/node_modules/connect-livereload/package.json
+12 verbose read json /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt/package.json
+13 verbose read json /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-concurrent/package.json
+14 verbose read json /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-clean/package.json
+15 verbose read json /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-concat/package.json
+16 verbose read json /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-connect/package.json
+17 verbose read json /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-copy/package.json
+18 verbose read json /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-cssmin/package.json
+19 verbose read json /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-htmlmin/package.json
+20 verbose read json /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/package.json
+21 verbose read json /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-watch/package.json
+22 verbose read json /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-mocha/package.json
+23 verbose read json /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-open/package.json
+24 verbose read json /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-rev/package.json
+25 verbose read json /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-usemin/package.json
+26 verbose read json /Users/eric/Projects/thePrinceBoardGame/node_modules/load-grunt-tasks/package.json
+27 verbose read json /Users/eric/Projects/thePrinceBoardGame/node_modules/time-grunt/package.json
+28 verbose from cache /Users/eric/Projects/thePrinceBoardGame/package.json
+29 verbose readDependencies using package.json deps
+30 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/connect-livereload/package.json
+31 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt/package.json
+32 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-concurrent/package.json
+33 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-clean/package.json
+34 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-concat/package.json
+35 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-connect/package.json
+36 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-copy/package.json
+37 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-cssmin/package.json
+38 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-htmlmin/package.json
+39 verbose read json /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/package.json
+40 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-watch/package.json
+41 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-mocha/package.json
+42 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-open/package.json
+43 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-rev/package.json
+44 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-usemin/package.json
+45 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/load-grunt-tasks/package.json
+46 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/time-grunt/package.json
+47 verbose already installed skipping grunt-contrib-htmlmin@~0.1.3 /Users/eric/Projects/thePrinceBoardGame
+48 verbose already installed skipping grunt-contrib-watch@~0.5.2 /Users/eric/Projects/thePrinceBoardGame
+49 verbose cache add [ 'grunt-contrib-imagemin@~0.2.0', null ]
+50 verbose cache add name=undefined spec="grunt-contrib-imagemin@~0.2.0" args=["grunt-contrib-imagemin@~0.2.0",null]
+51 verbose parsed url { protocol: null,
+51 verbose parsed url   slashes: null,
+51 verbose parsed url   auth: null,
+51 verbose parsed url   host: null,
+51 verbose parsed url   port: null,
+51 verbose parsed url   hostname: null,
+51 verbose parsed url   hash: null,
+51 verbose parsed url   search: null,
+51 verbose parsed url   query: null,
+51 verbose parsed url   pathname: 'grunt-contrib-imagemin@~0.2.0',
+51 verbose parsed url   path: 'grunt-contrib-imagemin@~0.2.0',
+51 verbose parsed url   href: 'grunt-contrib-imagemin@~0.2.0' }
+52 verbose cache add name="grunt-contrib-imagemin" spec="~0.2.0" args=["grunt-contrib-imagemin","~0.2.0"]
+53 verbose parsed url { protocol: null,
+53 verbose parsed url   slashes: null,
+53 verbose parsed url   auth: null,
+53 verbose parsed url   host: null,
+53 verbose parsed url   port: null,
+53 verbose parsed url   hostname: null,
+53 verbose parsed url   hash: null,
+53 verbose parsed url   search: null,
+53 verbose parsed url   query: null,
+53 verbose parsed url   pathname: '~0.2.0',
+53 verbose parsed url   path: '~0.2.0',
+53 verbose parsed url   href: '~0.2.0' }
+54 verbose addNamed [ 'grunt-contrib-imagemin', '~0.2.0' ]
+55 verbose addNamed [ null, '>=0.2.0- <0.3.0-' ]
+56 verbose already installed skipping grunt-rev@~0.1.0 /Users/eric/Projects/thePrinceBoardGame
+57 silly lockFile 65f7368c-grunt-contrib-imagemin-0-2-0 grunt-contrib-imagemin@~0.2.0
+58 verbose lock grunt-contrib-imagemin@~0.2.0 /Users/eric/.npm/65f7368c-grunt-contrib-imagemin-0-2-0.lock
+59 verbose already installed skipping grunt-open@~0.2.0 /Users/eric/Projects/thePrinceBoardGame
+60 verbose already installed skipping grunt-mocha@~0.4.0 /Users/eric/Projects/thePrinceBoardGame
+61 silly addNameRange { name: 'grunt-contrib-imagemin',
+61 silly addNameRange   range: '>=0.2.0- <0.3.0-',
+61 silly addNameRange   hasData: false }
+62 verbose already installed skipping load-grunt-tasks@~0.1.0 /Users/eric/Projects/thePrinceBoardGame
+63 verbose already installed skipping grunt-concurrent@~0.3.0 /Users/eric/Projects/thePrinceBoardGame
+64 verbose already installed skipping connect-livereload@~0.2.0 /Users/eric/Projects/thePrinceBoardGame
+65 verbose already installed skipping time-grunt@~0.1.1 /Users/eric/Projects/thePrinceBoardGame
+66 verbose url raw grunt-contrib-imagemin
+67 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-imagemin' ]
+68 verbose url resolved https://registry.npmjs.org/grunt-contrib-imagemin
+69 info trying registry request attempt 1 at 20:51:48
+70 verbose etag "CCDLY11PR3WAHFKMWI1G2LHU"
+71 http GET https://registry.npmjs.org/grunt-contrib-imagemin
+72 verbose already installed skipping grunt-usemin@~2.0.2 /Users/eric/Projects/thePrinceBoardGame
+73 verbose already installed skipping grunt-contrib-concat@~0.3.0 /Users/eric/Projects/thePrinceBoardGame
+74 verbose already installed skipping grunt@~0.4.1 /Users/eric/Projects/thePrinceBoardGame
+75 verbose already installed skipping grunt-contrib-copy@~0.4.1 /Users/eric/Projects/thePrinceBoardGame
+76 verbose already installed skipping grunt-contrib-cssmin@~0.6.0 /Users/eric/Projects/thePrinceBoardGame
+77 verbose already installed skipping grunt-contrib-connect@~0.3.0 /Users/eric/Projects/thePrinceBoardGame
+78 verbose already installed skipping grunt-contrib-clean@~0.5.0 /Users/eric/Projects/thePrinceBoardGame
+79 http 304 https://registry.npmjs.org/grunt-contrib-imagemin
+80 silly registry.get cb [ 304,
+80 silly registry.get   { date: 'Thu, 08 May 2014 03:51:47 GMT',
+80 silly registry.get     server: 'Apache',
+80 silly registry.get     via: '1.1 varnish',
+80 silly registry.get     'last-modified': 'Thu, 08 May 2014 03:51:47 GMT',
+80 silly registry.get     'cache-control': 'max-age=1',
+80 silly registry.get     etag: '"CCDLY11PR3WAHFKMWI1G2LHU"',
+80 silly registry.get     'x-served-by': 'cache-sv60-SJC3',
+80 silly registry.get     'x-cache': 'MISS',
+80 silly registry.get     'x-cache-hits': '0',
+80 silly registry.get     'x-timer': 'S1399521107.674065113,VS0,VE76',
+80 silly registry.get     vary: 'Accept',
+80 silly registry.get     'content-length': '0',
+80 silly registry.get     'keep-alive': 'timeout=10, max=50',
+80 silly registry.get     connection: 'Keep-Alive' } ]
+81 verbose etag grunt-contrib-imagemin from cache
+82 silly addNameRange number 2 { name: 'grunt-contrib-imagemin',
+82 silly addNameRange   range: '>=0.2.0- <0.3.0-',
+82 silly addNameRange   hasData: true }
+83 silly addNameRange versions [ 'grunt-contrib-imagemin',
+83 silly addNameRange   [ '0.1.0',
+83 silly addNameRange     '0.1.1',
+83 silly addNameRange     '0.1.2',
+83 silly addNameRange     '0.1.3',
+83 silly addNameRange     '0.1.4',
+83 silly addNameRange     '0.1.1-rc7',
+83 silly addNameRange     '0.1.1-rc8',
+83 silly addNameRange     '0.2.0',
+83 silly addNameRange     '0.2.1',
+83 silly addNameRange     '0.3.0',
+83 silly addNameRange     '0.4.0',
+83 silly addNameRange     '0.4.1',
+83 silly addNameRange     '0.5.0',
+83 silly addNameRange     '0.6.0',
+83 silly addNameRange     '0.6.1',
+83 silly addNameRange     '0.7.0' ] ]
+84 verbose addNamed [ 'grunt-contrib-imagemin', '0.2.1' ]
+85 verbose addNamed [ '0.2.1', '0.2.1' ]
+86 silly lockFile c4800b2c-grunt-contrib-imagemin-0-2-1 grunt-contrib-imagemin@0.2.1
+87 verbose lock grunt-contrib-imagemin@0.2.1 /Users/eric/.npm/c4800b2c-grunt-contrib-imagemin-0-2-1.lock
+88 verbose read json /Users/eric/.npm/grunt-contrib-imagemin/0.2.1/package/package.json
+89 silly lockFile c4800b2c-grunt-contrib-imagemin-0-2-1 grunt-contrib-imagemin@0.2.1
+90 silly lockFile c4800b2c-grunt-contrib-imagemin-0-2-1 grunt-contrib-imagemin@0.2.1
+91 silly lockFile 65f7368c-grunt-contrib-imagemin-0-2-0 grunt-contrib-imagemin@~0.2.0
+92 silly lockFile 65f7368c-grunt-contrib-imagemin-0-2-0 grunt-contrib-imagemin@~0.2.0
+93 silly resolved [ { name: 'grunt-contrib-imagemin',
+93 silly resolved     description: 'Minify PNG and JPEG images',
+93 silly resolved     version: '0.2.1',
+93 silly resolved     homepage: 'https://github.com/gruntjs/grunt-contrib-imagemin',
+93 silly resolved     author: { name: 'Grunt Team', url: 'http://gruntjs.com/' },
+93 silly resolved     repository:
+93 silly resolved      { type: 'git',
+93 silly resolved        url: 'git://github.com/gruntjs/grunt-contrib-imagemin.git' },
+93 silly resolved     bugs: { url: 'https://github.com/gruntjs/grunt-contrib-imagemin/issues' },
+93 silly resolved     licenses: [ [Object] ],
+93 silly resolved     main: 'Gruntfile.js',
+93 silly resolved     engines: { node: '>=0.8.0' },
+93 silly resolved     scripts: { test: 'grunt test' },
+93 silly resolved     dependencies:
+93 silly resolved      { filesize: '~1.10.0',
+93 silly resolved        'jpegtran-bin': '~0.2.0',
+93 silly resolved        'optipng-bin': '~0.3.0',
+93 silly resolved        gifsicle: '~0.1.0',
+93 silly resolved        'pngquant-bin': '~0.1.0',
+93 silly resolved        chalk: '~0.2.0' },
+93 silly resolved     devDependencies:
+93 silly resolved      { 'grunt-contrib-internal': '~0.4.3',
+93 silly resolved        'grunt-contrib-clean': '~0.5.0',
+93 silly resolved        'grunt-contrib-jshint': '~0.6.2',
+93 silly resolved        'grunt-contrib-nodeunit': '~0.2.0',
+93 silly resolved        grunt: '~0.4.0' },
+93 silly resolved     peerDependencies: { grunt: '~0.4.0' },
+93 silly resolved     keywords:
+93 silly resolved      [ 'gruntplugin',
+93 silly resolved        'image',
+93 silly resolved        'img',
+93 silly resolved        'minify',
+93 silly resolved        'compress',
+93 silly resolved        'png',
+93 silly resolved        'jpg',
+93 silly resolved        'jpeg' ],
+93 silly resolved     files: [ 'tasks/imagemin.js' ],
+93 silly resolved     readme: '# grunt-contrib-imagemin [![Build Status](https://secure.travis-ci.org/gruntjs/grunt-contrib-imagemin.png?branch=master)](http://travis-ci.org/gruntjs/grunt-contrib-imagemin)\n\n> Minify PNG and JPEG images\n\n\n\n## Getting Started\nThis plugin requires Grunt `~0.4.0`\n\nIf you haven\'t used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you\'re familiar with that process, you may install this plugin with this command:\n\n```shell\nnpm install grunt-contrib-imagemin --save-dev\n```\n\nOnce the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:\n\n```js\ngrunt.loadNpmTasks(\'grunt-contrib-imagemin\');\n```\n\n\n\n\n## Imagemin task\n_Run this task with the `grunt imagemin` command._\n\nTask targets, files and options may be specified according to the grunt [Configuring tasks](http://gruntjs.com/configuring-tasks) guide.\n\nMinify images using [OptiPNG](http://optipng.sourceforge.net), [pngquant](http://pngquant.org), [jpegtran](http://jpegclub.org/jpegtran/) and [gifsicle](http://www.lcdf.org/gifsicle).\n\nImages will be cached and only minified again if they change.\n\n### Options\n\nOptions will only apply to the relevant files, so you don\'t need separate targets for png/jpg.\n\n\n#### optimizationLevel *(png only)*\n\nType: `Number`\nDefault: `7`\n\nSelect optimization level between `0` and `7`.\n\n> The optimization level 0 enables a set of optimization operations that require minimal effort. There will be no changes to image attributes like bit depth or color type, and no recompression of existing IDAT datastreams. The optimization level 1 enables a single IDAT compression trial. The trial chosen is what. OptiPNG thinks it’s probably the most effective. The optimization levels 2 and higher enable multiple IDAT compression trials; the higher the level, the more trials.\n\nLevel and trials:\n\n1. 1 trial\n2. 8 trials\n3. 16 trials\n4. 24 trials\n5. 48 trials\n6. 120 trials\n7. 240 trials\n\n\n#### progressive *(jpg only)*\n\nType: `Boolean`\nDefault: `true`\n\nLossless conversion to progressive.\n\n\n#### pngquant\n\nType: `Boolean`\nDefault: `true`\n\nWhether to enable pngquant compression.\n\n> pngquant is a command-line utility for converting 24/32-bit PNG images to paletted (8-bit) PNGs. The conversion reduces file sizes significantly (often as much as 70%) and preserves full alpha transparency.\n\n#### Example config\n\nYou can either map your files statically or [dynamically](https://github.com/gruntjs/grunt/wiki/Configuring-tasks#building-the-files-object-dynamically).\n\n```javascript\ngrunt.initConfig({\n  imagemin: {                          // Task\n    static: {                          // Target\n      options: {                       // Target options\n        optimizationLevel: 3\n      },\n      files: {                         // Dictionary of files\n        \'dist/img.png\': \'src/img.png\', // \'destination\': \'source\'\n        \'dist/img.jpg\': \'src/img.jpg\',\n        \'dist/img.gif\': \'src/img.gif\'\n      }\n    },\n    dynamic: {                         // Another target\n      files: [{\n        expand: true,                  // Enable dynamic expansion\n        cwd: \'src/\',                   // Src matches are relative to this path\n        src: [\'**/*.{png,jpg,gif}\'],   // Actual patterns to match\n        dest: \'dist/\'                  // Destination path prefix\n      }]\n    }\n  }\n});\n\ngrunt.loadNpmTasks(\'grunt-contrib-imagemin\');\ngrunt.registerTask(\'default\', [\'imagemin\']);\n```\n\n\n## Release History\n\n * 2013-08-16   v0.2.0   Add `gifsicle` and `pngquant`. Cache images so only changed images are optimized. Default `optimizationLevel` to `7` and `progressive` to `true`.\n * 2013-04-10   v0.1.4   Fix exception when running in verbose mode.\n * 2013-04-05   v0.1.3   Fix OptiPNG not being able to overwrite file. Allow overwriting src when dest/src is the same. Limit to 10 concurrent optimizations.\n * 2013-02-22   v0.1.2   Fix OptiPNG not working on some systems. Prevent OptiPNG from producing .bak files.\n * 2013-02-15   v0.1.1   First official release for Grunt 0.4.0.\n * 2013-01-30   v0.1.1rc8   Fix task not creating destination folders\n * 2013-01-30   v0.1.1rc7   Updating to work with grunt v0.4.0rc7. Switching to this.files api.\n * 2012-11-01   v0.1.0   Initial release.\n\n---\n\nTask submitted by [Sindre Sorhus](http://github.com/sindresorhus)\n\n*This file was generated on Fri Aug 16 2013 20:16:49.*\n',
+93 silly resolved     readmeFilename: 'README.md',
+93 silly resolved     _id: 'grunt-contrib-imagemin@0.2.1',
+93 silly resolved     _from: 'grunt-contrib-imagemin@~0.2.0' } ]
+94 info install grunt-contrib-imagemin@0.2.1 into /Users/eric/Projects/thePrinceBoardGame
+95 info installOne grunt-contrib-imagemin@0.2.1
+96 verbose from cache /Users/eric/.npm/grunt-contrib-imagemin/0.2.1/package/package.json
+97 info /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin unbuild
+98 verbose read json /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/package.json
+99 verbose tar unpack /Users/eric/.npm/grunt-contrib-imagemin/0.2.1/package.tgz
+100 silly lockFile f9df97ff-e-modules-grunt-contrib-imagemin tar:///Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin
+101 verbose lock tar:///Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin /Users/eric/.npm/f9df97ff-e-modules-grunt-contrib-imagemin.lock
+102 silly lockFile 78bdbc94-ntrib-imagemin-0-2-1-package-tgz tar:///Users/eric/.npm/grunt-contrib-imagemin/0.2.1/package.tgz
+103 verbose lock tar:///Users/eric/.npm/grunt-contrib-imagemin/0.2.1/package.tgz /Users/eric/.npm/78bdbc94-ntrib-imagemin-0-2-1-package-tgz.lock
+104 silly gunzTarPerm modes [ '755', '644' ]
+105 silly gunzTarPerm extractEntry package.json
+106 silly gunzTarPerm extractEntry README.md
+107 silly gunzTarPerm extractEntry tasks/imagemin.js
+108 verbose read json /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/package.json
+109 silly lockFile f9df97ff-e-modules-grunt-contrib-imagemin tar:///Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin
+110 silly lockFile f9df97ff-e-modules-grunt-contrib-imagemin tar:///Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin
+111 silly lockFile 78bdbc94-ntrib-imagemin-0-2-1-package-tgz tar:///Users/eric/.npm/grunt-contrib-imagemin/0.2.1/package.tgz
+112 silly lockFile 78bdbc94-ntrib-imagemin-0-2-1-package-tgz tar:///Users/eric/.npm/grunt-contrib-imagemin/0.2.1/package.tgz
+113 info preinstall grunt-contrib-imagemin@0.2.1
+114 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/package.json
+115 verbose readDependencies using package.json deps
+116 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/package.json
+117 verbose readDependencies using package.json deps
+118 verbose cache add [ 'filesize@~1.10.0', null ]
+119 verbose cache add name=undefined spec="filesize@~1.10.0" args=["filesize@~1.10.0",null]
+120 verbose parsed url { protocol: null,
+120 verbose parsed url   slashes: null,
+120 verbose parsed url   auth: null,
+120 verbose parsed url   host: null,
+120 verbose parsed url   port: null,
+120 verbose parsed url   hostname: null,
+120 verbose parsed url   hash: null,
+120 verbose parsed url   search: null,
+120 verbose parsed url   query: null,
+120 verbose parsed url   pathname: 'filesize@~1.10.0',
+120 verbose parsed url   path: 'filesize@~1.10.0',
+120 verbose parsed url   href: 'filesize@~1.10.0' }
+121 verbose cache add name="filesize" spec="~1.10.0" args=["filesize","~1.10.0"]
+122 verbose parsed url { protocol: null,
+122 verbose parsed url   slashes: null,
+122 verbose parsed url   auth: null,
+122 verbose parsed url   host: null,
+122 verbose parsed url   port: null,
+122 verbose parsed url   hostname: null,
+122 verbose parsed url   hash: null,
+122 verbose parsed url   search: null,
+122 verbose parsed url   query: null,
+122 verbose parsed url   pathname: '~1.10.0',
+122 verbose parsed url   path: '~1.10.0',
+122 verbose parsed url   href: '~1.10.0' }
+123 verbose addNamed [ 'filesize', '~1.10.0' ]
+124 verbose addNamed [ null, '>=1.10.0- <1.11.0-' ]
+125 silly lockFile 63ad3fa4-filesize-1-10-0 filesize@~1.10.0
+126 verbose lock filesize@~1.10.0 /Users/eric/.npm/63ad3fa4-filesize-1-10-0.lock
+127 verbose cache add [ 'jpegtran-bin@~0.2.0', null ]
+128 verbose cache add name=undefined spec="jpegtran-bin@~0.2.0" args=["jpegtran-bin@~0.2.0",null]
+129 verbose parsed url { protocol: null,
+129 verbose parsed url   slashes: null,
+129 verbose parsed url   auth: null,
+129 verbose parsed url   host: null,
+129 verbose parsed url   port: null,
+129 verbose parsed url   hostname: null,
+129 verbose parsed url   hash: null,
+129 verbose parsed url   search: null,
+129 verbose parsed url   query: null,
+129 verbose parsed url   pathname: 'jpegtran-bin@~0.2.0',
+129 verbose parsed url   path: 'jpegtran-bin@~0.2.0',
+129 verbose parsed url   href: 'jpegtran-bin@~0.2.0' }
+130 verbose cache add name="jpegtran-bin" spec="~0.2.0" args=["jpegtran-bin","~0.2.0"]
+131 verbose parsed url { protocol: null,
+131 verbose parsed url   slashes: null,
+131 verbose parsed url   auth: null,
+131 verbose parsed url   host: null,
+131 verbose parsed url   port: null,
+131 verbose parsed url   hostname: null,
+131 verbose parsed url   hash: null,
+131 verbose parsed url   search: null,
+131 verbose parsed url   query: null,
+131 verbose parsed url   pathname: '~0.2.0',
+131 verbose parsed url   path: '~0.2.0',
+131 verbose parsed url   href: '~0.2.0' }
+132 verbose addNamed [ 'jpegtran-bin', '~0.2.0' ]
+133 verbose addNamed [ null, '>=0.2.0- <0.3.0-' ]
+134 silly lockFile c8e149e4-jpegtran-bin-0-2-0 jpegtran-bin@~0.2.0
+135 verbose lock jpegtran-bin@~0.2.0 /Users/eric/.npm/c8e149e4-jpegtran-bin-0-2-0.lock
+136 verbose cache add [ 'optipng-bin@~0.3.0', null ]
+137 verbose cache add name=undefined spec="optipng-bin@~0.3.0" args=["optipng-bin@~0.3.0",null]
+138 verbose parsed url { protocol: null,
+138 verbose parsed url   slashes: null,
+138 verbose parsed url   auth: null,
+138 verbose parsed url   host: null,
+138 verbose parsed url   port: null,
+138 verbose parsed url   hostname: null,
+138 verbose parsed url   hash: null,
+138 verbose parsed url   search: null,
+138 verbose parsed url   query: null,
+138 verbose parsed url   pathname: 'optipng-bin@~0.3.0',
+138 verbose parsed url   path: 'optipng-bin@~0.3.0',
+138 verbose parsed url   href: 'optipng-bin@~0.3.0' }
+139 verbose cache add name="optipng-bin" spec="~0.3.0" args=["optipng-bin","~0.3.0"]
+140 verbose parsed url { protocol: null,
+140 verbose parsed url   slashes: null,
+140 verbose parsed url   auth: null,
+140 verbose parsed url   host: null,
+140 verbose parsed url   port: null,
+140 verbose parsed url   hostname: null,
+140 verbose parsed url   hash: null,
+140 verbose parsed url   search: null,
+140 verbose parsed url   query: null,
+140 verbose parsed url   pathname: '~0.3.0',
+140 verbose parsed url   path: '~0.3.0',
+140 verbose parsed url   href: '~0.3.0' }
+141 verbose addNamed [ 'optipng-bin', '~0.3.0' ]
+142 verbose addNamed [ null, '>=0.3.0- <0.4.0-' ]
+143 silly lockFile f9376a62-optipng-bin-0-3-0 optipng-bin@~0.3.0
+144 verbose lock optipng-bin@~0.3.0 /Users/eric/.npm/f9376a62-optipng-bin-0-3-0.lock
+145 silly addNameRange { name: 'filesize', range: '>=1.10.0- <1.11.0-', hasData: false }
+146 silly addNameRange { name: 'jpegtran-bin',
+146 silly addNameRange   range: '>=0.2.0- <0.3.0-',
+146 silly addNameRange   hasData: false }
+147 verbose cache add [ 'gifsicle@~0.1.0', null ]
+148 verbose cache add name=undefined spec="gifsicle@~0.1.0" args=["gifsicle@~0.1.0",null]
+149 verbose parsed url { protocol: null,
+149 verbose parsed url   slashes: null,
+149 verbose parsed url   auth: null,
+149 verbose parsed url   host: null,
+149 verbose parsed url   port: null,
+149 verbose parsed url   hostname: null,
+149 verbose parsed url   hash: null,
+149 verbose parsed url   search: null,
+149 verbose parsed url   query: null,
+149 verbose parsed url   pathname: 'gifsicle@~0.1.0',
+149 verbose parsed url   path: 'gifsicle@~0.1.0',
+149 verbose parsed url   href: 'gifsicle@~0.1.0' }
+150 verbose cache add name="gifsicle" spec="~0.1.0" args=["gifsicle","~0.1.0"]
+151 verbose parsed url { protocol: null,
+151 verbose parsed url   slashes: null,
+151 verbose parsed url   auth: null,
+151 verbose parsed url   host: null,
+151 verbose parsed url   port: null,
+151 verbose parsed url   hostname: null,
+151 verbose parsed url   hash: null,
+151 verbose parsed url   search: null,
+151 verbose parsed url   query: null,
+151 verbose parsed url   pathname: '~0.1.0',
+151 verbose parsed url   path: '~0.1.0',
+151 verbose parsed url   href: '~0.1.0' }
+152 verbose addNamed [ 'gifsicle', '~0.1.0' ]
+153 verbose addNamed [ null, '>=0.1.0- <0.2.0-' ]
+154 silly lockFile 4c513529-gifsicle-0-1-0 gifsicle@~0.1.0
+155 verbose lock gifsicle@~0.1.0 /Users/eric/.npm/4c513529-gifsicle-0-1-0.lock
+156 verbose cache add [ 'pngquant-bin@~0.1.0', null ]
+157 verbose cache add name=undefined spec="pngquant-bin@~0.1.0" args=["pngquant-bin@~0.1.0",null]
+158 verbose parsed url { protocol: null,
+158 verbose parsed url   slashes: null,
+158 verbose parsed url   auth: null,
+158 verbose parsed url   host: null,
+158 verbose parsed url   port: null,
+158 verbose parsed url   hostname: null,
+158 verbose parsed url   hash: null,
+158 verbose parsed url   search: null,
+158 verbose parsed url   query: null,
+158 verbose parsed url   pathname: 'pngquant-bin@~0.1.0',
+158 verbose parsed url   path: 'pngquant-bin@~0.1.0',
+158 verbose parsed url   href: 'pngquant-bin@~0.1.0' }
+159 verbose cache add name="pngquant-bin" spec="~0.1.0" args=["pngquant-bin","~0.1.0"]
+160 verbose parsed url { protocol: null,
+160 verbose parsed url   slashes: null,
+160 verbose parsed url   auth: null,
+160 verbose parsed url   host: null,
+160 verbose parsed url   port: null,
+160 verbose parsed url   hostname: null,
+160 verbose parsed url   hash: null,
+160 verbose parsed url   search: null,
+160 verbose parsed url   query: null,
+160 verbose parsed url   pathname: '~0.1.0',
+160 verbose parsed url   path: '~0.1.0',
+160 verbose parsed url   href: '~0.1.0' }
+161 verbose addNamed [ 'pngquant-bin', '~0.1.0' ]
+162 verbose addNamed [ null, '>=0.1.0- <0.2.0-' ]
+163 silly lockFile b67fe8f9-pngquant-bin-0-1-0 pngquant-bin@~0.1.0
+164 verbose lock pngquant-bin@~0.1.0 /Users/eric/.npm/b67fe8f9-pngquant-bin-0-1-0.lock
+165 silly addNameRange { name: 'optipng-bin',
+165 silly addNameRange   range: '>=0.3.0- <0.4.0-',
+165 silly addNameRange   hasData: false }
+166 verbose cache add [ 'chalk@~0.2.0', null ]
+167 verbose cache add name=undefined spec="chalk@~0.2.0" args=["chalk@~0.2.0",null]
+168 verbose parsed url { protocol: null,
+168 verbose parsed url   slashes: null,
+168 verbose parsed url   auth: null,
+168 verbose parsed url   host: null,
+168 verbose parsed url   port: null,
+168 verbose parsed url   hostname: null,
+168 verbose parsed url   hash: null,
+168 verbose parsed url   search: null,
+168 verbose parsed url   query: null,
+168 verbose parsed url   pathname: 'chalk@~0.2.0',
+168 verbose parsed url   path: 'chalk@~0.2.0',
+168 verbose parsed url   href: 'chalk@~0.2.0' }
+169 verbose cache add name="chalk" spec="~0.2.0" args=["chalk","~0.2.0"]
+170 verbose parsed url { protocol: null,
+170 verbose parsed url   slashes: null,
+170 verbose parsed url   auth: null,
+170 verbose parsed url   host: null,
+170 verbose parsed url   port: null,
+170 verbose parsed url   hostname: null,
+170 verbose parsed url   hash: null,
+170 verbose parsed url   search: null,
+170 verbose parsed url   query: null,
+170 verbose parsed url   pathname: '~0.2.0',
+170 verbose parsed url   path: '~0.2.0',
+170 verbose parsed url   href: '~0.2.0' }
+171 verbose addNamed [ 'chalk', '~0.2.0' ]
+172 verbose addNamed [ null, '>=0.2.0- <0.3.0-' ]
+173 silly lockFile 7487f3fa-chalk-0-2-0 chalk@~0.2.0
+174 verbose lock chalk@~0.2.0 /Users/eric/.npm/7487f3fa-chalk-0-2-0.lock
+175 silly addNameRange { name: 'gifsicle', range: '>=0.1.0- <0.2.0-', hasData: false }
+176 silly addNameRange { name: 'pngquant-bin',
+176 silly addNameRange   range: '>=0.1.0- <0.2.0-',
+176 silly addNameRange   hasData: false }
+177 silly addNameRange { name: 'chalk', range: '>=0.2.0- <0.3.0-', hasData: false }
+178 verbose url raw jpegtran-bin
+179 verbose url resolving [ 'https://registry.npmjs.org/', './jpegtran-bin' ]
+180 verbose url resolved https://registry.npmjs.org/jpegtran-bin
+181 info trying registry request attempt 1 at 20:51:49
+182 verbose etag "D2JDA05F8PJL9BS6G3WD4FC4T"
+183 http GET https://registry.npmjs.org/jpegtran-bin
+184 verbose url raw filesize
+185 verbose url resolving [ 'https://registry.npmjs.org/', './filesize' ]
+186 verbose url resolved https://registry.npmjs.org/filesize
+187 info trying registry request attempt 1 at 20:51:49
+188 verbose etag "2XMR93VSO6KD5UD3A5ORPT14E"
+189 http GET https://registry.npmjs.org/filesize
+190 verbose url raw optipng-bin
+191 verbose url resolving [ 'https://registry.npmjs.org/', './optipng-bin' ]
+192 verbose url resolved https://registry.npmjs.org/optipng-bin
+193 info trying registry request attempt 1 at 20:51:49
+194 verbose etag "6NIYYH16K21OQMAECMI6ATTBH"
+195 http GET https://registry.npmjs.org/optipng-bin
+196 verbose url raw gifsicle
+197 verbose url resolving [ 'https://registry.npmjs.org/', './gifsicle' ]
+198 verbose url resolved https://registry.npmjs.org/gifsicle
+199 info trying registry request attempt 1 at 20:51:49
+200 verbose etag "DRGHEJ8L5F0F8R9T94F03OHKJ"
+201 http GET https://registry.npmjs.org/gifsicle
+202 verbose url raw pngquant-bin
+203 verbose url resolving [ 'https://registry.npmjs.org/', './pngquant-bin' ]
+204 verbose url resolved https://registry.npmjs.org/pngquant-bin
+205 info trying registry request attempt 1 at 20:51:49
+206 verbose etag "4B5O1BW8BXB8OUDO91VFRYKW6"
+207 http GET https://registry.npmjs.org/pngquant-bin
+208 verbose url raw chalk
+209 verbose url resolving [ 'https://registry.npmjs.org/', './chalk' ]
+210 verbose url resolved https://registry.npmjs.org/chalk
+211 info trying registry request attempt 1 at 20:51:49
+212 verbose etag "8N90ZCS3GC42U2PJJKL158M7V"
+213 http GET https://registry.npmjs.org/chalk
+214 http 304 https://registry.npmjs.org/filesize
+215 silly registry.get cb [ 304,
+215 silly registry.get   { date: 'Thu, 08 May 2014 03:51:48 GMT',
+215 silly registry.get     server: 'Apache',
+215 silly registry.get     via: '1.1 varnish',
+215 silly registry.get     'last-modified': 'Thu, 08 May 2014 03:51:48 GMT',
+215 silly registry.get     'cache-control': 'max-age=1',
+215 silly registry.get     etag: '"2XMR93VSO6KD5UD3A5ORPT14E"',
+215 silly registry.get     'x-served-by': 'cache-sv60-SJC3',
+215 silly registry.get     'x-cache': 'HIT',
+215 silly registry.get     'x-cache-hits': '1',
+215 silly registry.get     'x-timer': 'S1399521108.003186941,VS0,VE85',
+215 silly registry.get     vary: 'Accept',
+215 silly registry.get     'content-length': '0',
+215 silly registry.get     'keep-alive': 'timeout=10, max=50',
+215 silly registry.get     connection: 'Keep-Alive' } ]
+216 verbose etag filesize from cache
+217 http 304 https://registry.npmjs.org/jpegtran-bin
+218 silly registry.get cb [ 304,
+218 silly registry.get   { date: 'Thu, 08 May 2014 03:51:48 GMT',
+218 silly registry.get     server: 'Apache',
+218 silly registry.get     via: '1.1 varnish',
+218 silly registry.get     'last-modified': 'Thu, 08 May 2014 03:51:48 GMT',
+218 silly registry.get     'cache-control': 'max-age=1',
+218 silly registry.get     etag: '"D2JDA05F8PJL9BS6G3WD4FC4T"',
+218 silly registry.get     'x-served-by': 'cache-sv61-SJC3',
+218 silly registry.get     'x-cache': 'MISS',
+218 silly registry.get     'x-cache-hits': '0',
+218 silly registry.get     'x-timer': 'S1399521108.003193855,VS0,VE83',
+218 silly registry.get     vary: 'Accept',
+218 silly registry.get     'content-length': '0',
+218 silly registry.get     'keep-alive': 'timeout=10, max=50',
+218 silly registry.get     connection: 'Keep-Alive' } ]
+219 verbose etag jpegtran-bin from cache
+220 silly addNameRange number 2 { name: 'filesize', range: '>=1.10.0- <1.11.0-', hasData: true }
+221 silly addNameRange versions [ 'filesize',
+221 silly addNameRange   [ '1.6.0',
+221 silly addNameRange     '1.6.1',
+221 silly addNameRange     '1.6.2',
+221 silly addNameRange     '1.6.3',
+221 silly addNameRange     '1.6.4',
+221 silly addNameRange     '1.6.5',
+221 silly addNameRange     '1.6.6',
+221 silly addNameRange     '1.6.7',
+221 silly addNameRange     '1.7.0',
+221 silly addNameRange     '1.7.1',
+221 silly addNameRange     '1.7.2',
+221 silly addNameRange     '1.7.3',
+221 silly addNameRange     '1.7.4',
+221 silly addNameRange     '1.7.5',
+221 silly addNameRange     '1.7.6',
+221 silly addNameRange     '1.7.7',
+221 silly addNameRange     '1.7.8',
+221 silly addNameRange     '1.7.9',
+221 silly addNameRange     '1.8.0',
+221 silly addNameRange     '1.9.0',
+221 silly addNameRange     '1.9.1',
+221 silly addNameRange     '1.9.2',
+221 silly addNameRange     '1.9.3',
+221 silly addNameRange     '1.9.4',
+221 silly addNameRange     '1.9.5',
+221 silly addNameRange     '1.9.6',
+221 silly addNameRange     '1.9.7',
+221 silly addNameRange     '1.10.0',
+221 silly addNameRange     '2.0.0',
+221 silly addNameRange     '2.0.1',
+221 silly addNameRange     '2.0.2',
+221 silly addNameRange     '2.0.3' ] ]
+222 verbose addNamed [ 'filesize', '1.10.0' ]
+223 verbose addNamed [ '1.10.0', '1.10.0' ]
+224 silly lockFile 2f05b5c3-filesize-1-10-0 filesize@1.10.0
+225 verbose lock filesize@1.10.0 /Users/eric/.npm/2f05b5c3-filesize-1-10-0.lock
+226 silly addNameRange number 2 { name: 'jpegtran-bin',
+226 silly addNameRange   range: '>=0.2.0- <0.3.0-',
+226 silly addNameRange   hasData: true }
+227 silly addNameRange versions [ 'jpegtran-bin',
+227 silly addNameRange   [ '0.1.0',
+227 silly addNameRange     '0.1.2',
+227 silly addNameRange     '0.1.3',
+227 silly addNameRange     '0.1.4',
+227 silly addNameRange     '0.1.5',
+227 silly addNameRange     '0.1.6',
+227 silly addNameRange     '0.1.7',
+227 silly addNameRange     '0.2.0',
+227 silly addNameRange     '0.2.1',
+227 silly addNameRange     '0.2.2',
+227 silly addNameRange     '0.2.3',
+227 silly addNameRange     '0.2.6' ] ]
+228 verbose addNamed [ 'jpegtran-bin', '0.2.6' ]
+229 verbose addNamed [ '0.2.6', '0.2.6' ]
+230 silly lockFile 63e01147-jpegtran-bin-0-2-6 jpegtran-bin@0.2.6
+231 verbose lock jpegtran-bin@0.2.6 /Users/eric/.npm/63e01147-jpegtran-bin-0-2-6.lock
+232 verbose read json /Users/eric/.npm/filesize/1.10.0/package/package.json
+233 verbose read json /Users/eric/.npm/jpegtran-bin/0.2.6/package/package.json
+234 silly lockFile 2f05b5c3-filesize-1-10-0 filesize@1.10.0
+235 silly lockFile 2f05b5c3-filesize-1-10-0 filesize@1.10.0
+236 silly lockFile 63ad3fa4-filesize-1-10-0 filesize@~1.10.0
+237 silly lockFile 63ad3fa4-filesize-1-10-0 filesize@~1.10.0
+238 silly lockFile 63e01147-jpegtran-bin-0-2-6 jpegtran-bin@0.2.6
+239 silly lockFile 63e01147-jpegtran-bin-0-2-6 jpegtran-bin@0.2.6
+240 silly lockFile c8e149e4-jpegtran-bin-0-2-0 jpegtran-bin@~0.2.0
+241 silly lockFile c8e149e4-jpegtran-bin-0-2-0 jpegtran-bin@~0.2.0
+242 http 304 https://registry.npmjs.org/gifsicle
+243 silly registry.get cb [ 304,
+243 silly registry.get   { date: 'Thu, 08 May 2014 03:51:48 GMT',
+243 silly registry.get     server: 'Apache',
+243 silly registry.get     via: '1.1 varnish',
+243 silly registry.get     'last-modified': 'Thu, 08 May 2014 03:51:48 GMT',
+243 silly registry.get     'cache-control': 'max-age=1',
+243 silly registry.get     etag: '"DRGHEJ8L5F0F8R9T94F03OHKJ"',
+243 silly registry.get     'x-served-by': 'cache-sv62-SJC3',
+243 silly registry.get     'x-cache': 'HIT',
+243 silly registry.get     'x-cache-hits': '1',
+243 silly registry.get     'x-timer': 'S1399521108.017703772,VS0,VE149',
+243 silly registry.get     vary: 'Accept',
+243 silly registry.get     'content-length': '0',
+243 silly registry.get     'keep-alive': 'timeout=10, max=50',
+243 silly registry.get     connection: 'Keep-Alive' } ]
+244 verbose etag gifsicle from cache
+245 http 304 https://registry.npmjs.org/pngquant-bin
+246 silly registry.get cb [ 304,
+246 silly registry.get   { date: 'Thu, 08 May 2014 03:51:48 GMT',
+246 silly registry.get     server: 'Apache',
+246 silly registry.get     via: '1.1 varnish',
+246 silly registry.get     'last-modified': 'Thu, 08 May 2014 03:51:48 GMT',
+246 silly registry.get     'cache-control': 'max-age=1',
+246 silly registry.get     etag: '"4B5O1BW8BXB8OUDO91VFRYKW6"',
+246 silly registry.get     'x-served-by': 'cache-sv60-SJC3',
+246 silly registry.get     'x-cache': 'MISS',
+246 silly registry.get     'x-cache-hits': '0',
+246 silly registry.get     'x-timer': 'S1399521108.014993668,VS0,VE158',
+246 silly registry.get     vary: 'Accept',
+246 silly registry.get     'content-length': '0',
+246 silly registry.get     'keep-alive': 'timeout=10, max=50',
+246 silly registry.get     connection: 'Keep-Alive' } ]
+247 verbose etag pngquant-bin from cache
+248 silly addNameRange number 2 { name: 'gifsicle', range: '>=0.1.0- <0.2.0-', hasData: true }
+249 silly addNameRange versions [ 'gifsicle',
+249 silly addNameRange   [ '0.1.0', '0.1.1', '0.1.2', '0.1.3', '0.1.4', '0.1.5' ] ]
+250 verbose addNamed [ 'gifsicle', '0.1.5' ]
+251 verbose addNamed [ '0.1.5', '0.1.5' ]
+252 silly lockFile 52fbe105-gifsicle-0-1-5 gifsicle@0.1.5
+253 verbose lock gifsicle@0.1.5 /Users/eric/.npm/52fbe105-gifsicle-0-1-5.lock
+254 verbose read json /Users/eric/.npm/gifsicle/0.1.5/package/package.json
+255 silly addNameRange number 2 { name: 'pngquant-bin',
+255 silly addNameRange   range: '>=0.1.0- <0.2.0-',
+255 silly addNameRange   hasData: true }
+256 silly addNameRange versions [ 'pngquant-bin',
+256 silly addNameRange   [ '0.1.0',
+256 silly addNameRange     '0.1.1',
+256 silly addNameRange     '0.1.2',
+256 silly addNameRange     '0.1.3',
+256 silly addNameRange     '0.1.4',
+256 silly addNameRange     '0.1.6',
+256 silly addNameRange     '0.1.7',
+256 silly addNameRange     '0.2.0',
+256 silly addNameRange     '0.3.0' ] ]
+257 verbose addNamed [ 'pngquant-bin', '0.1.7' ]
+258 verbose addNamed [ '0.1.7', '0.1.7' ]
+259 silly lockFile cd4c3161-pngquant-bin-0-1-7 pngquant-bin@0.1.7
+260 verbose lock pngquant-bin@0.1.7 /Users/eric/.npm/cd4c3161-pngquant-bin-0-1-7.lock
+261 silly lockFile 52fbe105-gifsicle-0-1-5 gifsicle@0.1.5
+262 silly lockFile 52fbe105-gifsicle-0-1-5 gifsicle@0.1.5
+263 verbose read json /Users/eric/.npm/pngquant-bin/0.1.7/package/package.json
+264 silly lockFile 4c513529-gifsicle-0-1-0 gifsicle@~0.1.0
+265 silly lockFile 4c513529-gifsicle-0-1-0 gifsicle@~0.1.0
+266 silly lockFile cd4c3161-pngquant-bin-0-1-7 pngquant-bin@0.1.7
+267 silly lockFile cd4c3161-pngquant-bin-0-1-7 pngquant-bin@0.1.7
+268 silly lockFile b67fe8f9-pngquant-bin-0-1-0 pngquant-bin@~0.1.0
+269 silly lockFile b67fe8f9-pngquant-bin-0-1-0 pngquant-bin@~0.1.0
+270 http 200 https://registry.npmjs.org/chalk
+271 silly registry.get cb [ 200,
+271 silly registry.get   { date: 'Thu, 08 May 2014 03:51:48 GMT',
+271 silly registry.get     server: 'CouchDB/1.6.0+build.fauxton-91-g5a2864b (Erlang OTP/R14B04)',
+271 silly registry.get     etag: '"13QLXJSEGTLSAKJ3T160U5M3R"',
+271 silly registry.get     'content-type': 'application/json',
+271 silly registry.get     via: '1.1 varnish',
+271 silly registry.get     'cache-control': 'max-age=1',
+271 silly registry.get     'content-length': '12548',
+271 silly registry.get     'accept-ranges': 'bytes',
+271 silly registry.get     age: '471',
+271 silly registry.get     'x-served-by': 'cache-v43-ASH, cache-sv60-SJC3',
+271 silly registry.get     'x-cache': 'HIT, HIT',
+271 silly registry.get     'x-cache-hits': '6, 1',
+271 silly registry.get     'x-timer': 'S1399489459.576487780,VS0,VS36,VE36,VE31648611',
+271 silly registry.get     vary: 'Accept',
+271 silly registry.get     'keep-alive': 'timeout=10, max=49',
+271 silly registry.get     connection: 'Keep-Alive' } ]
+272 silly addNameRange number 2 { name: 'chalk', range: '>=0.2.0- <0.3.0-', hasData: true }
+273 silly addNameRange versions [ 'chalk',
+273 silly addNameRange   [ '0.1.0', '0.1.1', '0.2.0', '0.2.1', '0.3.0', '0.4.0' ] ]
+274 verbose addNamed [ 'chalk', '0.2.1' ]
+275 verbose addNamed [ '0.2.1', '0.2.1' ]
+276 silly lockFile 19eadf37-chalk-0-2-1 chalk@0.2.1
+277 verbose lock chalk@0.2.1 /Users/eric/.npm/19eadf37-chalk-0-2-1.lock
+278 verbose read json /Users/eric/.npm/chalk/0.2.1/package/package.json
+279 silly lockFile 19eadf37-chalk-0-2-1 chalk@0.2.1
+280 silly lockFile 19eadf37-chalk-0-2-1 chalk@0.2.1
+281 silly lockFile 7487f3fa-chalk-0-2-0 chalk@~0.2.0
+282 silly lockFile 7487f3fa-chalk-0-2-0 chalk@~0.2.0
+283 http 200 https://registry.npmjs.org/optipng-bin
+284 silly registry.get cb [ 200,
+284 silly registry.get   { date: 'Thu, 08 May 2014 03:51:48 GMT',
+284 silly registry.get     server: 'CouchDB/1.6.0+build.fauxton-91-g5a2864b (Erlang OTP/R14B04)',
+284 silly registry.get     etag: '"H7NNIWKEHSO9AWWPHVM1K62M"',
+284 silly registry.get     'content-type': 'application/json',
+284 silly registry.get     via: '1.1 varnish',
+284 silly registry.get     'cache-control': 'max-age=1',
+284 silly registry.get     'content-length': '26194',
+284 silly registry.get     'accept-ranges': 'bytes',
+284 silly registry.get     age: '262',
+284 silly registry.get     'x-served-by': 'cache-v37-ASH, cache-sv60-SJC3',
+284 silly registry.get     'x-cache': 'HIT, HIT',
+284 silly registry.get     'x-cache-hits': '1, 1',
+284 silly registry.get     'x-timer': 'S1399490238.364881039,VS0,VS37,VE132,VE30869818',
+284 silly registry.get     vary: 'Accept',
+284 silly registry.get     'keep-alive': 'timeout=10, max=50',
+284 silly registry.get     connection: 'Keep-Alive' } ]
+285 silly addNameRange number 2 { name: 'optipng-bin', range: '>=0.3.0- <0.4.0-', hasData: true }
+286 silly addNameRange versions [ 'optipng-bin',
+286 silly addNameRange   [ '0.1.0',
+286 silly addNameRange     '0.2.0',
+286 silly addNameRange     '0.2.1',
+286 silly addNameRange     '0.2.2',
+286 silly addNameRange     '0.2.3',
+286 silly addNameRange     '0.2.4',
+286 silly addNameRange     '0.2.5',
+286 silly addNameRange     '0.2.6',
+286 silly addNameRange     '0.3.0',
+286 silly addNameRange     '0.3.1',
+286 silly addNameRange     '0.3.2',
+286 silly addNameRange     '0.3.3',
+286 silly addNameRange     '0.3.4',
+286 silly addNameRange     '0.3.5',
+286 silly addNameRange     '0.3.6',
+286 silly addNameRange     '0.3.7',
+286 silly addNameRange     '0.3.8' ] ]
+287 verbose addNamed [ 'optipng-bin', '0.3.8' ]
+288 verbose addNamed [ '0.3.8', '0.3.8' ]
+289 silly lockFile b5017668-optipng-bin-0-3-8 optipng-bin@0.3.8
+290 verbose lock optipng-bin@0.3.8 /Users/eric/.npm/b5017668-optipng-bin-0-3-8.lock
+291 silly lockFile 0b2bdebe-ptipng-bin-optipng-bin-0-3-8-tgz https://registry.npmjs.org/optipng-bin/-/optipng-bin-0.3.8.tgz
+292 verbose lock https://registry.npmjs.org/optipng-bin/-/optipng-bin-0.3.8.tgz /Users/eric/.npm/0b2bdebe-ptipng-bin-optipng-bin-0-3-8-tgz.lock
+293 verbose addRemoteTarball [ 'https://registry.npmjs.org/optipng-bin/-/optipng-bin-0.3.8.tgz',
+293 verbose addRemoteTarball   'eb0eb3bc781fff4c84a6ab662234b8a169a8da8c' ]
+294 info retry fetch attempt 1 at 20:51:49
+295 verbose fetch to= /var/folders/ry/bhg0lbts0hxc51rv_m3l1fv00000gn/T/npm-20946/1399521109708-0.5724476247560233/tmp.tgz
+296 http GET https://registry.npmjs.org/optipng-bin/-/optipng-bin-0.3.8.tgz
+297 http 200 https://registry.npmjs.org/optipng-bin/-/optipng-bin-0.3.8.tgz
+298 verbose tar unpack /var/folders/ry/bhg0lbts0hxc51rv_m3l1fv00000gn/T/npm-20946/1399521109708-0.5724476247560233/tmp.tgz
+299 silly lockFile 7d5a516b-09708-0-5724476247560233-package tar:///var/folders/ry/bhg0lbts0hxc51rv_m3l1fv00000gn/T/npm-20946/1399521109708-0.5724476247560233/package
+300 verbose lock tar:///var/folders/ry/bhg0lbts0hxc51rv_m3l1fv00000gn/T/npm-20946/1399521109708-0.5724476247560233/package /Users/eric/.npm/7d5a516b-09708-0-5724476247560233-package.lock
+301 silly lockFile 9022522b-09708-0-5724476247560233-tmp-tgz tar:///var/folders/ry/bhg0lbts0hxc51rv_m3l1fv00000gn/T/npm-20946/1399521109708-0.5724476247560233/tmp.tgz
+302 verbose lock tar:///var/folders/ry/bhg0lbts0hxc51rv_m3l1fv00000gn/T/npm-20946/1399521109708-0.5724476247560233/tmp.tgz /Users/eric/.npm/9022522b-09708-0-5724476247560233-tmp-tgz.lock
+303 silly gunzTarPerm modes [ '755', '644' ]
+304 silly gunzTarPerm extractEntry package.json
+305 silly gunzTarPerm extractEntry cli.js
+306 silly gunzTarPerm extractEntry index.js
+307 silly gunzTarPerm extractEntry readme.md
+308 verbose read json /var/folders/ry/bhg0lbts0hxc51rv_m3l1fv00000gn/T/npm-20946/1399521109708-0.5724476247560233/package/package.json
+309 silly lockFile 7d5a516b-09708-0-5724476247560233-package tar:///var/folders/ry/bhg0lbts0hxc51rv_m3l1fv00000gn/T/npm-20946/1399521109708-0.5724476247560233/package
+310 silly lockFile 7d5a516b-09708-0-5724476247560233-package tar:///var/folders/ry/bhg0lbts0hxc51rv_m3l1fv00000gn/T/npm-20946/1399521109708-0.5724476247560233/package
+311 silly lockFile 9022522b-09708-0-5724476247560233-tmp-tgz tar:///var/folders/ry/bhg0lbts0hxc51rv_m3l1fv00000gn/T/npm-20946/1399521109708-0.5724476247560233/tmp.tgz
+312 silly lockFile 9022522b-09708-0-5724476247560233-tmp-tgz tar:///var/folders/ry/bhg0lbts0hxc51rv_m3l1fv00000gn/T/npm-20946/1399521109708-0.5724476247560233/tmp.tgz
+313 verbose from cache /var/folders/ry/bhg0lbts0hxc51rv_m3l1fv00000gn/T/npm-20946/1399521109708-0.5724476247560233/package/package.json
+314 verbose tar pack [ '/Users/eric/.npm/optipng-bin/0.3.8/package.tgz',
+314 verbose tar pack   '/var/folders/ry/bhg0lbts0hxc51rv_m3l1fv00000gn/T/npm-20946/1399521109708-0.5724476247560233/package' ]
+315 verbose tarball /Users/eric/.npm/optipng-bin/0.3.8/package.tgz
+316 verbose folder /var/folders/ry/bhg0lbts0hxc51rv_m3l1fv00000gn/T/npm-20946/1399521109708-0.5724476247560233/package
+317 silly lockFile 7d5a516b-09708-0-5724476247560233-package tar:///var/folders/ry/bhg0lbts0hxc51rv_m3l1fv00000gn/T/npm-20946/1399521109708-0.5724476247560233/package
+318 verbose lock tar:///var/folders/ry/bhg0lbts0hxc51rv_m3l1fv00000gn/T/npm-20946/1399521109708-0.5724476247560233/package /Users/eric/.npm/7d5a516b-09708-0-5724476247560233-package.lock
+319 silly lockFile 8e8e86d5-pm-optipng-bin-0-3-8-package-tgz tar:///Users/eric/.npm/optipng-bin/0.3.8/package.tgz
+320 verbose lock tar:///Users/eric/.npm/optipng-bin/0.3.8/package.tgz /Users/eric/.npm/8e8e86d5-pm-optipng-bin-0-3-8-package-tgz.lock
+321 silly lockFile 7d5a516b-09708-0-5724476247560233-package tar:///var/folders/ry/bhg0lbts0hxc51rv_m3l1fv00000gn/T/npm-20946/1399521109708-0.5724476247560233/package
+322 silly lockFile 7d5a516b-09708-0-5724476247560233-package tar:///var/folders/ry/bhg0lbts0hxc51rv_m3l1fv00000gn/T/npm-20946/1399521109708-0.5724476247560233/package
+323 silly lockFile 8e8e86d5-pm-optipng-bin-0-3-8-package-tgz tar:///Users/eric/.npm/optipng-bin/0.3.8/package.tgz
+324 silly lockFile 8e8e86d5-pm-optipng-bin-0-3-8-package-tgz tar:///Users/eric/.npm/optipng-bin/0.3.8/package.tgz
+325 silly lockFile 813c52b7-ic-npm-optipng-bin-0-3-8-package /Users/eric/.npm/optipng-bin/0.3.8/package
+326 verbose lock /Users/eric/.npm/optipng-bin/0.3.8/package /Users/eric/.npm/813c52b7-ic-npm-optipng-bin-0-3-8-package.lock
+327 silly lockFile 813c52b7-ic-npm-optipng-bin-0-3-8-package /Users/eric/.npm/optipng-bin/0.3.8/package
+328 silly lockFile 813c52b7-ic-npm-optipng-bin-0-3-8-package /Users/eric/.npm/optipng-bin/0.3.8/package
+329 verbose tar unpack /Users/eric/.npm/optipng-bin/0.3.8/package.tgz
+330 silly lockFile 38860d63-ic-npm-optipng-bin-0-3-8-package tar:///Users/eric/.npm/optipng-bin/0.3.8/package
+331 verbose lock tar:///Users/eric/.npm/optipng-bin/0.3.8/package /Users/eric/.npm/38860d63-ic-npm-optipng-bin-0-3-8-package.lock
+332 silly lockFile 8e8e86d5-pm-optipng-bin-0-3-8-package-tgz tar:///Users/eric/.npm/optipng-bin/0.3.8/package.tgz
+333 verbose lock tar:///Users/eric/.npm/optipng-bin/0.3.8/package.tgz /Users/eric/.npm/8e8e86d5-pm-optipng-bin-0-3-8-package-tgz.lock
+334 silly gunzTarPerm modes [ '755', '644' ]
+335 silly gunzTarPerm extractEntry package.json
+336 silly gunzTarPerm extractEntry cli.js
+337 silly gunzTarPerm extractEntry index.js
+338 silly gunzTarPerm extractEntry readme.md
+339 verbose read json /Users/eric/.npm/optipng-bin/0.3.8/package/package.json
+340 silly lockFile 38860d63-ic-npm-optipng-bin-0-3-8-package tar:///Users/eric/.npm/optipng-bin/0.3.8/package
+341 silly lockFile 38860d63-ic-npm-optipng-bin-0-3-8-package tar:///Users/eric/.npm/optipng-bin/0.3.8/package
+342 silly lockFile 8e8e86d5-pm-optipng-bin-0-3-8-package-tgz tar:///Users/eric/.npm/optipng-bin/0.3.8/package.tgz
+343 silly lockFile 8e8e86d5-pm-optipng-bin-0-3-8-package-tgz tar:///Users/eric/.npm/optipng-bin/0.3.8/package.tgz
+344 verbose from cache /Users/eric/.npm/optipng-bin/0.3.8/package/package.json
+345 verbose chmod /Users/eric/.npm/optipng-bin/0.3.8/package.tgz 644
+346 verbose chown /Users/eric/.npm/optipng-bin/0.3.8/package.tgz [ 501, 20 ]
+347 silly lockFile 0b2bdebe-ptipng-bin-optipng-bin-0-3-8-tgz https://registry.npmjs.org/optipng-bin/-/optipng-bin-0.3.8.tgz
+348 silly lockFile 0b2bdebe-ptipng-bin-optipng-bin-0-3-8-tgz https://registry.npmjs.org/optipng-bin/-/optipng-bin-0.3.8.tgz
+349 silly lockFile b5017668-optipng-bin-0-3-8 optipng-bin@0.3.8
+350 silly lockFile b5017668-optipng-bin-0-3-8 optipng-bin@0.3.8
+351 silly lockFile f9376a62-optipng-bin-0-3-0 optipng-bin@~0.3.0
+352 silly lockFile f9376a62-optipng-bin-0-3-0 optipng-bin@~0.3.0
+353 silly resolved [ { name: 'filesize',
+353 silly resolved     description: 'JavaScript library to generate a human readable String describing the file size',
+353 silly resolved     version: '1.10.0',
+353 silly resolved     homepage: 'http://filesizejs.com',
+353 silly resolved     author:
+353 silly resolved      { name: 'Jason Mulligan',
+353 silly resolved        email: 'jason.mulligan@avoidwork.com' },
+353 silly resolved     repository:
+353 silly resolved      { type: 'git',
+353 silly resolved        url: 'git://github.com/avoidwork/filesize.js.git' },
+353 silly resolved     bugs: { url: 'https://github.com/avoidwork/filesize.js/issues' },
+353 silly resolved     licenses: [ [Object] ],
+353 silly resolved     main: 'lib/filesize',
+353 silly resolved     engines: { node: '>= 0.4.0' },
+353 silly resolved     scripts: { test: 'grunt test' },
+353 silly resolved     devDependencies:
+353 silly resolved      { grunt: '~0.4.1',
+353 silly resolved        'grunt-cli': '~0.1.6',
+353 silly resolved        'grunt-exec': '~0.4',
+353 silly resolved        'grunt-sed': '~0.1',
+353 silly resolved        'grunt-contrib-concat': '~0.1.3',
+353 silly resolved        'grunt-contrib-jshint': '~0.1',
+353 silly resolved        'grunt-contrib-nodeunit': '~0.1.2',
+353 silly resolved        'grunt-contrib-watch': '~0.2' },
+353 silly resolved     keywords: [ 'file', 'filesize', 'size', 'readable', 'file system' ],
+353 silly resolved     readme: '[![build status](https://secure.travis-ci.org/avoidwork/filesize.js.png)](http://travis-ci.org/avoidwork/filesize.js)\n# filesize.js\n\nfilesize.js provides a simple way to get a human readable file size string from a number (float or integer) or string.  An optional second parameter is the decimal place to round to (default is 2), or _true_ which triggers Unix style output. An optional third parameter lets you disable `bit` sizes, e.g. "kb".\n\n## Examples\n\n1.10.0 switched to base 10, all previous versions use base 2.\n\n```javascript\nfilesize(500);                    // "4.00 Kb"\nfilesize(500, true);              // "4.0k"\nfilesize(1500);                   // "1.50 KB"\nfilesize("1500000000");           // "1.50 GB"\nfilesize("1500000000", 0);        // "2GB"\nfilesize(1212312421412412);       // "1.21 PB PB"\nfilesize(1212312421412412, true); // "1.1P" - shorthand output, similar to "ls -h"\nfilesize(265318, 2, false)        // "265.32 kB" - disabled `bit` sizes with third argument\n```\n\n## How can I load filesize.js?\n\nfilesize.js supports AMD loaders (require.js, curl.js, etc.), node.js & npm (npm install filesize), or using a script tag.\n\n## Support\n\nIf you\'re having problems with using the project, use the support forum at CodersClan.\n\n<a href="http://codersclan.net/forum/index.php?repo_id=11"><img src="http://www.codersclan.net/graphics/getSupport_blue_big.png" width="160"></a>\n\n## License\n\nfilesize.js is licensed under BSD-3 https://raw.github.com/avoidwork/filesize.js/master/LICENSE\n\n## Copyright\n\nCopyright (c) 2013, Jason Mulligan <jason.mulligan@avoidwork.com>\n',
+353 silly resolved     readmeFilename: 'README.md',
+353 silly resolved     _id: 'filesize@1.10.0',
+353 silly resolved     _from: 'filesize@~1.10.0' },
+353 silly resolved   { name: 'jpegtran-bin',
+353 silly resolved     version: '0.2.6',
+353 silly resolved     description: 'jpegtran (part of libjpeg-turbo) wrapper that makes it seamlessly available as a local dependency on OS X, Linux, FreeBSD, Solaris and Windows. Most commonly used to losslessly minify JPEG images.',
+353 silly resolved     keywords: [ 'jpeg', 'jpg', 'img', 'image', 'compress', 'minify', 'optimize' ],
+353 silly resolved     homepage: 'https://github.com/yeoman/node-jpegtran-bin',
+353 silly resolved     bugs: { url: 'https://github.com/yeoman/node-jpegtran-bin/issues' },
+353 silly resolved     license: 'BSD',
+353 silly resolved     author:
+353 silly resolved      { name: 'Sindre Sorhus',
+353 silly resolved        email: 'sindresorhus@gmail.com',
+353 silly resolved        url: 'http://sindresorhus.com' },
+353 silly resolved     maintainers: [ [Object] ],
+353 silly resolved     main: 'index.js',
+353 silly resolved     bin: { jpegtran: 'cli.js' },
+353 silly resolved     repository:
+353 silly resolved      { type: 'git',
+353 silly resolved        url: 'git://github.com/yeoman/node-jpegtran-bin.git' },
+353 silly resolved     scripts:
+353 silly resolved      { test: 'mocha --reporter list --timeout 0',
+353 silly resolved        postinstall: 'node index.js' },
+353 silly resolved     engines: { node: '>=0.10.0' },
+353 silly resolved     dependencies: { 'bin-wrapper': '~0.2.0', chalk: '~0.4.0' },
+353 silly resolved     devDependencies: { 'bin-check': '~0.1.0', mocha: '~1.18.2', rimraf: '~2.2.6' },
+353 silly resolved     files: [ 'cli.js', 'index.js', 'test' ],
+353 silly resolved     readme: '# node-jpegtran-bin [![Build Status](https://secure.travis-ci.org/yeoman/node-jpegtran-bin.png?branch=master)](http://travis-ci.org/yeoman/node-jpegtran-bin)\n\njpegtran 1.3 (part of [libjpeg-turbo](http://libjpeg-turbo.virtualgl.org/)) Node.js wrapper that makes it seamlessly available as a local dependency on OS X, Linux, FreeBSD, Solaris and Windows. Most commonly used to losslessly minify JPEG images.\n\n> libjpeg-turbo is a derivative of libjpeg that uses SIMD instructions (MMX, SSE2, NEON) to accelerate baseline JPEG compression and decompression on x86, x86-64, and ARM systems. On such systems, libjpeg-turbo is generally 2-4x as fast as the unmodified version of libjpeg, all else being equal.\n\n\n## Install\n\n- Install with [npm](https://npmjs.org/package/jpegtran-bin): `npm install --save jpegtran-bin`\n\n\n## Example usage\n\n```js\nvar execFile = require(\'child_process\').execFile;\nvar jpegtranPath = require(\'jpegtran-bin\').path;\n\nexecFile(jpegtranPath, [\'-outfile\', \'output.jpg\', \'input.jpg\'], function() {\n    console.log(\'Image minified\');\n});\n```\n\nCan also be run directly from `./node_modules/.bin/jpegtran`.\n\n\n## Dev\n\nNote to self on how to update the binaries.\n\n### OS X and Linux\n\n- Run `npm install` to build the binary.\n\nThe `nasm` (Netwide Assember) package is required to build the binary on Ubuntu.\n\n### Windows\n\n- Download the [Windows files 32/64-bit](http://sourceforge.net/projects/libjpeg-turbo/files/) (GCC compiled) on a Windows machine\n\n  (current version 1.3.0, x64 `libjpeg-turbo-1.3.0-gcc64.exe` and for x86 `libjpeg-turbo-1.3.0-gcc.exe`)\n- Run the downloaded file to extract\n- In the extracted folder go to the `bin` folder and copy `jpegtran.exe` and `libjpeg-62.dll` to `jpegtran-bin\\vendor\\` folder\n  \n  (for `grunt-contrib-imagemin` the folder is `grunt-contrib-imagemin\\node_modules\\jpegtran-bin\\vendor\\`)\n\n\n## License\n\nEverything excluding the binaries licensed under the [BSD license](http://opensource.org/licenses/bsd-license.php) and copyright Google.\n\nlibjpeg-turbo licensed under the BSD license and copyright dcommander.\n',
+353 silly resolved     readmeFilename: 'readme.md',
+353 silly resolved     _id: 'jpegtran-bin@0.2.6',
+353 silly resolved     _from: 'jpegtran-bin@~0.2.0' },
+353 silly resolved   { name: 'gifsicle',
+353 silly resolved     version: '0.1.5',
+353 silly resolved     description: 'gifsicle wrapper that makes it seamlessly available as a local dependency on OS X, Linux and Windows',
+353 silly resolved     keywords: [ 'gif', 'img', 'image', 'compress', 'minify', 'optimize' ],
+353 silly resolved     author:
+353 silly resolved      { name: 'Kevin Martensson',
+353 silly resolved        email: 'kevinmartensson@gmail.com',
+353 silly resolved        url: 'http://kevinmartensson.com' },
+353 silly resolved     license: 'BSD',
+353 silly resolved     repository: { type: 'git', url: 'yeoman/node-gifsicle' },
+353 silly resolved     main: 'index.js',
+353 silly resolved     bin: { gifsicle: 'cli.js' },
+353 silly resolved     scripts:
+353 silly resolved      { test: 'mocha --reporter list --timeout 0',
+353 silly resolved        postinstall: 'node index.js' },
+353 silly resolved     dependencies: { 'bin-wrapper': '~0.2.0', chalk: '~0.4.0' },
+353 silly resolved     devDependencies: { 'bin-check': '~0.1.0', mocha: '~1.18.2', rimraf: '~2.2.6' },
+353 silly resolved     engines: { node: '>=0.10.0' },
+353 silly resolved     files: [ 'cli.js', 'index.js' ],
+353 silly resolved     readme: '# node-gifsicle [![Build Status](https://secure.travis-ci.org/yeoman/node-gifsicle.png?branch=master)](http://travis-ci.org/yeoman/node-gifsicle)\n\n[gifsicle](http://www.lcdf.org/gifsicle/) 1.71 Node.js wrapper that makes it seamlessly available as a local dependency on OS X, Linux and Windows.\n\n> gifsicle manipulates GIF image files in many different ways. Depending on command line options, it can merge several GIFs into a GIF animation; explode an animation into its component frames; change individual frames in an animation; turn interlacing on and off; add transparency and much more.\n\n## Install\n\nInstall with [npm](https://npmjs.org/package/gifsicle): `npm install --save gifsicle`\n\n## Example usage\n\n```js\nvar execFile = require(\'child_process\').execFile;\nvar gifsiclePath = require(\'gifsicle\').path;\n\nexecFile(gifsiclePath, [\'-o\', \'output.gif\', \'input.gif\'], function() {\n\tconsole.log(\'Image minified\');\n});\n```\n\nCan also be run directly from `./node_modules/.bin/gifsicle`.\n\n## Dev\n\nNote to self on how to update the binaries.\n\n### OS X\n\nRun `npm install` on a OS X 10.7 machine to build the binary.\n\n### Linux\n\nRun `npm install` to build the binary.\n\n### Windows\n\n- Download the [Windows files 32/64-bit](http://www.lcdf.org/gifsicle/) on a Windows machine.\n- Run the downloaded file to extract.\n- Go to the `bin` folder at the destination and copy `gifsicle.exe`.\n\n## License\n\nEverything excluding the binaries licensed under the [BSD license](http://opensource.org/licenses/bsd-license.php) and copyright Google.\n\ngifsicle licensed under the GNU General Public License, Version 2.\n',
+353 silly resolved     readmeFilename: 'readme.md',
+353 silly resolved     _id: 'gifsicle@0.1.5',
+353 silly resolved     _from: 'gifsicle@~0.1.0' },
+353 silly resolved   { name: 'pngquant-bin',
+353 silly resolved     version: '0.1.7',
+353 silly resolved     description: 'pngquant wrapper that makes it seamlessly available as a local dependency on OS X, Linux and Windows',
+353 silly resolved     keywords: [ 'png', 'img', 'image', 'compress', 'minify', 'optimize' ],
+353 silly resolved     homepage: 'https://github.com/sindresorhus/node-pngquant-bin',
+353 silly resolved     bugs: { url: 'https://github.com/sindresorhus/node-pngquant-bin/issues' },
+353 silly resolved     license: 'MIT',
+353 silly resolved     author:
+353 silly resolved      { name: 'Sindre Sorhus',
+353 silly resolved        email: 'sindresorhus@gmail.com',
+353 silly resolved        url: 'http://sindresorhus.com' },
+353 silly resolved     contributors: [ [Object] ],
+353 silly resolved     files: [ 'cli.js', 'index.js' ],
+353 silly resolved     main: 'index.js',
+353 silly resolved     bin: { pngquant: 'cli.js' },
+353 silly resolved     repository:
+353 silly resolved      { type: 'git',
+353 silly resolved        url: 'git://github.com/sindresorhus/node-pngquant-bin.git' },
+353 silly resolved     scripts:
+353 silly resolved      { test: 'mocha --reporter list --timeout 0',
+353 silly resolved        postinstall: 'node index.js' },
+353 silly resolved     dependencies: { 'bin-wrapper': '~0.2.0', chalk: '~0.4.0' },
+353 silly resolved     devDependencies: { 'bin-check': '~0.1.0', mocha: '~1.18.2', rimraf: '~2.2.6' },
+353 silly resolved     engines: { node: '>=0.10.0' },
+353 silly resolved     readme: '# node-pngquant-bin [![Build Status](https://secure.travis-ci.org/sindresorhus/node-pngquant-bin.png?branch=master)](http://travis-ci.org/sindresorhus/node-pngquant-bin)\n\n[pngquant](http://pngquant.org) 1.8.4 Node.js wrapper that makes it seamlessly available as a local dependency on OS X, Linux and Windows.\n\n> pngquant is a command-line utility for converting 24/32-bit PNG images to paletted (8-bit) PNGs. The conversion reduces file sizes significantly (often as much as 70%) and preserves full alpha transparency.\n\n\n## Install\n\n- Install with [npm](https://npmjs.org/package/pngquant-bin): `npm install --save pngquant-bin`\n\n\n## Example usage\n\n```js\nvar execFile = require(\'child_process\').execFile;\nvar binPath = require(\'pngquant-bin\').path;\n\nexecFile(binPath, [\'input.png\'], function() {\n\tconsole.log(\'Image minified\');\n});\n```\n\nCan also be run directly from `./node_modules/.bin/pngquant`.\n\n\n## Dev\n\nNote to self on how to update the binaries.\n\n### OS X\n\n- Run `npm install` on a OS X 10.7 machine to build the binary.\n\n### Linux\n\n- Install dependencies by running `sudo apt-get install build-essential libpng-dev zlib1g-dev`.\n- Run `npm install` to build the binary.\n\n### Windows\n\n- Download the [Windows binary](http://pngquant.org/pngquant-windows.zip) and put it in `vendor/win/`.\n\n\n## License\n\nEverything except binaries: MIT License • © [Sindre Sorhus](http://sindresorhus.com)\n\ngifsicle licensed under the GNU General Public License, Version 2.\n',
+353 silly resolved     readmeFilename: 'readme.md',
+353 silly resolved     _id: 'pngquant-bin@0.1.7',
+353 silly resolved     _from: 'pngquant-bin@~0.1.0' },
+353 silly resolved   { name: 'chalk',
+353 silly resolved     version: '0.2.1',
+353 silly resolved     description: 'Terminal string styling done right',
+353 silly resolved     keywords:
+353 silly resolved      [ 'color',
+353 silly resolved        'colour',
+353 silly resolved        'colors',
+353 silly resolved        'terminal',
+353 silly resolved        'console',
+353 silly resolved        'cli',
+353 silly resolved        'string',
+353 silly resolved        'ansi',
+353 silly resolved        'styles',
+353 silly resolved        'tty',
+353 silly resolved        'formatting',
+353 silly resolved        'rgb',
+353 silly resolved        '256',
+353 silly resolved        'shell',
+353 silly resolved        'xterm',
+353 silly resolved        'log',
+353 silly resolved        'logging',
+353 silly resolved        'command-line',
+353 silly resolved        'text' ],
+353 silly resolved     homepage: 'https://github.com/sindresorhus/chalk',
+353 silly resolved     bugs: { url: 'https://github.com/sindresorhus/chalk/issues' },
+353 silly resolved     license: 'MIT',
+353 silly resolved     author:
+353 silly resolved      { name: 'Sindre Sorhus',
+353 silly resolved        email: 'sindresorhus@gmail.com',
+353 silly resolved        url: 'http://sindresorhus.com' },
+353 silly resolved     files: [ 'chalk.js' ],
+353 silly resolved     main: 'chalk',
+353 silly resolved     repository: { type: 'git', url: 'git://github.com/sindresorhus/chalk.git' },
+353 silly resolved     scripts: { test: 'mocha' },
+353 silly resolved     dependencies: { 'has-color': '~0.1.0', 'ansi-styles': '~0.2.0' },
+353 silly resolved     devDependencies: { mocha: '~1.12.0' },
+353 silly resolved     engines: { node: '>=0.8.0' },
+353 silly resolved     readme: '# chalk [![Build Status](https://secure.travis-ci.org/sindresorhus/chalk.png?branch=master)](http://travis-ci.org/sindresorhus/chalk)\n\n> Terminal string styling done right.\n\n[colors.js](https://github.com/Marak/colors.js) is currently the most popular string styling module, but it has serious deficiencies like extending String.prototype which causes all kinds of problems. Although there are other ones, they either do too much or not enough.\n\n**Chalk is a clean and focused alternative.**\n\n![screenshot](screenshot.png)\n\n\n## Why\n\n- **Doesn\'t extend String.prototype**\n- Expressive API\n- Clean and focused\n- Auto-detects color support\n- Actively maintained\n\n\n## Install\n\nInstall with [npm](https://npmjs.org/package/chalk): `npm install --save chalk`\n\n\n## Example\n\nChalk comes with an easy to use composable API where you just chain the styles you want.\n\n```js\nvar chalk = require(\'chalk\');\n\n// style a string\nconsole.log(chalk.blue(\'Hello world!\'));\n\n// combine styled and normal strings\nconsole.log(chalk.blue(\'Hello\') + \'World\' + chalk.red(\'!\'));\n\n// compose multiple styles using the chainable API\nconsole.log(chalk.blue.bgRed.bold(\'Hello world!\'));\n\n// nest styles\nchalk.red(\'Hello\' + chalk.underline.bgBlue(\'world\') + \'!\');\n```\n\nYou can easily define your own themes.\n\n```js\nvar chalk = require(\'chalk\');\nvar error = chalk.bold.red;\nconsole.log(error(\'Error!\'));\n```\n\n\n## API\n\n### chalk.\\<style>\\[.\\<style>...](string)\n\nChain [styles](#styles) and call the last one as a method with a string argument.\n\n\n### chalk.enabled\n\nColor support is automatically detected, but you can override it.\n\n### chalk.supportsColor\n\nDetect whether the terminal [supports color](https://github.com/sindresorhus/has-color).\n\nCan be overridden by the user with the flags `--color` and `--no-color`.\n\nUsed internally and handled for you, but exposed for convenience.\n\n### chalk.styles\n\nExposes the styles as [ANSI escape codes](https://github.com/sindresorhus/ansi-styles).\n\n```js\nvar chalk = require(\'chalk\');\n\nconsole.log(chalk.styles.red);\n//=> [\'\\x1b[31m\', \'\\x1b[39m\']\n\nconsole.log(chalk.styles.red[0] + \'Hello\' + chalk.styles.red[1]);\n// first item is the style escape code and second is the reset escape code\n```\n\n### chalk.stripColor(string)\n\nStrip color from a string.\n\n\n## Styles\n\n### General\n\n- reset\n- bold\n- italic\n- underline\n- inverse\n- strikethrough\n\n### Text colors\n\n- black\n- red\n- green\n- yellow\n- blue\n- magenta\n- cyan\n- white\n- gray\n\n### Background colors\n\n- bgBlack\n- bgRed\n- bgGreen\n- bgYellow\n- bgBlue\n- bgMagenta\n- bgCyan\n- bgWhite\n\n\n## License\n\nMIT License • © [Sindre Sorhus](http://sindresorhus.com)\n',
+353 silly resolved     readmeFilename: 'readme.md',
+353 silly resolved     _id: 'chalk@0.2.1',
+353 silly resolved     _from: 'chalk@~0.2.0' },
+353 silly resolved   { name: 'optipng-bin',
+353 silly resolved     version: '0.3.8',
+353 silly resolved     description: 'OptiPNG wrapper that makes it seamlessly available as a local dependency on OS X, Linux, FreeBSD and Windows',
+353 silly resolved     license: 'BSD',
+353 silly resolved     repository: { type: 'git', url: 'yeoman/optipng-bin' },
+353 silly resolved     author:
+353 silly resolved      { name: 'Sindre Sorhus',
+353 silly resolved        email: 'sindresorhus@gmail.com',
+353 silly resolved        url: 'http://sindresorhus.com' },
+353 silly resolved     maintainers: [ [Object] ],
+353 silly resolved     engines: { node: '>=0.10.0' },
+353 silly resolved     bin: { optipng: 'cli.js' },
+353 silly resolved     scripts:
+353 silly resolved      { postinstall: 'node index.js',
+353 silly resolved        test: 'mocha --reporter list --timeout 0' },
+353 silly resolved     files: [ 'cli.js', 'index.js' ],
+353 silly resolved     keywords: [ 'compress', 'image', 'img', 'minify', 'optimize', 'png' ],
+353 silly resolved     dependencies:
+353 silly resolved      { 'bin-build': '^0.1.0',
+353 silly resolved        'bin-wrapper': '^0.3.0',
+353 silly resolved        chalk: '^0.4.0' },
+353 silly resolved     devDependencies: { 'bin-check': '^0.1.0', mocha: '^1.18.2', rimraf: '^2.2.6' },
+353 silly resolved     readme: '# node-optipng-bin [![Build Status](https://secure.travis-ci.org/yeoman/node-optipng-bin.svg?branch=master)](http://travis-ci.org/yeoman/node-optipng-bin)\n\n[OptiPNG](http://optipng.sourceforge.net) 0.7.4 Node.js wrapper that makes it seamlessly available as a local dependency on OS X, Linux, FreeBSD, Solaris and Windows.\n\n> OptiPNG is a PNG optimizer that recompresses image files to a smaller size, without losing any information.\n\n\n## Install\n\n```bash\n$ npm install --save optipng-bin\n```\n\n\n## Usage\n\n```js\nvar execFile = require(\'child_process\').execFile;\nvar optipng = require(\'optipng-bin\').path;\n\nexecFile(optipng, [\'-v\'], function (err, stdout, stderr) {\n    console.log(\'OptiPNG version:\', stdout.match(/\\d\\.\\d\\.\\d/)[0]);\n});\n```\n\n\n## CLI\n\n```bash\n$ npm install --global optipng\n```\n\n```bash\n$ optipng --help\n```\n\n\n## License\n\nEverything excluding the binaries licensed under the [BSD license](http://opensource.org/licenses/bsd-license.php) and copyright Google.\n\nOptiPNG licensed under the [zlib license](http://optipng.sourceforge.net/license.txt) and copyright Cosmin Truta and the Contributing Authors.\n',
+353 silly resolved     readmeFilename: 'readme.md',
+353 silly resolved     _id: 'optipng-bin@0.3.8',
+353 silly resolved     dist: { shasum: 'eb0eb3bc781fff4c84a6ab662234b8a169a8da8c' },
+353 silly resolved     _from: 'optipng-bin@~0.3.0',
+353 silly resolved     _resolved: 'https://registry.npmjs.org/optipng-bin/-/optipng-bin-0.3.8.tgz' } ]
+354 info install filesize@1.10.0 into /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin
+355 info install jpegtran-bin@0.2.6 into /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin
+356 info install gifsicle@0.1.5 into /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin
+357 info install pngquant-bin@0.1.7 into /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin
+358 info install chalk@0.2.1 into /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin
+359 info install optipng-bin@0.3.8 into /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin
+360 info installOne filesize@1.10.0
+361 info installOne jpegtran-bin@0.2.6
+362 info installOne gifsicle@0.1.5
+363 info installOne pngquant-bin@0.1.7
+364 info installOne chalk@0.2.1
+365 info installOne optipng-bin@0.3.8
+366 verbose from cache /Users/eric/.npm/filesize/1.10.0/package/package.json
+367 info /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/filesize unbuild
+368 verbose read json /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/filesize/package.json
+369 verbose from cache /Users/eric/.npm/jpegtran-bin/0.2.6/package/package.json
+370 info /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/jpegtran-bin unbuild
+371 verbose read json /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/jpegtran-bin/package.json
+372 verbose from cache /Users/eric/.npm/gifsicle/0.1.5/package/package.json
+373 info /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/gifsicle unbuild
+374 verbose read json /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/gifsicle/package.json
+375 verbose from cache /Users/eric/.npm/pngquant-bin/0.1.7/package/package.json
+376 info /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/pngquant-bin unbuild
+377 verbose read json /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/pngquant-bin/package.json
+378 verbose from cache /Users/eric/.npm/chalk/0.2.1/package/package.json
+379 info /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/chalk unbuild
+380 verbose read json /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/chalk/package.json
+381 verbose from cache /Users/eric/.npm/optipng-bin/0.3.8/package/package.json
+382 info /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/optipng-bin unbuild
+383 verbose read json /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/optipng-bin/package.json
+384 verbose tar unpack /Users/eric/.npm/filesize/1.10.0/package.tgz
+385 silly lockFile 8de553dc-b-imagemin-node-modules-filesize tar:///Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/filesize
+386 verbose lock tar:///Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/filesize /Users/eric/.npm/8de553dc-b-imagemin-node-modules-filesize.lock
+387 silly lockFile 5e6f0c5f--npm-filesize-1-10-0-package-tgz tar:///Users/eric/.npm/filesize/1.10.0/package.tgz
+388 verbose lock tar:///Users/eric/.npm/filesize/1.10.0/package.tgz /Users/eric/.npm/5e6f0c5f--npm-filesize-1-10-0-package-tgz.lock
+389 verbose tar unpack /Users/eric/.npm/jpegtran-bin/0.2.6/package.tgz
+390 silly lockFile 0a72632e-agemin-node-modules-jpegtran-bin tar:///Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/jpegtran-bin
+391 verbose lock tar:///Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/jpegtran-bin /Users/eric/.npm/0a72632e-agemin-node-modules-jpegtran-bin.lock
+392 silly lockFile 8301a5bc-m-jpegtran-bin-0-2-6-package-tgz tar:///Users/eric/.npm/jpegtran-bin/0.2.6/package.tgz
+393 verbose lock tar:///Users/eric/.npm/jpegtran-bin/0.2.6/package.tgz /Users/eric/.npm/8301a5bc-m-jpegtran-bin-0-2-6-package-tgz.lock
+394 verbose tar unpack /Users/eric/.npm/gifsicle/0.1.5/package.tgz
+395 silly lockFile e57e7744-b-imagemin-node-modules-gifsicle tar:///Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/gifsicle
+396 verbose lock tar:///Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/gifsicle /Users/eric/.npm/e57e7744-b-imagemin-node-modules-gifsicle.lock
+397 silly lockFile c0eb2d92-c-npm-gifsicle-0-1-5-package-tgz tar:///Users/eric/.npm/gifsicle/0.1.5/package.tgz
+398 verbose lock tar:///Users/eric/.npm/gifsicle/0.1.5/package.tgz /Users/eric/.npm/c0eb2d92-c-npm-gifsicle-0-1-5-package-tgz.lock
+399 verbose tar unpack /Users/eric/.npm/pngquant-bin/0.1.7/package.tgz
+400 silly lockFile 60f45951-agemin-node-modules-pngquant-bin tar:///Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/pngquant-bin
+401 verbose lock tar:///Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/pngquant-bin /Users/eric/.npm/60f45951-agemin-node-modules-pngquant-bin.lock
+402 silly lockFile 753d634b-m-pngquant-bin-0-1-7-package-tgz tar:///Users/eric/.npm/pngquant-bin/0.1.7/package.tgz
+403 verbose lock tar:///Users/eric/.npm/pngquant-bin/0.1.7/package.tgz /Users/eric/.npm/753d634b-m-pngquant-bin-0-1-7-package-tgz.lock
+404 verbose tar unpack /Users/eric/.npm/chalk/0.2.1/package.tgz
+405 silly lockFile a8f1d231-trib-imagemin-node-modules-chalk tar:///Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/chalk
+406 verbose lock tar:///Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/chalk /Users/eric/.npm/a8f1d231-trib-imagemin-node-modules-chalk.lock
+407 silly lockFile 12656e4d-eric-npm-chalk-0-2-1-package-tgz tar:///Users/eric/.npm/chalk/0.2.1/package.tgz
+408 verbose lock tar:///Users/eric/.npm/chalk/0.2.1/package.tgz /Users/eric/.npm/12656e4d-eric-npm-chalk-0-2-1-package-tgz.lock
+409 verbose tar unpack /Users/eric/.npm/optipng-bin/0.3.8/package.tgz
+410 silly lockFile b40e3c4d-magemin-node-modules-optipng-bin tar:///Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/optipng-bin
+411 verbose lock tar:///Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/optipng-bin /Users/eric/.npm/b40e3c4d-magemin-node-modules-optipng-bin.lock
+412 silly lockFile 8e8e86d5-pm-optipng-bin-0-3-8-package-tgz tar:///Users/eric/.npm/optipng-bin/0.3.8/package.tgz
+413 verbose lock tar:///Users/eric/.npm/optipng-bin/0.3.8/package.tgz /Users/eric/.npm/8e8e86d5-pm-optipng-bin-0-3-8-package-tgz.lock
+414 silly gunzTarPerm modes [ '755', '644' ]
+415 silly gunzTarPerm modes [ '755', '644' ]
+416 silly gunzTarPerm modes [ '755', '644' ]
+417 silly gunzTarPerm modes [ '755', '644' ]
+418 silly gunzTarPerm modes [ '755', '644' ]
+419 silly gunzTarPerm modes [ '755', '644' ]
+420 silly gunzTarPerm extractEntry package.json
+421 silly gunzTarPerm extractEntry package.json
+422 silly gunzTarPerm extractEntry package.json
+423 silly gunzTarPerm extractEntry package.json
+424 silly gunzTarPerm extractEntry package.json
+425 silly gunzTarPerm extractEntry package.json
+426 silly gunzTarPerm extractEntry .npmignore
+427 silly gunzTarPerm extractEntry README.md
+428 silly gunzTarPerm extractEntry cli.js
+429 silly gunzTarPerm extractEntry index.js
+430 silly gunzTarPerm extractEntry cli.js
+431 silly gunzTarPerm extractEntry index.js
+432 silly gunzTarPerm extractEntry cli.js
+433 silly gunzTarPerm extractEntry index.js
+434 silly gunzTarPerm extractEntry cli.js
+435 silly gunzTarPerm extractEntry index.js
+436 silly gunzTarPerm extractEntry chalk.js
+437 silly gunzTarPerm extractEntry readme.md
+438 silly gunzTarPerm extractEntry readme.md
+439 silly gunzTarPerm extractEntry LICENSE
+440 silly gunzTarPerm extractEntry lib/filesize.js
+441 silly gunzTarPerm extractEntry readme.md
+442 silly gunzTarPerm extractEntry test/test.js
+443 silly gunzTarPerm extractEntry readme.md
+444 silly gunzTarPerm extractEntry readme.md
+445 silly gunzTarPerm extractEntry test/fixtures/test.jpg
+446 silly gunzTarPerm extractEntry test/tmp/test.jpg
+447 verbose read json /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/chalk/package.json
+448 verbose read json /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/optipng-bin/package.json
+449 verbose read json /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/pngquant-bin/package.json
+450 verbose read json /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/gifsicle/package.json
+451 silly lockFile a8f1d231-trib-imagemin-node-modules-chalk tar:///Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/chalk
+452 silly lockFile a8f1d231-trib-imagemin-node-modules-chalk tar:///Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/chalk
+453 silly lockFile 12656e4d-eric-npm-chalk-0-2-1-package-tgz tar:///Users/eric/.npm/chalk/0.2.1/package.tgz
+454 silly lockFile 12656e4d-eric-npm-chalk-0-2-1-package-tgz tar:///Users/eric/.npm/chalk/0.2.1/package.tgz
+455 silly lockFile b40e3c4d-magemin-node-modules-optipng-bin tar:///Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/optipng-bin
+456 silly lockFile b40e3c4d-magemin-node-modules-optipng-bin tar:///Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/optipng-bin
+457 silly lockFile 60f45951-agemin-node-modules-pngquant-bin tar:///Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/pngquant-bin
+458 silly lockFile 60f45951-agemin-node-modules-pngquant-bin tar:///Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/pngquant-bin
+459 silly lockFile e57e7744-b-imagemin-node-modules-gifsicle tar:///Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/gifsicle
+460 silly lockFile e57e7744-b-imagemin-node-modules-gifsicle tar:///Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/gifsicle
+461 info preinstall chalk@0.2.1
+462 silly lockFile 8e8e86d5-pm-optipng-bin-0-3-8-package-tgz tar:///Users/eric/.npm/optipng-bin/0.3.8/package.tgz
+463 silly lockFile 8e8e86d5-pm-optipng-bin-0-3-8-package-tgz tar:///Users/eric/.npm/optipng-bin/0.3.8/package.tgz
+464 silly lockFile 753d634b-m-pngquant-bin-0-1-7-package-tgz tar:///Users/eric/.npm/pngquant-bin/0.1.7/package.tgz
+465 silly lockFile 753d634b-m-pngquant-bin-0-1-7-package-tgz tar:///Users/eric/.npm/pngquant-bin/0.1.7/package.tgz
+466 silly lockFile c0eb2d92-c-npm-gifsicle-0-1-5-package-tgz tar:///Users/eric/.npm/gifsicle/0.1.5/package.tgz
+467 silly lockFile c0eb2d92-c-npm-gifsicle-0-1-5-package-tgz tar:///Users/eric/.npm/gifsicle/0.1.5/package.tgz
+468 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/chalk/package.json
+469 verbose readDependencies using package.json deps
+470 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/chalk/package.json
+471 verbose readDependencies using package.json deps
+472 verbose read json /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/filesize/package.json
+473 info preinstall optipng-bin@0.3.8
+474 info preinstall pngquant-bin@0.1.7
+475 info preinstall gifsicle@0.1.5
+476 verbose cache add [ 'has-color@~0.1.0', null ]
+477 verbose cache add name=undefined spec="has-color@~0.1.0" args=["has-color@~0.1.0",null]
+478 verbose parsed url { protocol: null,
+478 verbose parsed url   slashes: null,
+478 verbose parsed url   auth: null,
+478 verbose parsed url   host: null,
+478 verbose parsed url   port: null,
+478 verbose parsed url   hostname: null,
+478 verbose parsed url   hash: null,
+478 verbose parsed url   search: null,
+478 verbose parsed url   query: null,
+478 verbose parsed url   pathname: 'has-color@~0.1.0',
+478 verbose parsed url   path: 'has-color@~0.1.0',
+478 verbose parsed url   href: 'has-color@~0.1.0' }
+479 verbose cache add name="has-color" spec="~0.1.0" args=["has-color","~0.1.0"]
+480 verbose parsed url { protocol: null,
+480 verbose parsed url   slashes: null,
+480 verbose parsed url   auth: null,
+480 verbose parsed url   host: null,
+480 verbose parsed url   port: null,
+480 verbose parsed url   hostname: null,
+480 verbose parsed url   hash: null,
+480 verbose parsed url   search: null,
+480 verbose parsed url   query: null,
+480 verbose parsed url   pathname: '~0.1.0',
+480 verbose parsed url   path: '~0.1.0',
+480 verbose parsed url   href: '~0.1.0' }
+481 verbose addNamed [ 'has-color', '~0.1.0' ]
+482 verbose addNamed [ null, '>=0.1.0- <0.2.0-' ]
+483 silly lockFile c89da621-has-color-0-1-0 has-color@~0.1.0
+484 verbose lock has-color@~0.1.0 /Users/eric/.npm/c89da621-has-color-0-1-0.lock
+485 verbose cache add [ 'ansi-styles@~0.2.0', null ]
+486 verbose cache add name=undefined spec="ansi-styles@~0.2.0" args=["ansi-styles@~0.2.0",null]
+487 verbose parsed url { protocol: null,
+487 verbose parsed url   slashes: null,
+487 verbose parsed url   auth: null,
+487 verbose parsed url   host: null,
+487 verbose parsed url   port: null,
+487 verbose parsed url   hostname: null,
+487 verbose parsed url   hash: null,
+487 verbose parsed url   search: null,
+487 verbose parsed url   query: null,
+487 verbose parsed url   pathname: 'ansi-styles@~0.2.0',
+487 verbose parsed url   path: 'ansi-styles@~0.2.0',
+487 verbose parsed url   href: 'ansi-styles@~0.2.0' }
+488 verbose cache add name="ansi-styles" spec="~0.2.0" args=["ansi-styles","~0.2.0"]
+489 verbose parsed url { protocol: null,
+489 verbose parsed url   slashes: null,
+489 verbose parsed url   auth: null,
+489 verbose parsed url   host: null,
+489 verbose parsed url   port: null,
+489 verbose parsed url   hostname: null,
+489 verbose parsed url   hash: null,
+489 verbose parsed url   search: null,
+489 verbose parsed url   query: null,
+489 verbose parsed url   pathname: '~0.2.0',
+489 verbose parsed url   path: '~0.2.0',
+489 verbose parsed url   href: '~0.2.0' }
+490 verbose addNamed [ 'ansi-styles', '~0.2.0' ]
+491 verbose addNamed [ null, '>=0.2.0- <0.3.0-' ]
+492 silly lockFile 847f9987-ansi-styles-0-2-0 ansi-styles@~0.2.0
+493 verbose lock ansi-styles@~0.2.0 /Users/eric/.npm/847f9987-ansi-styles-0-2-0.lock
+494 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/optipng-bin/package.json
+495 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/pngquant-bin/package.json
+496 silly addNameRange { name: 'has-color', range: '>=0.1.0- <0.2.0-', hasData: false }
+497 silly addNameRange { name: 'ansi-styles',
+497 silly addNameRange   range: '>=0.2.0- <0.3.0-',
+497 silly addNameRange   hasData: false }
+498 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/gifsicle/package.json
+499 verbose readDependencies using package.json deps
+500 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/optipng-bin/package.json
+501 verbose readDependencies using package.json deps
+502 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/pngquant-bin/package.json
+503 verbose readDependencies using package.json deps
+504 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/gifsicle/package.json
+505 verbose readDependencies using package.json deps
+506 verbose readDependencies using package.json deps
+507 verbose readDependencies using package.json deps
+508 silly lockFile 8de553dc-b-imagemin-node-modules-filesize tar:///Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/filesize
+509 silly lockFile 8de553dc-b-imagemin-node-modules-filesize tar:///Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/filesize
+510 verbose cache add [ 'bin-build@^0.1.0', null ]
+511 verbose cache add name=undefined spec="bin-build@^0.1.0" args=["bin-build@^0.1.0",null]
+512 verbose parsed url { protocol: null,
+512 verbose parsed url   slashes: null,
+512 verbose parsed url   auth: null,
+512 verbose parsed url   host: null,
+512 verbose parsed url   port: null,
+512 verbose parsed url   hostname: null,
+512 verbose parsed url   hash: null,
+512 verbose parsed url   search: null,
+512 verbose parsed url   query: null,
+512 verbose parsed url   pathname: 'bin-build@^0.1.0',
+512 verbose parsed url   path: 'bin-build@^0.1.0',
+512 verbose parsed url   href: 'bin-build@^0.1.0' }
+513 verbose cache add name="bin-build" spec="^0.1.0" args=["bin-build","^0.1.0"]
+514 verbose parsed url { protocol: null,
+514 verbose parsed url   slashes: null,
+514 verbose parsed url   auth: null,
+514 verbose parsed url   host: null,
+514 verbose parsed url   port: null,
+514 verbose parsed url   hostname: null,
+514 verbose parsed url   hash: null,
+514 verbose parsed url   search: null,
+514 verbose parsed url   query: null,
+514 verbose parsed url   pathname: '^0.1.0',
+514 verbose parsed url   path: '^0.1.0',
+514 verbose parsed url   href: '^0.1.0' }
+515 verbose addNamed [ 'bin-build', '^0.1.0' ]
+516 verbose addNamed [ null, null ]
+517 silly lockFile a1813c54-bin-build-0-1-0 bin-build@^0.1.0
+518 verbose lock bin-build@^0.1.0 /Users/eric/.npm/a1813c54-bin-build-0-1-0.lock
+519 verbose cache add [ 'bin-wrapper@^0.3.0', null ]
+520 verbose cache add name=undefined spec="bin-wrapper@^0.3.0" args=["bin-wrapper@^0.3.0",null]
+521 verbose parsed url { protocol: null,
+521 verbose parsed url   slashes: null,
+521 verbose parsed url   auth: null,
+521 verbose parsed url   host: null,
+521 verbose parsed url   port: null,
+521 verbose parsed url   hostname: null,
+521 verbose parsed url   hash: null,
+521 verbose parsed url   search: null,
+521 verbose parsed url   query: null,
+521 verbose parsed url   pathname: 'bin-wrapper@^0.3.0',
+521 verbose parsed url   path: 'bin-wrapper@^0.3.0',
+521 verbose parsed url   href: 'bin-wrapper@^0.3.0' }
+522 verbose cache add name="bin-wrapper" spec="^0.3.0" args=["bin-wrapper","^0.3.0"]
+523 verbose parsed url { protocol: null,
+523 verbose parsed url   slashes: null,
+523 verbose parsed url   auth: null,
+523 verbose parsed url   host: null,
+523 verbose parsed url   port: null,
+523 verbose parsed url   hostname: null,
+523 verbose parsed url   hash: null,
+523 verbose parsed url   search: null,
+523 verbose parsed url   query: null,
+523 verbose parsed url   pathname: '^0.3.0',
+523 verbose parsed url   path: '^0.3.0',
+523 verbose parsed url   href: '^0.3.0' }
+524 verbose addNamed [ 'bin-wrapper', '^0.3.0' ]
+525 verbose addNamed [ null, null ]
+526 silly lockFile 9a882d9d-bin-wrapper-0-3-0 bin-wrapper@^0.3.0
+527 verbose lock bin-wrapper@^0.3.0 /Users/eric/.npm/9a882d9d-bin-wrapper-0-3-0.lock
+528 verbose cache add [ 'bin-wrapper@~0.2.0', null ]
+529 verbose cache add name=undefined spec="bin-wrapper@~0.2.0" args=["bin-wrapper@~0.2.0",null]
+530 verbose parsed url { protocol: null,
+530 verbose parsed url   slashes: null,
+530 verbose parsed url   auth: null,
+530 verbose parsed url   host: null,
+530 verbose parsed url   port: null,
+530 verbose parsed url   hostname: null,
+530 verbose parsed url   hash: null,
+530 verbose parsed url   search: null,
+530 verbose parsed url   query: null,
+530 verbose parsed url   pathname: 'bin-wrapper@~0.2.0',
+530 verbose parsed url   path: 'bin-wrapper@~0.2.0',
+530 verbose parsed url   href: 'bin-wrapper@~0.2.0' }
+531 verbose cache add name="bin-wrapper" spec="~0.2.0" args=["bin-wrapper","~0.2.0"]
+532 verbose parsed url { protocol: null,
+532 verbose parsed url   slashes: null,
+532 verbose parsed url   auth: null,
+532 verbose parsed url   host: null,
+532 verbose parsed url   port: null,
+532 verbose parsed url   hostname: null,
+532 verbose parsed url   hash: null,
+532 verbose parsed url   search: null,
+532 verbose parsed url   query: null,
+532 verbose parsed url   pathname: '~0.2.0',
+532 verbose parsed url   path: '~0.2.0',
+532 verbose parsed url   href: '~0.2.0' }
+533 verbose addNamed [ 'bin-wrapper', '~0.2.0' ]
+534 verbose addNamed [ null, '>=0.2.0- <0.3.0-' ]
+535 silly lockFile b415f1ca-bin-wrapper-0-2-0 bin-wrapper@~0.2.0
+536 verbose lock bin-wrapper@~0.2.0 /Users/eric/.npm/b415f1ca-bin-wrapper-0-2-0.lock
+537 verbose cache add [ 'chalk@~0.4.0', null ]
+538 verbose cache add name=undefined spec="chalk@~0.4.0" args=["chalk@~0.4.0",null]
+539 verbose parsed url { protocol: null,
+539 verbose parsed url   slashes: null,
+539 verbose parsed url   auth: null,
+539 verbose parsed url   host: null,
+539 verbose parsed url   port: null,
+539 verbose parsed url   hostname: null,
+539 verbose parsed url   hash: null,
+539 verbose parsed url   search: null,
+539 verbose parsed url   query: null,
+539 verbose parsed url   pathname: 'chalk@~0.4.0',
+539 verbose parsed url   path: 'chalk@~0.4.0',
+539 verbose parsed url   href: 'chalk@~0.4.0' }
+540 verbose cache add name="chalk" spec="~0.4.0" args=["chalk","~0.4.0"]
+541 verbose parsed url { protocol: null,
+541 verbose parsed url   slashes: null,
+541 verbose parsed url   auth: null,
+541 verbose parsed url   host: null,
+541 verbose parsed url   port: null,
+541 verbose parsed url   hostname: null,
+541 verbose parsed url   hash: null,
+541 verbose parsed url   search: null,
+541 verbose parsed url   query: null,
+541 verbose parsed url   pathname: '~0.4.0',
+541 verbose parsed url   path: '~0.4.0',
+541 verbose parsed url   href: '~0.4.0' }
+542 verbose addNamed [ 'chalk', '~0.4.0' ]
+543 verbose addNamed [ null, '>=0.4.0- <0.5.0-' ]
+544 silly lockFile bc9fb696-chalk-0-4-0 chalk@~0.4.0
+545 verbose lock chalk@~0.4.0 /Users/eric/.npm/bc9fb696-chalk-0-4-0.lock
+546 verbose cache add [ 'bin-wrapper@~0.2.0', null ]
+547 verbose cache add name=undefined spec="bin-wrapper@~0.2.0" args=["bin-wrapper@~0.2.0",null]
+548 verbose parsed url { protocol: null,
+548 verbose parsed url   slashes: null,
+548 verbose parsed url   auth: null,
+548 verbose parsed url   host: null,
+548 verbose parsed url   port: null,
+548 verbose parsed url   hostname: null,
+548 verbose parsed url   hash: null,
+548 verbose parsed url   search: null,
+548 verbose parsed url   query: null,
+548 verbose parsed url   pathname: 'bin-wrapper@~0.2.0',
+548 verbose parsed url   path: 'bin-wrapper@~0.2.0',
+548 verbose parsed url   href: 'bin-wrapper@~0.2.0' }
+549 verbose cache add name="bin-wrapper" spec="~0.2.0" args=["bin-wrapper","~0.2.0"]
+550 verbose parsed url { protocol: null,
+550 verbose parsed url   slashes: null,
+550 verbose parsed url   auth: null,
+550 verbose parsed url   host: null,
+550 verbose parsed url   port: null,
+550 verbose parsed url   hostname: null,
+550 verbose parsed url   hash: null,
+550 verbose parsed url   search: null,
+550 verbose parsed url   query: null,
+550 verbose parsed url   pathname: '~0.2.0',
+550 verbose parsed url   path: '~0.2.0',
+550 verbose parsed url   href: '~0.2.0' }
+551 verbose addNamed [ 'bin-wrapper', '~0.2.0' ]
+552 verbose cache add [ 'chalk@~0.4.0', null ]
+553 verbose cache add name=undefined spec="chalk@~0.4.0" args=["chalk@~0.4.0",null]
+554 verbose parsed url { protocol: null,
+554 verbose parsed url   slashes: null,
+554 verbose parsed url   auth: null,
+554 verbose parsed url   host: null,
+554 verbose parsed url   port: null,
+554 verbose parsed url   hostname: null,
+554 verbose parsed url   hash: null,
+554 verbose parsed url   search: null,
+554 verbose parsed url   query: null,
+554 verbose parsed url   pathname: 'chalk@~0.4.0',
+554 verbose parsed url   path: 'chalk@~0.4.0',
+554 verbose parsed url   href: 'chalk@~0.4.0' }
+555 verbose cache add name="chalk" spec="~0.4.0" args=["chalk","~0.4.0"]
+556 verbose parsed url { protocol: null,
+556 verbose parsed url   slashes: null,
+556 verbose parsed url   auth: null,
+556 verbose parsed url   host: null,
+556 verbose parsed url   port: null,
+556 verbose parsed url   hostname: null,
+556 verbose parsed url   hash: null,
+556 verbose parsed url   search: null,
+556 verbose parsed url   query: null,
+556 verbose parsed url   pathname: '~0.4.0',
+556 verbose parsed url   path: '~0.4.0',
+556 verbose parsed url   href: '~0.4.0' }
+557 verbose addNamed [ 'chalk', '~0.4.0' ]
+558 info addNameTag [ 'bin-build', '^0.1.0' ]
+559 info addNameTag [ 'bin-wrapper', '^0.3.0' ]
+560 silly addNameRange { name: 'bin-wrapper',
+560 silly addNameRange   range: '>=0.2.0- <0.3.0-',
+560 silly addNameRange   hasData: false }
+561 silly addNameRange { name: 'chalk', range: '>=0.4.0- <0.5.0-', hasData: false }
+562 verbose cache add [ 'chalk@^0.4.0', null ]
+563 verbose cache add name=undefined spec="chalk@^0.4.0" args=["chalk@^0.4.0",null]
+564 verbose parsed url { protocol: null,
+564 verbose parsed url   slashes: null,
+564 verbose parsed url   auth: null,
+564 verbose parsed url   host: null,
+564 verbose parsed url   port: null,
+564 verbose parsed url   hostname: null,
+564 verbose parsed url   hash: null,
+564 verbose parsed url   search: null,
+564 verbose parsed url   query: null,
+564 verbose parsed url   pathname: 'chalk@^0.4.0',
+564 verbose parsed url   path: 'chalk@^0.4.0',
+564 verbose parsed url   href: 'chalk@^0.4.0' }
+565 verbose cache add name="chalk" spec="^0.4.0" args=["chalk","^0.4.0"]
+566 verbose parsed url { protocol: null,
+566 verbose parsed url   slashes: null,
+566 verbose parsed url   auth: null,
+566 verbose parsed url   host: null,
+566 verbose parsed url   port: null,
+566 verbose parsed url   hostname: null,
+566 verbose parsed url   hash: null,
+566 verbose parsed url   search: null,
+566 verbose parsed url   query: null,
+566 verbose parsed url   pathname: '^0.4.0',
+566 verbose parsed url   path: '^0.4.0',
+566 verbose parsed url   href: '^0.4.0' }
+567 verbose addNamed [ 'chalk', '^0.4.0' ]
+568 verbose addNamed [ null, null ]
+569 silly lockFile b2f4396d-chalk-0-4-0 chalk@^0.4.0
+570 verbose lock chalk@^0.4.0 /Users/eric/.npm/b2f4396d-chalk-0-4-0.lock
+571 verbose url raw has-color
+572 verbose url resolving [ 'https://registry.npmjs.org/', './has-color' ]
+573 verbose url resolved https://registry.npmjs.org/has-color
+574 info trying registry request attempt 1 at 20:51:49
+575 verbose etag "23J39UZD0XIMOV2JU8FW8DVLF"
+576 http GET https://registry.npmjs.org/has-color
+577 verbose url raw ansi-styles
+578 verbose url resolving [ 'https://registry.npmjs.org/', './ansi-styles' ]
+579 verbose url resolved https://registry.npmjs.org/ansi-styles
+580 info trying registry request attempt 1 at 20:51:49
+581 verbose etag "40B5CQMFZQYQGOMLXWZVXLZ2H"
+582 http GET https://registry.npmjs.org/ansi-styles
+583 silly lockFile 5e6f0c5f--npm-filesize-1-10-0-package-tgz tar:///Users/eric/.npm/filesize/1.10.0/package.tgz
+584 silly lockFile 5e6f0c5f--npm-filesize-1-10-0-package-tgz tar:///Users/eric/.npm/filesize/1.10.0/package.tgz
+585 verbose url raw bin-build
+586 verbose url resolving [ 'https://registry.npmjs.org/', './bin-build' ]
+587 verbose url resolved https://registry.npmjs.org/bin-build
+588 info trying registry request attempt 1 at 20:51:49
+589 http GET https://registry.npmjs.org/bin-build
+590 info addNameTag [ 'chalk', '^0.4.0' ]
+591 verbose registry.get chalk not expired, no request
+592 silly addNameRange number 2 { name: 'chalk', range: '>=0.4.0- <0.5.0-', hasData: true }
+593 silly addNameRange versions [ 'chalk',
+593 silly addNameRange   [ '0.1.0', '0.1.1', '0.2.0', '0.2.1', '0.3.0', '0.4.0' ] ]
+594 verbose addNamed [ 'chalk', '0.4.0' ]
+595 verbose addNamed [ '0.4.0', '0.4.0' ]
+596 silly lockFile 1efe4790-chalk-0-4-0 chalk@0.4.0
+597 verbose lock chalk@0.4.0 /Users/eric/.npm/1efe4790-chalk-0-4-0.lock
+598 verbose url raw bin-wrapper
+599 verbose url resolving [ 'https://registry.npmjs.org/', './bin-wrapper' ]
+600 verbose url resolved https://registry.npmjs.org/bin-wrapper
+601 info trying registry request attempt 1 at 20:51:49
+602 verbose etag "45M0VWIG3UIW6X5ZWNMR52I37"
+603 http GET https://registry.npmjs.org/bin-wrapper
+604 verbose url raw bin-wrapper
+605 verbose url resolving [ 'https://registry.npmjs.org/', './bin-wrapper' ]
+606 verbose url resolved https://registry.npmjs.org/bin-wrapper
+607 info trying registry request attempt 1 at 20:51:49
+608 verbose etag "45M0VWIG3UIW6X5ZWNMR52I37"
+609 http GET https://registry.npmjs.org/bin-wrapper
+610 verbose registry.get chalk not expired, no request
+611 silly lockFile b2f4396d-chalk-0-4-0 chalk@^0.4.0
+612 silly lockFile b2f4396d-chalk-0-4-0 chalk@^0.4.0
+613 info preinstall filesize@1.10.0
+614 verbose read json /Users/eric/.npm/chalk/0.4.0/package/package.json
+615 verbose about to build /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/optipng-bin
+616 info /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/optipng-bin unbuild
+617 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/optipng-bin/package.json
+618 info preuninstall optipng-bin@0.3.8
+619 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/filesize/package.json
+620 verbose readDependencies using package.json deps
+621 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/filesize/package.json
+622 info uninstall optipng-bin@0.3.8
+623 verbose readDependencies using package.json deps
+624 silly resolved []
+625 verbose about to build /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/filesize
+626 info build /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/filesize
+627 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/filesize/package.json
+628 verbose linkStuff [ false,
+628 verbose linkStuff   false,
+628 verbose linkStuff   false,
+628 verbose linkStuff   '/Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules' ]
+629 info linkStuff filesize@1.10.0
+630 verbose from cache /Users/eric/Projects/thePrinceBoardGame/package.json
+631 verbose linkBins filesize@1.10.0
+632 verbose linkMans filesize@1.10.0
+633 verbose rebuildBundles filesize@1.10.0
+634 info install filesize@1.10.0
+635 verbose read json /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/jpegtran-bin/package.json
+636 verbose false,/Users/eric/Projects/thePrinceBoardGame/node_modules,/Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules unbuild optipng-bin@0.3.8
+637 verbose /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/.bin,[object Object] binRoot
+638 info postinstall filesize@1.10.0
+639 info postuninstall optipng-bin@0.3.8
+640 silly lockFile 1efe4790-chalk-0-4-0 chalk@0.4.0
+641 silly lockFile 1efe4790-chalk-0-4-0 chalk@0.4.0
+642 silly lockFile bc9fb696-chalk-0-4-0 chalk@~0.4.0
+643 silly lockFile bc9fb696-chalk-0-4-0 chalk@~0.4.0
+644 silly lockFile 0a72632e-agemin-node-modules-jpegtran-bin tar:///Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/jpegtran-bin
+645 silly lockFile 0a72632e-agemin-node-modules-jpegtran-bin tar:///Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/jpegtran-bin
+646 verbose about to build /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin
+647 info /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin unbuild
+648 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/package.json
+649 info preuninstall grunt-contrib-imagemin@0.2.1
+650 silly lockFile 8301a5bc-m-jpegtran-bin-0-2-6-package-tgz tar:///Users/eric/.npm/jpegtran-bin/0.2.6/package.tgz
+651 silly lockFile 8301a5bc-m-jpegtran-bin-0-2-6-package-tgz tar:///Users/eric/.npm/jpegtran-bin/0.2.6/package.tgz
+652 info uninstall grunt-contrib-imagemin@0.2.1
+653 verbose true,/Users/eric/Projects/thePrinceBoardGame/node_modules,/Users/eric/Projects/thePrinceBoardGame/node_modules unbuild grunt-contrib-imagemin@0.2.1
+654 info postuninstall grunt-contrib-imagemin@0.2.1
+655 info preinstall jpegtran-bin@0.2.6
+656 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/jpegtran-bin/package.json
+657 verbose readDependencies using package.json deps
+658 verbose from cache /Users/eric/Projects/thePrinceBoardGame/node_modules/grunt-contrib-imagemin/node_modules/jpegtran-bin/package.json
+659 verbose readDependencies using package.json deps
+660 verbose cache add [ 'bin-wrapper@~0.2.0', null ]
+661 verbose cache add name=undefined spec="bin-wrapper@~0.2.0" args=["bin-wrapper@~0.2.0",null]
+662 verbose parsed url { protocol: null,
+662 verbose parsed url   slashes: null,
+662 verbose parsed url   auth: null,
+662 verbose parsed url   host: null,
+662 verbose parsed url   port: null,
+662 verbose parsed url   hostname: null,
+662 verbose parsed url   hash: null,
+662 verbose parsed url   search: null,
+662 verbose parsed url   query: null,
+662 verbose parsed url   pathname: 'bin-wrapper@~0.2.0',
+662 verbose parsed url   path: 'bin-wrapper@~0.2.0',
+662 verbose parsed url   href: 'bin-wrapper@~0.2.0' }
+663 verbose cache add name="bin-wrapper" spec="~0.2.0" args=["bin-wrapper","~0.2.0"]
+664 verbose parsed url { protocol: null,
+664 verbose parsed url   slashes: null,
+664 verbose parsed url   auth: null,
+664 verbose parsed url   host: null,
+664 verbose parsed url   port: null,
+664 verbose parsed url   hostname: null,
+664 verbose parsed url   hash: null,
+664 verbose parsed url   search: null,
+664 verbose parsed url   query: null,
+664 verbose parsed url   pathname: '~0.2.0',
+664 verbose parsed url   path: '~0.2.0',
+664 verbose parsed url   href: '~0.2.0' }
+665 verbose addNamed [ 'bin-wrapper', '~0.2.0' ]
+666 verbose cache add [ 'chalk@~0.4.0', null ]
+667 verbose cache add name=undefined spec="chalk@~0.4.0" args=["chalk@~0.4.0",null]
+668 verbose parsed url { protocol: null,
+668 verbose parsed url   slashes: null,
+668 verbose parsed url   auth: null,
+668 verbose parsed url   host: null,
+668 verbose parsed url   port: null,
+668 verbose parsed url   hostname: null,
+668 verbose parsed url   hash: null,
+668 verbose parsed url   search: null,
+668 verbose parsed url   query: null,
+668 verbose parsed url   pathname: 'chalk@~0.4.0',
+668 verbose parsed url   path: 'chalk@~0.4.0',
+668 verbose parsed url   href: 'chalk@~0.4.0' }
+669 verbose cache add name="chalk" spec="~0.4.0" args=["chalk","~0.4.0"]
+670 verbose parsed url { protocol: null,
+670 verbose parsed url   slashes: null,
+670 verbose parsed url   auth: null,
+670 verbose parsed url   host: null,
+670 verbose parsed url   port: null,
+670 verbose parsed url   hostname: null,
+670 verbose parsed url   hash: null,
+670 verbose parsed url   search: null,
+670 verbose parsed url   query: null,
+670 verbose parsed url   pathname: '~0.4.0',
+670 verbose parsed url   path: '~0.4.0',
+670 verbose parsed url   href: '~0.4.0' }
+671 verbose addNamed [ 'chalk', '~0.4.0' ]
+672 verbose addNamed [ null, '>=0.4.0- <0.5.0-' ]
+673 silly lockFile bc9fb696-chalk-0-4-0 chalk@~0.4.0
+674 verbose lock chalk@~0.4.0 /Users/eric/.npm/bc9fb696-chalk-0-4-0.lock
+675 silly addNameRange { name: 'chalk', range: '>=0.4.0- <0.5.0-', hasData: false }
+676 verbose registry.get chalk not expired, no request
+677 silly addNameRange number 2 { name: 'chalk', range: '>=0.4.0- <0.5.0-', hasData: true }
+678 silly addNameRange versions [ 'chalk',
+678 silly addNameRange   [ '0.1.0', '0.1.1', '0.2.0', '0.2.1', '0.3.0', '0.4.0' ] ]
+679 verbose addNamed [ 'chalk', '0.4.0' ]
+680 verbose addNamed [ '0.4.0', '0.4.0' ]
+681 silly lockFile 1efe4790-chalk-0-4-0 chalk@0.4.0
+682 verbose lock chalk@0.4.0 /Users/eric/.npm/1efe4790-chalk-0-4-0.lock
+683 verbose from cache /Users/eric/.npm/chalk/0.4.0/package/package.json
+684 silly lockFile 1efe4790-chalk-0-4-0 chalk@0.4.0
+685 silly lockFile 1efe4790-chalk-0-4-0 chalk@0.4.0
+686 silly lockFile bc9fb696-chalk-0-4-0 chalk@~0.4.0
+687 silly lockFile bc9fb696-chalk-0-4-0 chalk@~0.4.0
+688 error Error: No compatible version found: chalk@'^0.4.0'
+688 error Valid install targets:
+688 error ["0.1.0","0.1.1","0.2.0","0.2.1","0.3.0","0.4.0"]
+688 error     at installTargetsError (/usr/local/Cellar/node/0.10.4/lib/node_modules/npm/lib/cache.js:719:10)
+688 error     at /usr/local/Cellar/node/0.10.4/lib/node_modules/npm/lib/cache.js:641:10
+688 error     at RegClient.get_ (/usr/local/Cellar/node/0.10.4/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:101:14)
+688 error     at RegClient.<anonymous> (/usr/local/Cellar/node/0.10.4/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:37:12)
+688 error     at fs.js:266:14
+688 error     at Object.oncomplete (fs.js:107:15)
+689 error If you need help, you may report this log at:
+689 error     <http://github.com/isaacs/npm/issues>
+689 error or email it to:
+689 error     <npm-@googlegroups.com>
+690 error System Darwin 13.1.0
+691 error command "node" "/usr/local/bin/npm" "install"
+692 error cwd /Users/eric/Projects/thePrinceBoardGame
+693 error node -v v0.10.4
+694 error npm -v 1.2.28
+695 verbose exit [ 1, true ]

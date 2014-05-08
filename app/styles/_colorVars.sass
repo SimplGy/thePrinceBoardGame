@@ -1,17 +1,5 @@
 
 
-$colorForeground: #544943
-$colorBackground: #ece4d8
-
-$colorMuted: #777
-
-$colorBlue: #417090
-
-
-$colorTeam0: #fff8dc
-$colorTeam1: #5E4C3A
-$colorTeam0dark: mix($colorTeam0,$colorTeam1, 90%)
-$colorTeam1light: mix($colorTeam1,$colorTeam0, 90w%)
 
 
 
@@ -22,13 +10,24 @@ $colorWarn: #f0ad4e
 $colorBad:  #d9534f
 
 
+$colorTeam0: $colorGood
+$colorTeam1: $colorInfo
+$colorTeam0Light: mix(white, $colorTeam0, 30%)
+$colorTeam1Light: mix(white, $colorTeam0, 30%)
+$colorTeam0Dark: mix(black, $colorTeam0, 20%)
+$colorTeam1Dark: mix(black, $colorTeam1, 20%)
+
+
 
 $black05: mix(black,white,5%)
 $black10: mix(black,white,10%)
+$black20: mix(black,white,20%)
+$black50: mix(black,white,50%)
 
 $shade05: rgba(0,0,0,0.05)
 $shade10: rgba(0,0,0,0.10)
 $shade20: rgba(0,0,0,0.20)
+$shade50: rgba(0,0,0,0.50)
 
 $light20: rgba(255,255,255,0.20)
 $light50: rgba(255,255,255,0.50)

@@ -11,7 +11,7 @@
       y: void 0
     };
     return Space;
-  }).factory('gameBoard', function(cfg, Space, Piece) {
+  }).factory('gameBoard', function(cfg, Space, Piece, PieceDefinitions) {
     var api, space, x, y, _i, _j, _ref, _ref1;
     api = {
       locations: [],
@@ -30,17 +30,17 @@
       }
     }
     api.pieces.push(new Piece({
-      type: Piece.TYPES.prince,
+      type: PieceDefinitions.TYPES.prince,
       x: 2,
       y: 5
     }));
     api.pieces.push(new Piece({
-      type: Piece.TYPES.footman,
+      type: PieceDefinitions.TYPES.footman,
       x: 2,
       y: 4
     }));
     api.pieces.push(new Piece({
-      type: Piece.TYPES.footman,
+      type: PieceDefinitions.TYPES.footman,
       x: 3,
       y: 5
     }));
@@ -49,7 +49,7 @@
     return {
       restrict: 'E',
       scope: {},
-      template: '<b\n  ng-repeat="space in board.spaces"\n  class="space x{{space.x}} y{{space.y}}"\n  ng-class="{altColor: (space.x + space.y) % 2 === 0}" title="{{space.x}}, {{space.y}}">\n</b>\n\n<i piece\n   ng-repeat="piece in board.pieces"\n   class="piece {{piece.type}} x{{piece.x}} y{{piece.y}} team{{piece.team}} side{{piece.getSide()}}">\n  {{piece.type}} [{{piece.getSide()}}]\n</i>',
+      template: '<b\n  ng-repeat="space in board.spaces"\n  class="space x{{space.x}} y{{space.y}}"\n  ng-class="{altColor: (space.x + space.y) % 2 === 0}" title="{{space.x}}, {{space.y}}">\n</b>\n\n<i piece\n   ng-repeat="piece in board.pieces"\n   class="piece {{piece.type}} x{{piece.x}} y{{piece.y}} team{{piece.team}} side{{piece.getSide()}}">\n  {{piece.type}}\n</i>',
       link: function(scope, el, attrs) {
         var calculateSize;
         scope.board = gameBoard;
