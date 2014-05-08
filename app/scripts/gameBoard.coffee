@@ -19,7 +19,7 @@ angular.module('prince')
 
 
 # Build a game board with instances of space objects
-.factory 'gameBoard', (cfg, Space, Piece, PieceDefinitions) ->
+.factory 'gameBoard', (cfg, Space) ->
   api =
     locations: []  # 2d array representing board shape
     spaces: []     # Flat list
@@ -32,19 +32,9 @@ angular.module('prince')
       api.spaces.push space
       api.locations[y].push
 
-  # Starting pieces
-  api.pieces.push new Piece
-    type: PieceDefinitions.TYPES.prince
-    x: 2
-    y: 5
-  api.pieces.push new Piece
-    type: PieceDefinitions.TYPES.footman
-    x: 2
-    y: 4
-  api.pieces.push new Piece
-    type: PieceDefinitions.TYPES.footman
-    x:3
-    y:5
+  # Given a piece instance, show the actions on the game board that can be made
+  api.showActions = (piece) ->
+    console.log "Show actions for piece: ", piece
 
   api
 
@@ -52,7 +42,7 @@ angular.module('prince')
 .directive 'gameBoard', (gameBoard, $window, cfg) ->
   restrict: 'E'
   scope: {}
-  template: '<b\n  ng-repeat="space in board.spaces"\n  class="space x{{space.x}} y{{space.y}}"\n  ng-class="{altColor: (space.x + space.y) % 2 === 0}" title="{{space.x}}, {{space.y}}">\n</b>\n\n<i piece\n   ng-repeat="piece in board.pieces"\n   class="piece {{piece.type}} x{{piece.x}} y{{piece.y}} team{{piece.team}} side{{piece.getSide()}}">\n  {{piece.type}}\n</i>'
+  template: '<b\n  ng-repeat="space in board.spaces"\n  class="space x{{space.x}} y{{space.y}}"\n  ng-class="{altColor: (space.x + space.y) % 2 === 0}" title="{{space.x}}, {{space.y}}">\n</b>\n\n<i piece\n   ng-repeat="piece in board.pieces"\n   ng-click="onClick(piece)"\n   class="piece {{piece.type}} x{{piece.x}} y{{piece.y}} team{{piece.team}} side{{piece.getSide()}}">\n  {{piece.type}}\n</i>'
   link: (scope, el, attrs) ->
     scope.board = gameBoard
     calculateSize = ->

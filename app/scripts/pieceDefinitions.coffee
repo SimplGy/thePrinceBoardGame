@@ -15,16 +15,24 @@ angular.module('prince')
     command: 'command'
 
   # Shortcut vars for readable action postions
-  m = ACTIONS.move
-  s = ACTIONS.slide
-  j = ACTIONS.jump
-  x = ACTIONS.strike
-  c = ACTIONS.command
+#  m = ACTIONS.move
+#  s = ACTIONS.slide
+#  j = ACTIONS.jump
+#  x = ACTIONS.strike
+#  c = ACTIONS.command
 
   definitions =
     TYPES: TYPES
     ACTIONS: ACTIONS
+    prince:
+      type: TYPES.prince
+      actions: [
+        slide: [-1, 0], [1, 0]    #      ^
+      ,                           #    < D >
+        slide: [0, 1], [0, -1]    #      v
+      ]
     footman:
+      type: TYPES.footman
       actions: [
         move: [
           [0,-1]

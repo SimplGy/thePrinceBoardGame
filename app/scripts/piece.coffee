@@ -1,18 +1,21 @@
 angular.module('prince')
 
 
-.factory 'Piece', (cfg, PieceDefinitions) ->
+.factory 'Piece', (cfg, gameBoard, PieceDefinitions) ->
 
   Piece = (options) ->
-    @type = options.type
+    definition = PieceDefinitions[options.type]
+    unless definition then console.warn "No Piece Definition found for type: #{options.type}"
+    angular.extend @, definition
     @x = options.x
     @y = options.y
 
   Piece.prototype =
     x: undefined
     y: undefined
-    actions: 0 # how many actions has this piece taken?
-    getSide: -> if @actions % 2 is 0 then 0 else 1 # is it on side 0 or side 1?
+    actionCount: 0 # how many actions has this piece taken?
+    getSide: -> if @actionCount % 2 is 0 then 0 else 1 # is it on side 0 or side 1?
+    showActions: -> gameBoard.showActions @
     act: (pos) ->
       return 'off the left'   if pos.x < 0                    # Off the left side
       return 'off the right'  if pos.x > cfg.cellCount - 1    # Too far right
@@ -25,7 +28,7 @@ angular.module('prince')
       else
         @x = pos.x
         @y = pos.y
-        @actions++
+        @actionCount++
     team: 0 # dark or light team?
 
   Piece
@@ -53,5 +56,5 @@ angular.module('prince')
       scope.$apply ->
         console.log scope.piece.act pos
 
-
+    scope.onClick = (piece) -> piece.showActions()
 
