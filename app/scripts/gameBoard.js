@@ -11,33 +11,71 @@
       y: void 0
     };
     return Space;
-  }).factory('gameBoard', function(cfg, Space) {
-    var api, space, x, y, _i, _j, _ref, _ref1;
-    api = {
+  }).factory('gameBoard', function(cfg, Space, PieceDefinitions) {
+    var gameBoard, space, x, y, _i, _j, _ref, _ref1;
+    gameBoard = {
       locations: [],
       spaces: [],
       pieces: []
     };
-    for (y = _i = 0, _ref = cfg.cellCount; 0 <= _ref ? _i < _ref : _i > _ref; y = 0 <= _ref ? ++_i : --_i) {
-      api.locations[y] = [];
-      for (x = _j = 0, _ref1 = cfg.cellCount; 0 <= _ref1 ? _j < _ref1 : _j > _ref1; x = 0 <= _ref1 ? ++_j : --_j) {
+    for (x = _i = 0, _ref = cfg.cellCount; 0 <= _ref ? _i < _ref : _i > _ref; x = 0 <= _ref ? ++_i : --_i) {
+      gameBoard.locations[x] = [];
+      for (y = _j = 0, _ref1 = cfg.cellCount; 0 <= _ref1 ? _j < _ref1 : _j > _ref1; y = 0 <= _ref1 ? ++_j : --_j) {
         space = new Space({
           x: x,
           y: y
         });
-        api.spaces.push(space);
-        api.locations[y].push;
+        gameBoard.spaces.push(space);
+        gameBoard.locations[x].push(space);
       }
     }
-    api.showActions = function(piece) {
-      return console.log("Visualize these actions: ", piece.getActions());
+    gameBoard.clearHighlights = function() {
+      var _k, _len, _ref2, _results;
+      _ref2 = gameBoard.spaces;
+      _results = [];
+      for (_k = 0, _len = _ref2.length; _k < _len; _k++) {
+        space = _ref2[_k];
+        _results.push(space.highlight = false);
+      }
+      return _results;
     };
-    return api;
+    gameBoard.showActions = function(piece) {
+      var actions, coords, loc, offset, type, _results;
+      gameBoard.clearHighlights();
+      actions = piece.getActions();
+      console.log('highlight actions: ', actions);
+      _results = [];
+      for (type in actions) {
+        coords = actions[type];
+        if (type === PieceDefinitions.ACTIONS.move) {
+          _results.push((function() {
+            var _k, _len, _ref2, _results1;
+            _results1 = [];
+            for (_k = 0, _len = coords.length; _k < _len; _k++) {
+              offset = coords[_k];
+              x = piece.x + offset[0];
+              y = piece.y + offset[1];
+              loc = (_ref2 = gameBoard.locations[x]) != null ? _ref2[y] : void 0;
+              if (loc) {
+                _results1.push(loc.highlight = true);
+              } else {
+                _results1.push(void 0);
+              }
+            }
+            return _results1;
+          })());
+        } else {
+          _results.push(console.warn("coord display rules for type " + type + " not yet implemented"));
+        }
+      }
+      return _results;
+    };
+    return gameBoard;
   }).directive('gameBoard', function(gameBoard, $window, cfg) {
     return {
       restrict: 'E',
       scope: {},
-      template: '<b\n  ng-repeat="space in board.spaces"\n  class="space x{{space.x}} y{{space.y}}"\n  ng-class="{altColor: (space.x + space.y) % 2 === 0}" title="{{space.x}}, {{space.y}}">\n</b>\n\n<i piece\n   ng-repeat="piece in board.pieces"\n   ng-click="onClick(piece)"\n   class="piece {{piece.type}} x{{piece.x}} y{{piece.y}} team{{piece.team}} side{{piece.getSide()}}">\n  {{piece.type}}\n</i>',
+      template: '<b\n  ng-repeat="space in board.spaces"\n  class="space x{{space.x}} y{{space.y}}"\n  ng-class="{highlight: space.highlight, altColor: (space.x + space.y) % 2 === 0}"\n  title="{{space.x}}, {{space.y}}">\n</b>\n\n<i piece\n   ng-repeat="piece in board.pieces"\n   ng-mousedown="piece.showActions()"\n   class="piece {{piece.type}} x{{piece.x}} y{{piece.y}} team{{piece.team}} side{{piece.getSide()}}">\n  {{piece.type}}\n</i>',
       link: function(scope, el, attrs) {
         var calculateSize;
         scope.board = gameBoard;

@@ -30,6 +30,7 @@
         return gameBoard.showActions(this);
       },
       act: function(pos) {
+        gameBoard.clearHighlights();
         if (pos.x < 0) {
           return 'off the left';
         }
@@ -75,15 +76,12 @@
           };
           return setPosition(pos);
         });
-        setPosition = function(pos) {
+        return setPosition = function(pos) {
           draggie.element.style.left = null;
           draggie.element.style.top = null;
           return scope.$apply(function() {
             return console.log(scope.piece.act(pos));
           });
-        };
-        return scope.onClick = function(piece) {
-          return piece.showActions();
         };
       }
     };

@@ -19,6 +19,7 @@ angular.module('prince')
     getActions: -> @actions[@getSide()]
     showActions: -> gameBoard.showActions @
     act: (pos) ->
+      gameBoard.clearHighlights()
       return 'off the left'   if pos.x < 0                    # Off the left side
       return 'off the right'  if pos.x > cfg.cellCount - 1    # Too far right
       return 'off the top'    if pos.y < 0                    # Off the top
@@ -31,6 +32,7 @@ angular.module('prince')
         @x = pos.x
         @y = pos.y
         @actionCount++
+
     team: 0 # dark or light team?
 
   Piece
@@ -57,6 +59,4 @@ angular.module('prince')
       # Announce the new x/y coord to scope. It will assign the css class and css will handle the positioning
       scope.$apply ->
         console.log scope.piece.act pos
-
-    scope.onClick = (piece) -> piece.showActions()
 

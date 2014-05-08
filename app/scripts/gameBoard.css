@@ -15,6 +15,8 @@ game-board {
     text-align: center; }
     game-board .space.altColor {
       background: #f2f2f2; }
+    game-board .space.highlight {
+      background: rgba(240, 173, 78, 0.5); }
   game-board .x0 {
     left: 0%; }
   game-board .x1 {
