@@ -14,10 +14,15 @@ angular.module('prince')
     x: undefined
     y: undefined
     actionCount: 0 # how many actions has this piece taken?
+    selected: false
     getSide: -> if @actionCount % 2 is 0 then 0 else 1 # is it on side 0 or side 1?
     # gets the actions for the current side of the piece
     getActions: -> @actions[@getSide()]
     showActions: -> gameBoard.showActions @
+    selectPiece: (select)-> 
+      console.log "selected: ", select, @
+      @selected = select 
+      gameBoard.selectPiece @
     act: (pos) ->
       gameBoard.clearHighlights()
       return 'off the left'   if pos.x < 0                    # Off the left side

@@ -6,12 +6,12 @@
   }).controller('MainController', function($scope, gameBoard, Piece, PieceDefinitions) {
     $scope.definitions = PieceDefinitions;
     $scope.newPiece = $scope.definitions.bowman;
-    $scope.addPiece = function() {
-      console.log("addPiece");
+    $scope.gameBoard = gameBoard;
+    $scope.addPiece = function(ptype, px, py) {
       return gameBoard.pieces.push(new Piece({
-        type: $scope.newPiece.type,
-        x: 0,
-        y: 0
+        type: ptype,
+        x: px,
+        y: py
       }));
     };
     gameBoard.pieces.push(new Piece({

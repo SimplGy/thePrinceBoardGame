@@ -3,26 +3,26 @@
   angular.module('prince', []).constant('cfg', {
     title: 'The Prince',
     cellCount: 6
-  }).controller('MainController', function(gameBoard, Piece, PieceDefinitions) {
+  }).controller('MainController', function($scope, gameBoard, Piece, PieceDefinitions) {
+    $scope.definitions = PieceDefinitions;
+    $scope.newPiece = $scope.definitions.bowman;
+    $scope.gameBoard = gameBoard;
+    $scope.addPiece = function(ptype, px, py) {
+      return gameBoard.pieces.push(new Piece({
+        type: ptype,
+        x: px,
+        y: py
+      }));
+    };
     gameBoard.pieces.push(new Piece({
       type: PieceDefinitions.TYPES.prince,
-      x: 2,
-      y: 5
-    }));
-    gameBoard.pieces.push(new Piece({
-      type: PieceDefinitions.TYPES.footman,
-      x: 2,
-      y: 4
-    }));
-    gameBoard.pieces.push(new Piece({
-      type: PieceDefinitions.TYPES.footman,
       x: 3,
       y: 5
     }));
     return gameBoard.pieces.push(new Piece({
-      type: PieceDefinitions.TYPES.pikeman,
-      x: 5,
-      y: 0
+      type: PieceDefinitions.TYPES.footman,
+      x: 2,
+      y: 5
     }));
   });
 
@@ -35,7 +35,20 @@
     TYPES = {
       prince: 'prince',
       footman: 'footman',
-      pikeman: 'pikeman'
+      pikeman: 'pikeman',
+      bowman: 'bowman',
+      champion: 'champion',
+      dragoon: 'dragoon',
+      assassin: 'assassin',
+      general: 'general',
+      knight: 'knight',
+      marshall: 'marshall',
+      priest: 'priest',
+      seer: 'seer',
+      wizard: 'wizard',
+      longbowman: 'longbowman',
+      oracle: 'oracle',
+      duchess: 'duchess'
     };
     ACTIONS = {
       move: 'move',
@@ -52,19 +65,19 @@
         type: TYPES.prince,
         actions: [
           {
-            slide: [-1, 0]
-          }, [1, 0], {
-            slide: [0, 1]
-          }, [0, -1]
+            slide: [[-1, 0], [1, 0]]
+          }, {
+            slide: [[0, -1], [0, 1]]
+          }
         ]
       },
       footman: {
         type: TYPES.footman,
         actions: [
           {
-            move: [[0, -1], [1, 0], [0, 1], [-1, 0]]
+            move: [[0, -1], [-1, 0], [1, 0], [0, 1]]
           }, {
-            move: [[0, -2], [-1, -1], [1, 1], [-1, 1], [1, -1]]
+            move: [[0, -2], [-1, -1], [1, -1], [-1, 1], [1, 1]]
           }
         ]
       },
@@ -72,10 +85,158 @@
         type: TYPES.pikeman,
         actions: [
           {
-            move: [[-2, -2], [-1, -1], [1, -1], [2, -2]]
+            move: [[-2, -2], [2, -2], [-1, -1], [1, -1]]
           }, {
-            move: [[0, -1], [0, 1], [0, 2]],
-            strike: [[-1, -2], [1, -2]]
+            strike: [[-1, -2], [1, -2]],
+            move: [[0, -1], [0, 1], [0, 2]]
+          }
+        ]
+      },
+      bowman: {
+        type: TYPES.bowman,
+        actions: [
+          {
+            jump: [[-2, 0], [2, 0], [0, 2]],
+            move: [[0, -1], [-1, 0], [1, 0]]
+          }, {
+            strike: [[0, -2], [-1, -1], [1, -1]],
+            move: [[0, -1], [-1, 1], [1, 1]]
+          }
+        ]
+      },
+      champion: {
+        type: TYPES.champion,
+        actions: [
+          {
+            jump: [[0, -2], [-2, 0], [2, 0], [0, 2]],
+            move: [[0, -1], [-1, 0], [1, 0], [0, 1]]
+          }, {
+            jump: [[0, -2], [-2, 0], [2, 0], [0, 2]],
+            strike: [[0, -1], [-1, 0], [1, 0], [0, 1]]
+          }
+        ]
+      },
+      dragoon: {
+        type: TYPES.dragoon,
+        actions: [
+          {
+            strike: [[-2, -2], [0, -2], [2, -2]],
+            move: [[-1, 0], [1, 0]]
+          }, {
+            jump: [[-1, -2], [1, -2]],
+            slide: [[-1, 1], [1, 1]],
+            move: [[0, -2], [0, -1]]
+          }
+        ]
+      },
+      assassin: {
+        type: TYPES.assassin,
+        actions: [
+          {
+            jumpslide: [[0, -2], [-2, 2], [2, 2]]
+          }, {
+            jumpslide: [[-2, -2], [2, -2], [0, 2]]
+          }
+        ]
+      },
+      general: {
+        type: TYPES.general,
+        actions: [
+          {
+            jump: [[-1, -2], [1, -2]],
+            move: [[0, -1], [-2, 0], [2, 0], [0, 1]]
+          }, {
+            jump: [[-1, -2], [1, -2]],
+            move: [[0, -1], [-2, 0], [-1, 0], [1, 0], [2, 0]],
+            command: [[-1, 0], [1, 0], [-1, 1], [0, 1], [1, 1]]
+          }
+        ]
+      },
+      knight: {
+        type: TYPES.knight,
+        actions: [
+          {
+            jump: [[-1, -2], [1, -2]],
+            move: [[-1, 0], [1, 0], [0, 1], [0, 2]]
+          }, {
+            slide: [[0, -1]],
+            move: [[-1, 1], [1, 1], [-2, 2], [2, 2]]
+          }
+        ]
+      },
+      marshall: {
+        type: TYPES.marshall,
+        actions: [
+          {
+            jump: [[-2, -2], [2, -2], [0, 2]],
+            slide: [[-1, 0], [1, 0]]
+          }, {
+            move: [[-1, -1], [0, -1], [1, -1], [-2, 0], [-1, 0], [1, 0], [2, 0], [-1, 1], [1, 1]],
+            command: [[-1, -1], [0, -1], [1, -1]]
+          }
+        ]
+      },
+      priest: {
+        type: TYPES.priest,
+        actions: [
+          {
+            slide: [[-1, -1], [1, -1], [-1, 1], [1, 1]]
+          }, {
+            jump: [[-2, -2], [2, -2], [-2, 2], [2, 2]],
+            move: [[-1, -1], [1, -1], [-1, 1], [1, 1]]
+          }
+        ]
+      },
+      seer: {
+        type: TYPES.seer,
+        actions: [
+          {
+            jump: [[0, -2], [-2, 0], [2, 0], [0, 2]],
+            move: [[-1, -1], [1, -1], [-1, 1], [1, 1]]
+          }, {
+            jump: [[-2, -2], [2, -2], [-2, 2], [2, 2]],
+            move: [[0, -1], [-1, 0], [1, 0], [0, 1]]
+          }
+        ]
+      },
+      wizard: {
+        type: TYPES.wizard,
+        actions: [
+          {
+            move: [[-1, -1], [0, -1], [1, -1], [-1, 0], [1, 0], [-1, 1], [0, 1], [1, 1]]
+          }, {
+            jump: [[-2, -2], [2, -2], [-2, 0], [2, 0], [-2, 2], [2, 2]]
+          }
+        ]
+      },
+      longbowman: {
+        type: TYPES.longbowman,
+        actions: [
+          {
+            move: [[-1, 0], [0, -1], [1, 0], [0, 1]]
+          }, {
+            move: [[-1, 1], [1, 1]],
+            strike: [[0, -2], [0, -3]]
+          }
+        ]
+      },
+      oracle: {
+        type: TYPES.oracle,
+        actions: [
+          {
+            move: [[-1, -1], [1, -1], [-1, 1], [1, 1]]
+          }
+        ]
+      },
+      duchess: {
+        type: TYPES.duchess,
+        actions: [
+          {
+            move: [[-1, 0], [1, 0], [0, 2]],
+            command: [[-2, 0], [-1, 0], [1, 0], [2, 0]]
+          }, {
+            move: [[-1, 0], [1, 0], [0, 2]],
+            command: [[-2, 0], [-1, 0], [1, 0], [2, 0]]
           }
         ]
       }
@@ -103,7 +264,8 @@
     gameBoard = {
       locations: [],
       spaces: [],
-      pieces: []
+      pieces: [],
+      selectedPiece: null
     };
     for (x = _i = 0, _ref = cfg.cellCount; 0 <= _ref ? _i < _ref : _i > _ref; x = 0 <= _ref ? ++_i : --_i) {
       gameBoard.locations[x] = [];
@@ -157,12 +319,39 @@
       }
       return _results;
     };
+    gameBoard.selectPiece = function(piece) {
+      if (piece.selected === false) {
+        gameBoard.selectedPiece = null;
+        return gameBoard.clearHighlights();
+      } else {
+        if (gameBoard.selectedPiece) {
+          gameBoard.selectedPiece.selected = false;
+        }
+        gameBoard.selectedPiece = piece;
+        return gameBoard.selectedPiece.showActions();
+      }
+    };
+    gameBoard.unselectPiece = function() {
+      if (gameBoard.selectedPiece) {
+        gameBoard.selectedPiece.selected = false;
+      }
+      gameBoard.selectedPiece = null;
+      return gameBoard.clearHighlights();
+    };
+    gameBoard.removePiece = function(piece) {
+      var index;
+      index = gameBoard.pieces.indexOf(piece);
+      if (index !== -1) {
+        gameBoard.pieces.splice(index, 1);
+        return gameBoard.clearHighlights();
+      }
+    };
     return gameBoard;
   }).directive('gameBoard', function(gameBoard, $window, cfg) {
     return {
       restrict: 'E',
       scope: {},
-      template: '<b\n  ng-repeat="space in board.spaces"\n  class="space x{{space.x}} y{{space.y}}"\n  ng-class="{highlight: space.highlight, altColor: (space.x + space.y) % 2 === 0}"\n  title="{{space.x}}, {{space.y}}">\n</b>\n\n<i piece\n   ng-repeat="piece in board.pieces"\n   ng-mousedown="piece.showActions()"\n   class="piece {{piece.type}} x{{piece.x}} y{{piece.y}} team{{piece.team}} side{{piece.getSide()}}">\n  {{piece.type}}\n</i>',
+      template: '<b\n  ng-repeat="space in board.spaces"\n  class="space x{{space.x}} y{{space.y}}"\n  ng-class="{highlight: space.highlight, altColor: (space.x + space.y) % 2 === 0}"\n  ng-click="board.unselectPiece()"\n  title="{{space.x}}, {{space.y}}">\n</b>\n\n<i piece\n   ng-repeat="piece in board.pieces"\n   ng-mousedown="piece.showActions()"\n   ng-click="piece.selectPiece(true)"\n   class="piece {{piece.type}} x{{piece.x}} y{{piece.y}} team{{piece.team}} select{{piece.selected}} side{{piece.getSide()}}">\n  {{piece.type}}\n</i>',
       link: function(scope, el, attrs) {
         var calculateSize;
         scope.board = gameBoard;
@@ -208,6 +397,7 @@
       x: void 0,
       y: void 0,
       actionCount: 0,
+      selected: false,
       getSide: function() {
         if (this.actionCount % 2 === 0) {
           return 0;
@@ -220,6 +410,11 @@
       },
       showActions: function() {
         return gameBoard.showActions(this);
+      },
+      selectPiece: function(select) {
+        console.log("selected: ", select, this);
+        this.selected = select;
+        return gameBoard.selectPiece(this);
       },
       act: function(pos) {
         gameBoard.clearHighlights();

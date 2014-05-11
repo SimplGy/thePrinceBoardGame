@@ -10,10 +10,22 @@
   <link rel="stylesheet" href="styles/all-min.css"/>
 </head>
 <body ng-app="prince" ng-controller="MainController">
-
+  New piece: {{newPiece.type}}<br>
+  <select ng-model="newPiece" ng-options="p for (p, object) in definitions">
+    <option value="">-- choose a piece --</option>
+  </select>
+  <button ng-click="addPiece(newPiece.type, 0, 0)">Add</button>
+  <br>
+  <button ng-click="gameBoard.removePiece(gameBoard.selectedPiece)">Remove Selected</button>
+<!--   <ul>
+    <li ng-repeat="p in definitions" title="p | json">
+        {{p.type}}
+    </li>
+  </ul>
+ -->
   <game-board></game-board>
 
-<!-- fake change -->
+
 
 
   <!-- CDN Libs -->
@@ -23,7 +35,6 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/draggabilly/1.0.2/draggabilly.pkgd.js"></script>
 
   <script src="scripts/all-min.js"></script>
-
   <script>
 
   </script>

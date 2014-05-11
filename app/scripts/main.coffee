@@ -10,13 +10,13 @@ angular.module('prince', [] )
   .controller 'MainController', ($scope, gameBoard, Piece, PieceDefinitions) ->
     $scope.definitions = PieceDefinitions
     $scope.newPiece = $scope.definitions.bowman
-    
-    $scope.addPiece = ->
-      console.log "addPiece"
+    $scope.gameBoard = gameBoard
+
+    $scope.addPiece = (ptype, px, py) ->
       gameBoard.pieces.push new Piece
-        type: $scope.newPiece.type
-        x:0
-        y:0
+        type: ptype
+        x:px
+        y:py
 
     # Starting pieces
     gameBoard.pieces.push new Piece

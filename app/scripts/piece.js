@@ -16,6 +16,7 @@
       x: void 0,
       y: void 0,
       actionCount: 0,
+      selected: false,
       getSide: function() {
         if (this.actionCount % 2 === 0) {
           return 0;
@@ -28,6 +29,11 @@
       },
       showActions: function() {
         return gameBoard.showActions(this);
+      },
+      selectPiece: function(select) {
+        console.log("selected: ", select, this);
+        this.selected = select;
+        return gameBoard.selectPiece(this);
       },
       act: function(pos) {
         gameBoard.clearHighlights();

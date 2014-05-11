@@ -24,6 +24,7 @@ angular.module('prince')
     locations: []  # 2d array representing board shape
     spaces: []     # Flat list
     pieces: []
+    selectedPiece: null
 
   for x in [0...cfg.cellCount]
     gameBoard.locations[x] = []
@@ -53,13 +54,36 @@ angular.module('prince')
       else
         console.warn "coord display rules for type #{type} not yet implemented"
 
+  # Select the given piece and show the actions
+  gameBoard.selectPiece = (piece) ->
+    if piece.selected == false
+      gameBoard.selectedPiece = null
+      gameBoard.clearHighlights()
+    else
+      if gameBoard.selectedPiece
+        gameBoard.selectedPiece.selected = false
+      gameBoard.selectedPiece = piece
+      gameBoard.selectedPiece.showActions()
+
+  gameBoard.unselectPiece = ->
+    if gameBoard.selectedPiece
+      gameBoard.selectedPiece.selected = false
+    gameBoard.selectedPiece = null
+    gameBoard.clearHighlights()
+
+  # Remove the given piece
+  gameBoard.removePiece = (piece) ->
+    index = gameBoard.pieces.indexOf(piece)
+    if index != -1
+      gameBoard.pieces.splice(index,1); 
+      gameBoard.clearHighlights()
   gameBoard
 
 
 .directive 'gameBoard', (gameBoard, $window, cfg) ->
   restrict: 'E'
   scope: {}
-  template: '<b\n  ng-repeat="space in board.spaces"\n  class="space x{{space.x}} y{{space.y}}"\n  ng-class="{highlight: space.highlight, altColor: (space.x + space.y) % 2 === 0}"\n  title="{{space.x}}, {{space.y}}">\n</b>\n\n<i piece\n   ng-repeat="piece in board.pieces"\n   ng-mousedown="piece.showActions()"\n   class="piece {{piece.type}} x{{piece.x}} y{{piece.y}} team{{piece.team}} side{{piece.getSide()}}">\n  {{piece.type}}\n</i>'
+  template: '<b\n  ng-repeat="space in board.spaces"\n  class="space x{{space.x}} y{{space.y}}"\n  ng-class="{highlight: space.highlight, altColor: (space.x + space.y) % 2 === 0}"\n  ng-click="board.unselectPiece()"\n  title="{{space.x}}, {{space.y}}">\n</b>\n\n<i piece\n   ng-repeat="piece in board.pieces"\n   ng-mousedown="piece.showActions()"\n   ng-click="piece.selectPiece(true)"\n   class="piece {{piece.type}} x{{piece.x}} y{{piece.y}} team{{piece.team}} select{{piece.selected}} side{{piece.getSide()}}">\n  {{piece.type}}\n</i>'
   link: (scope, el, attrs) ->
     scope.board = gameBoard
     calculateSize = ->
