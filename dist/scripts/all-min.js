@@ -205,7 +205,7 @@
           {
             move: [[-1, -1], [0, -1], [1, -1], [-1, 0], [1, 0], [-1, 1], [0, 1], [1, 1]]
           }, {
-            jump: [[-2, -2], [2, -2], [-2, 0], [2, 0], [-2, 2], [2, 2]]
+            jump: [[-2, -2], [0, -2], [2, -2], [-2, 0], [2, 0], [-2, 2], [0, 2], [2, 2]]
           }
         ]
       },
@@ -296,7 +296,7 @@
       _results = [];
       for (type in actions) {
         coords = actions[type];
-        if (type === PieceDefinitions.ACTIONS.move) {
+        if (type === PieceDefinitions.ACTIONS.move || type === PieceDefinitions.ACTIONS.jump) {
           _results.push((function() {
             var _k, _len, _ref2, _results1;
             _results1 = [];

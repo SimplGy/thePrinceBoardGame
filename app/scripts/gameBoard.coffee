@@ -44,7 +44,7 @@ angular.module('prince')
     actions = piece.getActions()
     console.log 'highlight actions: ', actions
     for type, coords of actions
-      if type is PieceDefinitions.ACTIONS.move
+      if type is PieceDefinitions.ACTIONS.move or type is PieceDefinitions.ACTIONS.jump
         for offset in coords
           x = piece.x + offset[0]
           y = piece.y + offset[1]
@@ -56,7 +56,7 @@ angular.module('prince')
 
   # Select the given piece and show the actions
   gameBoard.selectPiece = (piece) ->
-    if piece.selected == false
+    if piece.selected is false
       gameBoard.selectedPiece = null
       gameBoard.clearHighlights()
     else

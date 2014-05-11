@@ -48,7 +48,7 @@
       _results = [];
       for (type in actions) {
         coords = actions[type];
-        if (type === PieceDefinitions.ACTIONS.move) {
+        if (type === PieceDefinitions.ACTIONS.move || type === PieceDefinitions.ACTIONS.jump) {
           _results.push((function() {
             var _k, _len, _ref2, _results1;
             _results1 = [];
