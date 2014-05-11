@@ -17,7 +17,18 @@
   <!-- endbuild -->
 </head>
 <body ng-app="prince" ng-controller="MainController">
-
+  New piece: {{newPiece.type}}<br>
+  <select ng-model="newPiece" ng-options="p for (p, object) in definitions">
+    <option value="">-- choose a piece --</option>
+  </select>
+  <button ng-click="addPiece()">Add</button>
+  <br>
+<!--   <ul>
+    <li ng-repeat="p in definitions" title="p | json">
+        {{p.type}}
+    </li>
+  </ul>
+ -->
   <game-board></game-board>
 
 
@@ -35,7 +46,6 @@
   <script src="scripts/gameBoard.js"></script>
   <script src="scripts/piece.js"></script>
   <!-- endbuild -->
-
   <script>
 
   </script>

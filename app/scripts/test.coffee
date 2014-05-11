@@ -16,7 +16,6 @@ angular.module('prince')
     priest:'priest'
     seer:'seer'
     wizard:'wizard'
-    longbowman:'longbowman'
     oracle:'oracle'
     duchess:'duchess'
   ACTIONS = 
@@ -225,8 +224,8 @@ angular.module('prince')
           [1,-2]
         ]
         move: [
-          [-1,0]
-          [1,0]
+          [-2,0]
+          [2,0]
           [0,1]
           [0,2]
         ]
@@ -351,26 +350,6 @@ angular.module('prince')
         ]
       ]
 
-    longbowman:
-      type: TYPES.longbowman
-      actions: [
-        move: [
-          [-1,0]
-          [0,-1]
-          [1,0]
-          [0,1]
-        ]
-      ,
-        move: [
-          [-1,1]
-          [1,1]
-        ]
-        strike: [
-          [0,-2]
-          [0,-3]
-        ]
-      ]
-
     oracle:
       type: TYPES.oracle
       actions: [
@@ -412,3 +391,113 @@ angular.module('prince')
       ]
 
   definitions
+
+
+
+  &.prince:before
+    content: "P"
+  &.footman:before
+    content: "F"
+  &.pikeman:before
+    content: "Pi"
+  &.bowman:before
+    content: "B"
+  &.champion:before
+    content: "C"
+  &.dragoon:before
+    content: "D"
+  &.assassin:before
+    content: "A"
+  &.general:before
+    content: "G"
+  &.knight:before
+    content: "K"
+  &.marshall:before
+    content: "M"
+  &.priest:before
+    content: "Pr"
+  &.seer:before
+    content: "S"
+  &.wizard:before
+    content: "W"
+  &.oracle:before
+    content: "O"
+  &.duchess:before
+    content: "Du"
+
+
+gameBoard.pieces.push new Piece
+  type: PieceDefinitions.TYPES.prince
+  x:0
+  y:0
+
+gameBoard.pieces.push new Piece
+  type: PieceDefinitions.TYPES.footman
+  x:1
+  y:0
+
+gameBoard.pieces.push new Piece
+  type: PieceDefinitions.TYPES.pikeman
+  x:2
+  y:0
+
+gameBoard.pieces.push new Piece
+  type: PieceDefinitions.TYPES.bowman
+  x:3
+  y:0
+
+gameBoard.pieces.push new Piece
+  type: PieceDefinitions.TYPES.champion
+  x:4
+  y:0
+
+gameBoard.pieces.push new Piece
+  type: PieceDefinitions.TYPES.dragoon
+  x:5
+  y:0
+
+gameBoard.pieces.push new Piece
+  type: PieceDefinitions.TYPES.assassin
+  x:0
+  y:1
+
+gameBoard.pieces.push new Piece
+  type: PieceDefinitions.TYPES.general
+  x:1
+  y:1
+
+gameBoard.pieces.push new Piece
+  type: PieceDefinitions.TYPES.knight
+  x:2
+  y:1
+
+gameBoard.pieces.push new Piece
+  type: PieceDefinitions.TYPES.marshall
+  x:3
+  y:1
+
+gameBoard.pieces.push new Piece
+  type: PieceDefinitions.TYPES.priest
+  x:4
+  y:1
+
+gameBoard.pieces.push new Piece
+  type: PieceDefinitions.TYPES.seer
+  x:5
+  y:1
+
+gameBoard.pieces.push new Piece
+  type: PieceDefinitions.TYPES.wizard
+  x:0
+  y:2
+
+gameBoard.pieces.push new Piece
+  type: PieceDefinitions.TYPES.oracle
+  x:1
+  y:2
+
+gameBoard.pieces.push new Piece
+  type: PieceDefinitions.TYPES.duchess
+  x:2
+  y:2
+

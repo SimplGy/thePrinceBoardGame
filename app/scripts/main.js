@@ -3,26 +3,26 @@
   angular.module('prince', []).constant('cfg', {
     title: 'The Prince',
     cellCount: 6
-  }).controller('MainController', function(gameBoard, Piece, PieceDefinitions) {
+  }).controller('MainController', function($scope, gameBoard, Piece, PieceDefinitions) {
+    $scope.definitions = PieceDefinitions;
+    $scope.newPiece = $scope.definitions.bowman;
+    $scope.addPiece = function() {
+      console.log("addPiece");
+      return gameBoard.pieces.push(new Piece({
+        type: $scope.newPiece.type,
+        x: 0,
+        y: 0
+      }));
+    };
     gameBoard.pieces.push(new Piece({
       type: PieceDefinitions.TYPES.prince,
-      x: 2,
-      y: 5
-    }));
-    gameBoard.pieces.push(new Piece({
-      type: PieceDefinitions.TYPES.footman,
-      x: 2,
-      y: 4
-    }));
-    gameBoard.pieces.push(new Piece({
-      type: PieceDefinitions.TYPES.footman,
       x: 3,
       y: 5
     }));
     return gameBoard.pieces.push(new Piece({
-      type: PieceDefinitions.TYPES.pikeman,
-      x: 5,
-      y: 0
+      type: PieceDefinitions.TYPES.footman,
+      x: 2,
+      y: 5
     }));
   });
 
