@@ -54,22 +54,27 @@ angular.module('prince')
       else
         console.warn "coord display rules for type #{type} not yet implemented"
 
-  # Select the given piece and show the actions
-  gameBoard.selectPiece = (piece) ->
-    if piece.selected is false
-      gameBoard.selectedPiece = null
-      gameBoard.clearHighlights()
-    else
-      if gameBoard.selectedPiece
-        gameBoard.selectedPiece.selected = false
-      gameBoard.selectedPiece = piece
-      gameBoard.selectedPiece.showActions()
-
-  gameBoard.unselectPiece = ->
+  gameBoard.unselectCurrent = ->
     if gameBoard.selectedPiece
       gameBoard.selectedPiece.selected = false
     gameBoard.selectedPiece = null
     gameBoard.clearHighlights()
+
+  # Select the given piece and show the actions
+  gameBoard.selectPiece = (piece) ->
+    if gameBoard.selectedPiece
+      gameBoard.selectedPiece.selected = false
+    gameBoard.selectedPiece = piece
+    gameBoard.selectedPiece.showActions()
+
+  # Move the selected piece in case the given space is highlighted
+  # Unselect it afterward or in any other case
+  gameBoard.moveSelected = (space) ->
+    console.log "click space", space
+    if gameBoard.selectedPiece
+      if space.highlight
+        gameBoard.selectedPiece.act space
+      gameBoard.unselectCurrent()
 
   # Remove the given piece
   gameBoard.removePiece = (piece) ->
@@ -83,7 +88,7 @@ angular.module('prince')
 .directive 'gameBoard', (gameBoard, $window, cfg) ->
   restrict: 'E'
   scope: {}
-  template: '<b\n  ng-repeat="space in board.spaces"\n  class="space x{{space.x}} y{{space.y}}"\n  ng-class="{highlight: space.highlight, altColor: (space.x + space.y) % 2 === 0}"\n  ng-click="board.unselectPiece()"\n  title="{{space.x}}, {{space.y}}">\n</b>\n\n<i piece\n   ng-repeat="piece in board.pieces"\n   ng-mousedown="piece.showActions()"\n   ng-click="piece.selectPiece(true)"\n   class="piece {{piece.type}} x{{piece.x}} y{{piece.y}} team{{piece.team}} select{{piece.selected}} side{{piece.getSide()}}">\n  {{piece.type}}\n</i>'
+  template: '<b\n  ng-repeat="space in board.spaces"\n  class="space x{{space.x}} y{{space.y}}"\n  ng-class="{highlight: space.highlight, altColor: (space.x + space.y) % 2 === 0}"\n  ng-click="board.moveSelected(space)"\n  title="{{space.x}}, {{space.y}}">\n</b>\n\n<i piece\n   ng-repeat="piece in board.pieces"\n   ng-mousedown="piece.showActions()"\n   ng-click="piece.selectPiece(true)"\n   class="piece {{piece.type}} x{{piece.x}} y{{piece.y}} team{{piece.team}} select{{piece.selected}} side{{piece.getSide()}}">\n  {{piece.type}}\n</i>'
   link: (scope, el, attrs) ->
     scope.board = gameBoard
     calculateSize = ->
