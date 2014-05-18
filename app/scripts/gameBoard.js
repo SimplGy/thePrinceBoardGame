@@ -79,10 +79,12 @@
       return gameBoard.clearHighlights();
     };
     gameBoard.selectPiece = function(piece) {
+      console.log("gb.select ", piece);
       if (gameBoard.selectedPiece) {
         gameBoard.selectedPiece.selected = false;
       }
       gameBoard.selectedPiece = piece;
+      gameBoard.selectedPiece.selected = true;
       return gameBoard.selectedPiece.showActions();
     };
     gameBoard.moveSelected = function(space) {
@@ -92,6 +94,13 @@
           gameBoard.selectedPiece.act(space);
         }
         return gameBoard.unselectCurrent();
+      }
+    };
+    gameBoard.movePiece = function(piece, pos) {
+      var _ref2;
+      space = (_ref2 = gameBoard.locations[pos.x]) != null ? _ref2[pos.y] : void 0;
+      if (space && space.highlight) {
+        return piece.act(space);
       }
     };
     gameBoard.removePiece = function(piece) {
@@ -107,7 +116,7 @@
     return {
       restrict: 'E',
       scope: {},
-      template: '<b\n  ng-repeat="space in board.spaces"\n  class="space x{{space.x}} y{{space.y}}"\n  ng-class="{highlight: space.highlight, altColor: (space.x + space.y) % 2 === 0}"\n  ng-click="board.moveSelected(space)"\n  title="{{space.x}}, {{space.y}}">\n</b>\n\n<i piece\n   ng-repeat="piece in board.pieces"\n   ng-mousedown="piece.showActions()"\n   ng-click="piece.selectPiece(true)"\n   class="piece {{piece.type}} x{{piece.x}} y{{piece.y}} team{{piece.team}} select{{piece.selected}} side{{piece.getSide()}}">\n  {{piece.type}}\n</i>',
+      template: '<b\n  ng-repeat="space in board.spaces"\n  class="space x{{space.x}} y{{space.y}}"\n  ng-class="{highlight: space.highlight, altColor: (space.x + space.y) % 2 === 0}"\n  ng-click="board.moveSelected(space)"\n  title="{{space.x}}, {{space.y}}">\n</b>\n\n<i piece\n   ng-repeat="piece in board.pieces"\n   ng-click="piece.selectPiece()"\n   ng-mouseover="piece.selectPiece()"\n   class="piece {{piece.type}} x{{piece.x}} y{{piece.y}} team{{piece.team}} select{{piece.selected}} side{{piece.getSide()}}">\n  {{piece.type}}\n</i>',
       link: function(scope, el, attrs) {
         var calculateSize;
         scope.board = gameBoard;

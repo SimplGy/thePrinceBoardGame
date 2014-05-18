@@ -30,10 +30,12 @@
       showActions: function() {
         return gameBoard.showActions(this);
       },
-      selectPiece: function(select) {
-        console.log("selected: ", select, this);
-        this.selected = select;
+      selectPiece: function() {
+        console.log("selected: ", this);
         return gameBoard.selectPiece(this);
+      },
+      movePiece: function(pos) {
+        return gameBoard.movePiece(this, pos);
       },
       act: function(pos) {
         gameBoard.clearHighlights();
@@ -86,7 +88,7 @@
           draggie.element.style.left = null;
           draggie.element.style.top = null;
           return scope.$apply(function() {
-            return console.log(scope.piece.act(pos));
+            return console.log(scope.piece.movePiece(pos));
           });
         };
       }

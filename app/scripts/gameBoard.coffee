@@ -62,9 +62,11 @@ angular.module('prince')
 
   # Select the given piece and show the actions
   gameBoard.selectPiece = (piece) ->
+    console.log "gb.select ", piece
     if gameBoard.selectedPiece
       gameBoard.selectedPiece.selected = false
     gameBoard.selectedPiece = piece
+    gameBoard.selectedPiece.selected = true
     gameBoard.selectedPiece.showActions()
 
   # Move the selected piece in case the given space is highlighted
@@ -76,6 +78,13 @@ angular.module('prince')
         gameBoard.selectedPiece.act space
       gameBoard.unselectCurrent()
 
+  # Try to move the given piece on the given space
+  # Move is allowed if space is highlighted
+  gameBoard.movePiece = (piece, pos) ->
+    space = gameBoard.locations[pos.x]?[pos.y]
+    if space and space.highlight
+      piece.act space
+    
   # Remove the given piece
   gameBoard.removePiece = (piece) ->
     index = gameBoard.pieces.indexOf(piece)
@@ -88,7 +97,7 @@ angular.module('prince')
 .directive 'gameBoard', (gameBoard, $window, cfg) ->
   restrict: 'E'
   scope: {}
-  template: '<b\n  ng-repeat="space in board.spaces"\n  class="space x{{space.x}} y{{space.y}}"\n  ng-class="{highlight: space.highlight, altColor: (space.x + space.y) % 2 === 0}"\n  ng-click="board.moveSelected(space)"\n  title="{{space.x}}, {{space.y}}">\n</b>\n\n<i piece\n   ng-repeat="piece in board.pieces"\n   ng-mousedown="piece.showActions()"\n   ng-click="piece.selectPiece(true)"\n   class="piece {{piece.type}} x{{piece.x}} y{{piece.y}} team{{piece.team}} select{{piece.selected}} side{{piece.getSide()}}">\n  {{piece.type}}\n</i>'
+  template: '<b\n  ng-repeat="space in board.spaces"\n  class="space x{{space.x}} y{{space.y}}"\n  ng-class="{highlight: space.highlight, altColor: (space.x + space.y) % 2 === 0}"\n  ng-click="board.moveSelected(space)"\n  title="{{space.x}}, {{space.y}}">\n</b>\n\n<i piece\n   ng-repeat="piece in board.pieces"\n   ng-click="piece.selectPiece()"\n   ng-mouseover="piece.selectPiece()"\n   class="piece {{piece.type}} x{{piece.x}} y{{piece.y}} team{{piece.team}} select{{piece.selected}} side{{piece.getSide()}}">\n  {{piece.type}}\n</i>'
   link: (scope, el, attrs) ->
     scope.board = gameBoard
     calculateSize = ->

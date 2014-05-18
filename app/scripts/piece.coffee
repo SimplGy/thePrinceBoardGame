@@ -19,10 +19,11 @@ angular.module('prince')
     # gets the actions for the current side of the piece
     getActions: -> @actions[@getSide()]
     showActions: -> gameBoard.showActions @
-    selectPiece: (select)-> 
-      console.log "selected: ", select, @
-      @selected = select 
+    selectPiece: -> 
+      console.log "selected: ", @
       gameBoard.selectPiece @
+    movePiece: (pos) ->
+      gameBoard.movePiece @, pos
     act: (pos) ->
       gameBoard.clearHighlights()
       return 'off the left'   if pos.x < 0                    # Off the left side
@@ -48,6 +49,7 @@ angular.module('prince')
   restrict: 'A'
   link: (scope, el, attrs) ->
     draggie = new Draggabilly el[0]
+
     draggie.on 'dragEnd', (draggie, evt, pointer) ->
       console.warn 'can not position piece without knowing size' unless cfg.pieceSize
       col = Math.round draggie.position.x / cfg.pieceSize
@@ -63,5 +65,5 @@ angular.module('prince')
       draggie.element.style.top = null
       # Announce the new x/y coord to scope. It will assign the css class and css will handle the positioning
       scope.$apply ->
-        console.log scope.piece.act pos
+        console.log scope.piece.movePiece pos
 
