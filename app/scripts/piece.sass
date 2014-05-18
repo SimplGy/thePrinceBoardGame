@@ -1,5 +1,15 @@
 @import '../styles/__'
 
+=team-colors($colorTeam, $colorTeamLight, $colorTeamDark)
+  background: $colorTeamLight
+  box-shadow:  inset 0 -3px 0 0 $colorTeamDark, inset 0 1px 0 0 $colorTeamDark, inset 0 0 0 1px $colorTeamDark, inset 0 2px 0 0 $light50, 0 2px 1px 0 $shade20
+  &:hover
+    background: mix(white, $colorTeamLight, 10%)
+  &:before
+    color: $colorTeamDark
+  &.side1
+    box-shadow:  inset 0 -3px 0 0 $colorTeamDark, inset 0 1px 0 0 $colorTeamDark, inset 0 0 0 1px $colorTeamDark, inset 0 2px 0 0 $light50, 0 2px 1px 0 $shade20, inset 0 -1px 0 4px $colorTeamLight, inset 0 -1px 0 7px $colorTeam
+
 
 // Pieces
 .piece
@@ -9,8 +19,6 @@
   width: $spaceSize
   height: $spaceSize
   cursor: pointer
-  background: $colorTeam0Light
-  box-shadow:  inset 0 -3px 0 0 $colorTeam0Dark, inset 0 1px 0 0 $colorTeam0Dark, inset 0 0 0 1px $colorTeam0Dark, inset 0 2px 0 0 $light50, 0 2px 1px 0 $shade20
   border-radius: 3px
   margin-top: -1px
   color: $shade20
@@ -20,8 +28,6 @@
   box-sizing: border-box
   overflow: hidden
   //+transition(all .15s ease-in-out)
-  &:hover
-    background: mix(white, $colorTeam0Light, 10%)
 
 
   // Things "closer" to the viewer should be higher in z-space
@@ -55,7 +61,6 @@
     line-height: $size
     font-weight: bold
     text-shadow: 0 -1px 0 $shade50, -1px 0 0 $shade50
-    color: $colorTeam0Dark
   &.prince:before
     content: "P"
   &.footman:before
@@ -87,12 +92,21 @@
   &.oracle:before
     content: "O"
   &.duchess:before
-    content: "Du"
+    content: "Du"    
 
+  &.team0
+    +team-colors($colorTeam0, $colorTeam0Light, $colorTeam0Dark)
+  &.team1
+    +team-colors($colorTeam1, $colorTeam1Light, $colorTeam1Dark)
+    -moz-transform: scaleY(-1)    
+    -o-transform: scaleY(-1)     
+    -webkit-transform: scaleY(-1) 
+    transform: scaleY(-1)         
+    filter: FlipV                 
+
+  // Highlight when selected
   &.selecttrue
     background: $colorWarn
-  // Styling for each side
-  //&.side0:before
-  &.side1
-    box-shadow:  inset 0 -3px 0 0 $colorTeam0Dark, inset 0 1px 0 0 $colorTeam0Dark, inset 0 0 0 1px $colorTeam0Dark, inset 0 2px 0 0 $light50, 0 2px 1px 0 $shade20, inset 0 -1px 0 4px $colorTeam0Light, inset 0 -1px 0 7px $colorTeam0
+    &:hover
+      background: mix(white, $colorWarn, 10%)
 

@@ -41,6 +41,8 @@ angular.module('prince')
   # Given a piece instance, show the actions on the game board that can be made
   gameBoard.showActions = (piece) ->
     gameBoard.clearHighlights()
+    if not piece then return
+
     actions = piece.getActions()
     console.log 'highlight actions: ', actions
     for type, coords of actions
@@ -50,7 +52,11 @@ angular.module('prince')
           y = piece.y + offset[1]
           # Highlight the location, if it's on the board
           loc = gameBoard.locations[x]?[y]
-          if loc then loc.highlight = true
+          if loc
+            loc.highlight = true
+            for p in gameBoard.pieces
+              if p.x is loc.x and p.y is loc.y
+                loc.highlight = false
       else
         console.warn "coord display rules for type #{type} not yet implemented"
 
@@ -89,6 +95,7 @@ angular.module('prince')
   gameBoard.removePiece = (piece) ->
     index = gameBoard.pieces.indexOf(piece)
     if index != -1
+      gameBoard.selectedPiece = null
       gameBoard.pieces.splice(index,1); 
       gameBoard.clearHighlights()
   gameBoard
@@ -97,7 +104,7 @@ angular.module('prince')
 .directive 'gameBoard', (gameBoard, $window, cfg) ->
   restrict: 'E'
   scope: {}
-  template: '<b\n  ng-repeat="space in board.spaces"\n  class="space x{{space.x}} y{{space.y}}"\n  ng-class="{highlight: space.highlight, altColor: (space.x + space.y) % 2 === 0}"\n  ng-click="board.moveSelected(space)"\n  title="{{space.x}}, {{space.y}}">\n</b>\n\n<i piece\n   ng-repeat="piece in board.pieces"\n   ng-click="piece.selectPiece()"\n   ng-mouseover="piece.selectPiece()"\n   class="piece {{piece.type}} x{{piece.x}} y{{piece.y}} team{{piece.team}} select{{piece.selected}} side{{piece.getSide()}}">\n  {{piece.type}}\n</i>'
+  template: '<b\n  ng-repeat="space in board.spaces"\n  class="space x{{space.x}} y{{space.y}}"\n  ng-class="{highlight: space.highlight, altColor: (space.x + space.y) % 2 === 0}"\n  ng-click="board.moveSelected(space)"\n  title="{{space.x}}, {{space.y}}">\n</b>\n\n<i piece\n   ng-repeat="piece in board.pieces"\n   ng-click="piece.selectPiece()"\n   ng-mouseover="piece.showActions()"\n   ng-mouseleave="board.showActions(board.selectedPiece)"\n   class="piece {{piece.type}} x{{piece.x}} y{{piece.y}} team{{piece.team}} select{{piece.selected}} side{{piece.getSide()}}">\n  {{piece.type}}\n</i>'
   link: (scope, el, attrs) ->
     scope.board = gameBoard
     calculateSize = ->

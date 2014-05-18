@@ -21,7 +21,7 @@
   <select ng-model="newPiece" ng-options="p for (p, object) in definitions">
     <option value="">-- choose a piece --</option>
   </select>
-  <button ng-click="addPiece(newPiece.type, 0, 0)">Add</button>
+  <button ng-click="addPiece(newPiece.type, 0, 0, 0)">Add</button>
   <br>
   <button ng-click="gameBoard.removePiece(gameBoard.selectedPiece)">Remove Selected</button>
 <!--   <ul>

@@ -7,22 +7,37 @@
     $scope.definitions = PieceDefinitions;
     $scope.newPiece = $scope.definitions.bowman;
     $scope.gameBoard = gameBoard;
-    $scope.addPiece = function(ptype, px, py) {
+    $scope.addPiece = function(ptype, pteam, px, py) {
       return gameBoard.pieces.push(new Piece({
         type: ptype,
         x: px,
-        y: py
+        y: py,
+        team: pteam
       }));
     };
     gameBoard.pieces.push(new Piece({
       type: PieceDefinitions.TYPES.prince,
       x: 3,
-      y: 5
+      y: 5,
+      team: 0
+    }));
+    gameBoard.pieces.push(new Piece({
+      type: PieceDefinitions.TYPES.footman,
+      x: 2,
+      y: 5,
+      team: 0
+    }));
+    gameBoard.pieces.push(new Piece({
+      type: PieceDefinitions.TYPES.prince,
+      x: 3,
+      y: 0,
+      team: 1
     }));
     return gameBoard.pieces.push(new Piece({
       type: PieceDefinitions.TYPES.footman,
       x: 2,
-      y: 5
+      y: 0,
+      team: 1
     }));
   });
 

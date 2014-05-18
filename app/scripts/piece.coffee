@@ -9,10 +9,12 @@ angular.module('prince')
     angular.extend @, definition
     @x = options.x
     @y = options.y
+    @team = options.team # dark or light team?
 
   Piece.prototype =
     x: undefined
     y: undefined
+    team: undefined
     actionCount: 0 # how many actions has this piece taken?
     selected: false
     getSide: -> if @actionCount % 2 is 0 then 0 else 1 # is it on side 0 or side 1?
@@ -38,8 +40,6 @@ angular.module('prince')
         @x = pos.x
         @y = pos.y
         @actionCount++
-
-    team: 0 # dark or light team?
 
   Piece
 

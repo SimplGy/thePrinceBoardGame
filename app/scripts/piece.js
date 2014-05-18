@@ -10,11 +10,13 @@
       }
       angular.extend(this, definition);
       this.x = options.x;
-      return this.y = options.y;
+      this.y = options.y;
+      return this.team = options.team;
     };
     Piece.prototype = {
       x: void 0,
       y: void 0,
+      team: void 0,
       actionCount: 0,
       selected: false,
       getSide: function() {
@@ -61,8 +63,7 @@
           this.y = pos.y;
           return this.actionCount++;
         }
-      },
-      team: 0
+      }
     };
     return Piece;
   }).directive('piece', function(cfg) {

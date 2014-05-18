@@ -41,8 +41,11 @@
       return _results;
     };
     gameBoard.showActions = function(piece) {
-      var actions, coords, loc, offset, type, _results;
+      var actions, coords, loc, offset, p, type, _results;
       gameBoard.clearHighlights();
+      if (!piece) {
+        return;
+      }
       actions = piece.getActions();
       console.log('highlight actions: ', actions);
       _results = [];
@@ -58,7 +61,21 @@
               y = piece.y + offset[1];
               loc = (_ref2 = gameBoard.locations[x]) != null ? _ref2[y] : void 0;
               if (loc) {
-                _results1.push(loc.highlight = true);
+                loc.highlight = true;
+                _results1.push((function() {
+                  var _l, _len1, _ref3, _results2;
+                  _ref3 = gameBoard.pieces;
+                  _results2 = [];
+                  for (_l = 0, _len1 = _ref3.length; _l < _len1; _l++) {
+                    p = _ref3[_l];
+                    if (p.x === loc.x && p.y === loc.y) {
+                      _results2.push(loc.highlight = false);
+                    } else {
+                      _results2.push(void 0);
+                    }
+                  }
+                  return _results2;
+                })());
               } else {
                 _results1.push(void 0);
               }
@@ -107,6 +124,7 @@
       var index;
       index = gameBoard.pieces.indexOf(piece);
       if (index !== -1) {
+        gameBoard.selectedPiece = null;
         gameBoard.pieces.splice(index, 1);
         return gameBoard.clearHighlights();
       }
@@ -116,7 +134,7 @@
     return {
       restrict: 'E',
       scope: {},
-      template: '<b\n  ng-repeat="space in board.spaces"\n  class="space x{{space.x}} y{{space.y}}"\n  ng-class="{highlight: space.highlight, altColor: (space.x + space.y) % 2 === 0}"\n  ng-click="board.moveSelected(space)"\n  title="{{space.x}}, {{space.y}}">\n</b>\n\n<i piece\n   ng-repeat="piece in board.pieces"\n   ng-click="piece.selectPiece()"\n   ng-mouseover="piece.selectPiece()"\n   class="piece {{piece.type}} x{{piece.x}} y{{piece.y}} team{{piece.team}} select{{piece.selected}} side{{piece.getSide()}}">\n  {{piece.type}}\n</i>',
+      template: '<b\n  ng-repeat="space in board.spaces"\n  class="space x{{space.x}} y{{space.y}}"\n  ng-class="{highlight: space.highlight, altColor: (space.x + space.y) % 2 === 0}"\n  ng-click="board.moveSelected(space)"\n  title="{{space.x}}, {{space.y}}">\n</b>\n\n<i piece\n   ng-repeat="piece in board.pieces"\n   ng-click="piece.selectPiece()"\n   ng-mouseover="piece.showActions()"\n   ng-mouseleave="board.showActions(board.selectedPiece)"\n   class="piece {{piece.type}} x{{piece.x}} y{{piece.y}} team{{piece.team}} select{{piece.selected}} side{{piece.getSide()}}">\n  {{piece.type}}\n</i>',
       link: function(scope, el, attrs) {
         var calculateSize;
         scope.board = gameBoard;
