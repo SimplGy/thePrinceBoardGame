@@ -48,8 +48,12 @@ game-board {
     text-align: center; }
     game-board .space.altColor {
       background: #f2f2f2; }
-    game-board .space.highlight {
+    game-board .space.highlightmove {
       background: rgba(240, 173, 78, 0.5); }
+    game-board .space.highlightjump {
+      background: rgba(240, 173, 78, 0.5); }
+    game-board .space.highlightstrike {
+      background: rgba(217, 83, 79, 0.5); }
   game-board .x0 {
     left: 0%; }
   game-board .x1 {
@@ -163,7 +167,7 @@ game-board {
     -o-transform: scaleY(-1);
     -webkit-transform: scaleY(-1);
     transform: scaleY(-1);
-    filter: FlipV; }
+    filter: FlipH; }
     .piece.team1:hover {
       background: #97d6e9; }
     .piece.team1:before {
@@ -174,3 +178,11 @@ game-board {
     background: #f0ad4e; }
     .piece.selecttrue:hover {
       background: #f1b55f; }
+  .piece.attackedmove {
+    background: #f0ad4e; }
+    .piece.attackedmove:hover {
+      background: #f1b55f; }
+  .piece.attackedstrike {
+    background: #d9534f; }
+    .piece.attackedstrike:hover {
+      background: #dc6460; }

@@ -1,55 +1,53 @@
-@import '../styles/__'
+@import ../styles/__
 
 game-board
-  $spaceSize: percentage(1 / 6) // 6x6 board
-  position: relative
-  display: block
-  margin: 20px auto
-  //box-shadow: 0 4px 0 2px $black10, 0 0 0 2px $black10, 0 5px 1px 1px $black20 // 3dish
-  box-shadow: 0 0 0 0 white, 0 0 0 5px $black05 // double outline
-  background: white
-
-  .space
+    $spaceSize: percentage(1 / 6)
+    position: relative
     display: block
-    position: absolute
-    width: $spaceSize
-    height: $spaceSize
+    margin: 20px auto
+    //box-shadow: 0 4px 0 2px $black10, 0 0 0 2px $black10, 0 5px 1px 1px $black20 // 3dish
+    box-shadow: 0 0 0 0 white, 0 0 0 5px $black05
     background: white
-    font-weight: normal
-    font-size: 10px
-    text-align: center
-    &.altColor
-      background: $black05
-    &.highlight
-      background: transparentize($colorHighlight,.5)
-
-
-  // X Positions
-  .x0
-    left: $spaceSize * 0
-  .x1
-    left: $spaceSize * 1
-  .x2
-    left: $spaceSize * 2
-  .x3
-    left: $spaceSize * 3
-  .x4
-    left: $spaceSize * 4
-  .x5
-    left: $spaceSize * 5
-  // Y Positions
-  .y0
-    top: $spaceSize * 0
-  .y1
-    top: $spaceSize * 1
-  .y2
-    top: $spaceSize * 2
-  .y3
-    top: $spaceSize * 3
-  .y4
-    top: $spaceSize * 4
-  .y5
-    top: $spaceSize * 5
-
-
-
+    .space
+        display: block
+        position: absolute
+        width: $spaceSize
+        height: $spaceSize
+        background: white
+        font-weight: normal
+        font-size: 10px
+        text-align: center
+        &.altColor
+            background: $black05
+        &.highlightmove
+            background: transparentize($colorHighlight, 0.5)
+        &.highlightjump
+            background: transparentize($colorHighlight, 0.5)
+        &.highlightstrike
+            background: transparentize($colorHighlightStrike, 0.5)
+    // X Positions
+    .x0
+        left: $spaceSize * 0
+    .x1
+        left: $spaceSize * 1
+    .x2
+        left: $spaceSize * 2
+    .x3
+        left: $spaceSize * 3
+    .x4
+        left: $spaceSize * 4
+    .x5
+        left: $spaceSize * 5
+    // Y Positions
+    .y0
+        top: $spaceSize * 0
+    .y1
+        top: $spaceSize * 1
+    .y2
+        top: $spaceSize * 2
+    .y3
+        top: $spaceSize * 3
+    .y4
+        top: $spaceSize * 4
+    .y5
+        top: $spaceSize * 5

@@ -8,7 +8,8 @@
     };
     Space.prototype = {
       x: void 0,
-      y: void 0
+      y: void 0,
+      highlight: ""
     };
     return Space;
   }).factory('gameBoard', function(cfg, Space, PieceDefinitions) {
@@ -31,51 +32,57 @@
       }
     }
     gameBoard.clearHighlights = function() {
-      var _k, _len, _ref2, _results;
+      var p, _k, _l, _len, _len1, _ref2, _ref3, _results;
       _ref2 = gameBoard.spaces;
-      _results = [];
       for (_k = 0, _len = _ref2.length; _k < _len; _k++) {
         space = _ref2[_k];
-        _results.push(space.highlight = false);
+        space.highlight = "";
+      }
+      _ref3 = gameBoard.pieces;
+      _results = [];
+      for (_l = 0, _len1 = _ref3.length; _l < _len1; _l++) {
+        p = _ref3[_l];
+        _results.push(p.attacked = "");
       }
       return _results;
     };
     gameBoard.showActions = function(piece) {
       var actions, coords, loc, offset, p, type, _results;
-      gameBoard.clearHighlights();
+      if (gameBoard.selectedPiece && piece.team !== gameBoard.selectedPiece.team) {
+        return;
+      }
       if (!piece) {
         return;
       }
+      gameBoard.clearHighlights();
       actions = piece.getActions();
-      console.log('highlight actions: ', actions);
+      console.log('highlight actions: ', actions, piece.team);
       _results = [];
       for (type in actions) {
         coords = actions[type];
-        if (type === PieceDefinitions.ACTIONS.move || type === PieceDefinitions.ACTIONS.jump) {
+        if (type === PieceDefinitions.ACTIONS.move || type === PieceDefinitions.ACTIONS.jump || type === PieceDefinitions.ACTIONS.strike) {
           _results.push((function() {
-            var _k, _len, _ref2, _results1;
+            var _k, _l, _len, _len1, _ref2, _ref3, _results1;
             _results1 = [];
             for (_k = 0, _len = coords.length; _k < _len; _k++) {
               offset = coords[_k];
               x = piece.x + offset[0];
-              y = piece.y + offset[1];
+              y = piece.y + offset[1] * piece.getTeamOrientation();
               loc = (_ref2 = gameBoard.locations[x]) != null ? _ref2[y] : void 0;
               if (loc) {
-                loc.highlight = true;
-                _results1.push((function() {
-                  var _l, _len1, _ref3, _results2;
-                  _ref3 = gameBoard.pieces;
-                  _results2 = [];
-                  for (_l = 0, _len1 = _ref3.length; _l < _len1; _l++) {
-                    p = _ref3[_l];
-                    if (p.x === loc.x && p.y === loc.y) {
-                      _results2.push(loc.highlight = false);
+                loc.highlight = type;
+                _ref3 = gameBoard.pieces;
+                for (_l = 0, _len1 = _ref3.length; _l < _len1; _l++) {
+                  p = _ref3[_l];
+                  if (p.x === loc.x && p.y === loc.y) {
+                    if (p.team === piece.team) {
+                      loc.highlight = "";
                     } else {
-                      _results2.push(void 0);
+                      p.attacked = type;
                     }
                   }
-                  return _results2;
-                })());
+                }
+                _results1.push(console.log("loc", loc));
               } else {
                 _results1.push(void 0);
               }
@@ -88,6 +95,10 @@
       }
       return _results;
     };
+    gameBoard.getSpace = function(x, y) {
+      var _ref2;
+      return (_ref2 = gameBoard.locations[x]) != null ? _ref2[y] : void 0;
+    };
     gameBoard.unselectCurrent = function() {
       if (gameBoard.selectedPiece) {
         gameBoard.selectedPiece.selected = false;
@@ -97,6 +108,12 @@
     };
     gameBoard.selectPiece = function(piece) {
       console.log("gb.select ", piece);
+      if (piece.attacked !== "") {
+        gameBoard.selectedPiece.act(gameBoard.getSpace(piece.x, piece.y));
+        gameBoard.removePiece(piece);
+        gameBoard.selectedPiece.showActions();
+        return;
+      }
       if (gameBoard.selectedPiece) {
         gameBoard.selectedPiece.selected = false;
       }
@@ -104,27 +121,36 @@
       gameBoard.selectedPiece.selected = true;
       return gameBoard.selectedPiece.showActions();
     };
-    gameBoard.moveSelected = function(space) {
+    gameBoard.clickSpace = function(space) {
       console.log("click space", space);
       if (gameBoard.selectedPiece) {
-        if (space.highlight) {
+        if (space.highlight !== "") {
           gameBoard.selectedPiece.act(space);
+          return;
         }
         return gameBoard.unselectCurrent();
       }
     };
     gameBoard.movePiece = function(piece, pos) {
-      var _ref2;
-      space = (_ref2 = gameBoard.locations[pos.x]) != null ? _ref2[pos.y] : void 0;
-      if (space && space.highlight) {
-        return piece.act(space);
+      var p, _k, _len, _ref2, _ref3;
+      space = gameBoard.getSpace(pos.x, pos.y);
+      if (space && ((_ref2 = space.highlight) === PieceDefinitions.ACTIONS.move || _ref2 === PieceDefinitions.ACTIONS.jump)) {
+        piece.act(space);
+      }
+      _ref3 = gameBoard.pieces;
+      for (_k = 0, _len = _ref3.length; _k < _len; _k++) {
+        p = _ref3[_k];
+        if (p.x === pos.x && p.y === pos.y && p.attacked) {
+          console.log("attack", p.x, p.y, p.definition);
+          gameBoard.removePiece(p);
+          return;
+        }
       }
     };
     gameBoard.removePiece = function(piece) {
       var index;
       index = gameBoard.pieces.indexOf(piece);
       if (index !== -1) {
-        gameBoard.selectedPiece = null;
         gameBoard.pieces.splice(index, 1);
         return gameBoard.clearHighlights();
       }
@@ -134,7 +160,7 @@
     return {
       restrict: 'E',
       scope: {},
-      template: '<b\n  ng-repeat="space in board.spaces"\n  class="space x{{space.x}} y{{space.y}}"\n  ng-class="{highlight: space.highlight, altColor: (space.x + space.y) % 2 === 0}"\n  ng-click="board.moveSelected(space)"\n  title="{{space.x}}, {{space.y}}">\n</b>\n\n<i piece\n   ng-repeat="piece in board.pieces"\n   ng-click="piece.selectPiece()"\n   ng-mouseover="piece.showActions()"\n   ng-mouseleave="board.showActions(board.selectedPiece)"\n   class="piece {{piece.type}} x{{piece.x}} y{{piece.y}} team{{piece.team}} select{{piece.selected}} side{{piece.getSide()}}">\n  {{piece.type}}\n</i>',
+      template: '<b\n  ng-repeat="space in board.spaces"\n  class="space x{{space.x}} y{{space.y}} highlight{{space.highlight}}"\n  ng-class="{altColor: (space.x + space.y) % 2 === 0}"\n  ng-click="board.clickSpace(space)"\n  title="{{space.x}}, {{space.y}}">\n</b>\n\n<i piece\n   ng-repeat="piece in board.pieces"\n   ng-click="piece.selectPiece()"\n   ng-mouseover="piece.showActions()"\n   ng-mouseleave="board.selectedPiece.showActions()"\n   class="piece {{piece.type}} x{{piece.x}} y{{piece.y}} team{{piece.team}} select{{piece.selected}} attacked{{piece.attacked}} side{{piece.getSide()}}">\n  {{piece.type}}\n</i>',
       link: function(scope, el, attrs) {
         var calculateSize;
         scope.board = gameBoard;

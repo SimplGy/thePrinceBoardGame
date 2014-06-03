@@ -86,7 +86,7 @@
     -o-transform: scaleY(-1);
     -webkit-transform: scaleY(-1);
     transform: scaleY(-1);
-    filter: FlipV; }
+    filter: FlipH; }
     .piece.team1:hover {
       background: #97d6e9; }
     .piece.team1:before {
@@ -97,3 +97,11 @@
     background: #f0ad4e; }
     .piece.selecttrue:hover {
       background: #f1b55f; }
+  .piece.attackedmove {
+    background: #f0ad4e; }
+    .piece.attackedmove:hover {
+      background: #f1b55f; }
+  .piece.attackedstrike {
+    background: #d9534f; }
+    .piece.attackedstrike:hover {
+      background: #dc6460; }

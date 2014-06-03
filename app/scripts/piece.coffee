@@ -15,11 +15,13 @@ angular.module('prince')
     x: undefined
     y: undefined
     team: undefined
+    attacked: false
     actionCount: 0 # how many actions has this piece taken?
     selected: false
     getSide: -> if @actionCount % 2 is 0 then 0 else 1 # is it on side 0 or side 1?
     # gets the actions for the current side of the piece
-    getActions: -> @actions[@getSide()]
+    getActions: -> @actions[@getSide()]           
+    getTeamOrientation: -> if @team is 1 then -1 else 1 # team 0 is looking up, team 1 is looking down
     showActions: -> gameBoard.showActions @
     selectPiece: -> 
       console.log "selected: ", @
@@ -27,6 +29,8 @@ angular.module('prince')
     movePiece: (pos) ->
       gameBoard.movePiece @, pos
     act: (pos) ->
+      # pos can be a piece
+      highlight = pos.highlight
       gameBoard.clearHighlights()
       return 'off the left'   if pos.x < 0                    # Off the left side
       return 'off the right'  if pos.x > cfg.cellCount - 1    # Too far right
@@ -36,10 +40,11 @@ angular.module('prince')
         return 'missing a position'
       if pos.x is @x and pos.y is @y
         return 'already in this position'
-      else
+
+      @actionCount++
+      if highlight in [PieceDefinitions.ACTIONS.move, PieceDefinitions.ACTIONS.jump]
         @x = pos.x
         @y = pos.y
-        @actionCount++
 
   Piece
 
@@ -64,6 +69,6 @@ angular.module('prince')
       draggie.element.style.left = null
       draggie.element.style.top = null
       # Announce the new x/y coord to scope. It will assign the css class and css will handle the positioning
-      scope.$apply ->
-        console.log scope.piece.movePiece pos
+      # scope.$apply ->
+      #   console.log scope.piece.movePiece pos
 

@@ -17,6 +17,7 @@
       x: void 0,
       y: void 0,
       team: void 0,
+      attacked: false,
       actionCount: 0,
       selected: false,
       getSide: function() {
@@ -29,6 +30,13 @@
       getActions: function() {
         return this.actions[this.getSide()];
       },
+      getTeamOrientation: function() {
+        if (this.team === 1) {
+          return -1;
+        } else {
+          return 1;
+        }
+      },
       showActions: function() {
         return gameBoard.showActions(this);
       },
@@ -40,6 +48,8 @@
         return gameBoard.movePiece(this, pos);
       },
       act: function(pos) {
+        var highlight;
+        highlight = pos.highlight;
         gameBoard.clearHighlights();
         if (pos.x < 0) {
           return 'off the left';
@@ -58,10 +68,11 @@
         }
         if (pos.x === this.x && pos.y === this.y) {
           return 'already in this position';
-        } else {
+        }
+        this.actionCount++;
+        if (highlight === PieceDefinitions.ACTIONS.move || highlight === PieceDefinitions.ACTIONS.jump) {
           this.x = pos.x;
-          this.y = pos.y;
-          return this.actionCount++;
+          return this.y = pos.y;
         }
       }
     };
@@ -87,10 +98,7 @@
         });
         return setPosition = function(pos) {
           draggie.element.style.left = null;
-          draggie.element.style.top = null;
-          return scope.$apply(function() {
-            return console.log(scope.piece.movePiece(pos));
-          });
+          return draggie.element.style.top = null;
         };
       }
     };

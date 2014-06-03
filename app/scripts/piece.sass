@@ -102,11 +102,21 @@
     -o-transform: scaleY(-1)     
     -webkit-transform: scaleY(-1) 
     transform: scaleY(-1)         
-    filter: FlipV                 
+    filter: FlipH                 
 
   // Highlight when selected
   &.selecttrue
     background: $colorWarn
     &:hover
       background: mix(white, $colorWarn, 10%)
+  // Highlight differently when attacked
+  &.attackedmove
+    background: $colorHighlight
+    &:hover
+      background: mix(white, $colorHighlight, 10%)
+  // Highlight differently when attacked by strike
+  &.attackedstrike
+    background: $colorHighlightStrike
+    &:hover
+      background: mix(white, $colorHighlightStrike, 10%)
 
